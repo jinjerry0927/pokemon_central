@@ -28,7 +28,7 @@ Plan -> Build -> Verify -> Commit -> Deploy/Document -> Review
 - Deploy/Document: 배포하거나 문서를 갱신한다.
 - Review: 다음 단계의 리스크와 우선순위를 다시 정한다.
 
-## Phase A. Project Base
+## Phase A. Project Base ✅
 
 목표: 프로젝트가 어디서 운영되는지 명확히 하고, GitHub 기반 작업 루틴을 고정한다.
 
