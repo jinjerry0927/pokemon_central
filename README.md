@@ -16,6 +16,7 @@ Planning and setup.
 ## Key Documents
 
 - [Product Plan](docs/planning/product-plan.md)
+- [Development Loop Roadmap](docs/planning/development-loop-roadmap.md)
 - [Competitor Research](docs/research/competitor-research.md)
 - [Project Paths](docs/setup/project-paths.md)
 - [GitHub Setup](docs/setup/github-setup.md)
