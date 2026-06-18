@@ -103,7 +103,7 @@ npm run lint
 npm run build
 ```
 
-## Phase D. Hosting Setup
+## Phase D. Hosting Setup ✅
 
 목표: Cloudflare Pages 무료 배포 파이프라인을 만든다.
 
@@ -127,6 +127,10 @@ npm run build
 
 - Cloudflare Pages 빌드 로그 확인
 - 배포 URL 접속 확인
+
+배포 URL:
+
+- https://pokemon-central.pages.dev/
 
 ## Phase E. Data Source Policy
 

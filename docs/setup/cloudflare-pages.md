@@ -5,6 +5,7 @@
 - Platform: Cloudflare Pages
 - Repository: `jinjerry0927/pokemon_central`
 - Production branch: `main`
+- Production URL: https://pokemon-central.pages.dev/
 - Domain policy: use the default `*.pages.dev` domain for MVP
 - Custom domain: defer until after MVP launch
 
@@ -46,6 +47,5 @@ npm run build
 
 ## Phase D Status
 
-Local deployment configuration is ready. Phase D is complete only after the
-Cloudflare Pages project is connected and the generated deployment URL is
-verified in a browser.
+Complete. Cloudflare Pages is connected to GitHub, deploys from `main`, and the
+production URL responds successfully.
