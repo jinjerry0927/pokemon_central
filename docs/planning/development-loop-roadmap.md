@@ -51,6 +51,14 @@ git status --short --branch
 git remote -v
 ```
 
+현재 확인 결과:
+
+- 원본 저장소 루트: `C:\Users\James\Documents\GitHub\pokemon_central`
+- 현재 Codex 작업 루트: `C:\Users\James\.codex\worktrees\ce82\pokemon_central`
+- 원격 저장소: `https://github.com/jinjerry0927/pokemon_central.git`
+- 기본 브랜치 `main`은 `origin/main`과 같은 커밋을 가리킨다.
+- 이 Codex 세션은 임시 worktree의 detached HEAD에서 실행된다.
+
 ## Phase B. Product Scope Lock
 
 목표: MVP 범위를 고정해서 기능이 과하게 커지는 것을 막는다.

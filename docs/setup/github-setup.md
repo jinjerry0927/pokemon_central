@@ -2,25 +2,25 @@
 
 ## Current Status
 
-- Local Git can be initialized in this workspace.
-- GitHub CLI `gh` is not currently available in this environment.
-- Remote GitHub connection requires either an existing repository URL or GitHub CLI/browser authentication outside this environment.
-
-## Recommended Repository Name
+- Local Git is already initialized.
+- The canonical local repository path is `C:\Users\James\Documents\GitHub\pokemon_central`.
+- This Codex session is running from a temporary worktree at `C:\Users\James\.codex\worktrees\ce82\pokemon_central`.
+- The `main` branch tracks `origin/main`.
+- Remote GitHub connection is configured:
 
 ```text
-pokemon-champions-guide
+origin  https://github.com/jinjerry0927/pokemon_central.git
 ```
 
-Alternative:
+## Repository Name
 
 ```text
-pokemon-champions-korean-guide
+pokemon_central
 ```
 
 ## Local Git Setup
 
-Run from the workspace root:
+Already complete. Historical setup command:
 
 ```powershell
 git init
@@ -30,10 +30,10 @@ git commit -m "Initial Pokemon Champions guide planning setup"
 
 ## Connect Existing GitHub Repository
 
-After creating a repository on GitHub, run:
+Already complete. Historical setup command:
 
 ```powershell
-git remote add origin https://github.com/<owner>/<repo>.git
+git remote add origin https://github.com/jinjerry0927/pokemon_central.git
 git branch -M main
 git push -u origin main
 ```
@@ -42,7 +42,7 @@ git push -u origin main
 
 ```powershell
 git remote -v
-git status
+git status --short --branch
 ```
 
 ## Notes
