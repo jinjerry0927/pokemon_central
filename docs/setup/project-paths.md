@@ -3,7 +3,7 @@
 ## Workspace Root
 
 ```text
-C:\Users\James\Documents\Codex\2026-06-19\pokemon-champions-https-damage-calc-com
+C:\Users\James\Documents\GitHub\pokemon_central
 ```
 
 ## Directory Roles
