@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #f7f8fb;
+  --foreground: #182033;
+  --muted: #5f6b7a;
+  --panel: #ffffff;
+  --panel-border: #dce2ea;
+  --accent: #d83a4b;
+  --accent-strong: #b92738;
+  --support: #2d6cdf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

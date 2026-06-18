@@ -59,7 +59,7 @@ git remote -v
 - 기본 브랜치 `main`은 `origin/main`과 같은 커밋을 가리킨다.
 - 이 Codex 세션은 임시 worktree의 detached HEAD에서 실행된다.
 
-## Phase B. Product Scope Lock
+## Phase B. Product Scope Lock ✅
 
 목표: MVP 범위를 고정해서 기능이 과하게 커지는 것을 막는다.
 
@@ -74,7 +74,7 @@ git remote -v
 - `docs/planning/product-plan.md`에 MVP 범위가 반영되어 있다.
 - 추가 기능은 Backlog로만 기록한다.
 
-## Phase C. Tech Stack Setup
+## Phase C. Tech Stack Setup ✅
 
 목표: 무료 정적 배포에 맞는 프론트엔드 프로젝트를 만든다.
 
@@ -106,6 +106,10 @@ npm run build
 ## Phase D. Hosting Setup
 
 목표: Cloudflare Pages 무료 배포 파이프라인을 만든다.
+
+로컬 준비 문서:
+
+- `docs/setup/cloudflare-pages.md`
 
 해야 할 일:
 

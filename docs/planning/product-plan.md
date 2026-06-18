@@ -10,6 +10,13 @@ Pokemon Champions를 처음 접하거나 랭크/팀빌딩을 준비하는 한국
 - Secondary: mobile-friendly reading/searching.
 - Differentiator: Korean explanations, beginner-friendly build flow, and tight linking between Pokedex, build, team builder, speed tiers, and damage calculation.
 
+## MVP Scope Lock
+
+- Target user: Korean Pokemon Champions beginners and players preparing for ranked battles.
+- Primary device: desktop. Mobile support is limited to reading, lookup, and search assistance.
+- First-release features are limited to Pokedex, Builds, Team Builder, Speed Tiers, Damage Calculator, and Guides.
+- New ideas outside this list should be recorded in Backlog unless they unblock one of the first-release features.
+
 ## MVP Pages
 
 1. Home
@@ -33,12 +40,17 @@ Pokemon Champions를 처음 접하거나 랭크/팀빌딩을 준비하는 한국
    - Role balance summary
    - Local browser save for MVP
 
-5. Damage Calculator
+5. Speed Tiers
+   - Fast lookup for common speed benchmarks
+   - Filters for Pokemon, role, and speed range
+   - Links back to Pokemon details and related builds
+
+6. Damage Calculator
    - Single attacker/defender calculation first
    - Link from Pokemon detail and team builder
    - Later expansion for weather, field, boosts, ability, and item modifiers
 
-6. Guides
+7. Guides
    - Beginner guide
    - First ranked team guide
    - Common matchup/counter guides
@@ -56,6 +68,15 @@ Mobile should collapse these panels into tabs or stacked sections, but MVP decis
 - Start with 10 sample builds and 3 beginner team guides.
 - Use simple Korean labels and avoid excessive competitive jargon.
 - Every curated recommendation should explain when to use it and what it loses to.
+
+## Backlog
+
+- Advanced damage calculator options such as weather, field, boosts, ability, and item modifiers.
+- Account sync, cloud save, or cross-device team storage.
+- Community submissions, voting, comments, or build sharing.
+- Automated metagame statistics ingestion.
+- Native mobile app or mobile-first team building workflows.
+- PvP simulator, battle replay tools, or matchmaking features.
 
 ## Legal / Attribution Notes
 
