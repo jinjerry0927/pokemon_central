@@ -24,7 +24,7 @@ Plan -> Build -> Verify -> Commit -> Deploy/Document -> Review
 - Plan: 이번 단계의 산출물과 완료 기준을 정한다.
 - Build: 가장 작은 단위로 구현한다.
 - Verify: 빌드, 린트, 수동 확인 중 가장 적절한 검증을 한다.
-- Commit: 의미 있는 단위로 커밋한다.
+- Commit: 의미 있는 단위로 커밋한다. Phase가 완료되면 커밋 전에 해당 Phase 제목 끝에 `✅`를 붙인다.
 - Deploy/Document: 배포하거나 문서를 갱신한다.
 - Review: 다음 단계의 리스크와 우선순위를 다시 정한다.
 
