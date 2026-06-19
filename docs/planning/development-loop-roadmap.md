@@ -405,7 +405,7 @@ data/sources.md
 - 모바일에서 내용이 깨지지 않는다.
 - 데스크탑 전용 기능은 명확히 안내된다.
 
-## Phase T. QA Checklist
+## Phase T. QA Checklist ✅
 
 목표: 공개 전 기본 오류를 줄인다.
 
