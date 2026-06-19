@@ -55,9 +55,9 @@ export default function Home() {
     <AppShell>
       <PageHeader
         aside={
-          <InfoCard title="MVP 상태">
+          <InfoCard description="도감, 빌드, 팀빌더, 스피드, 계산기를 홈에서 바로 시작합니다." title="데스크탑 허브">
             <div className="flex flex-wrap gap-2">
-              <Badge tone="accent">Phase G</Badge>
+              <Badge tone="accent">Phase R</Badge>
               <Badge tone="success">Static export</Badge>
               <Badge tone="support">TypeScript</Badge>
               <Badge>Local data</Badge>
@@ -69,7 +69,7 @@ export default function Home() {
         title="한국어로 빠르게 찾는 포켓몬 공략 허브"
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-10">
+      <section className="mx-auto max-w-[1440px] px-6 py-10 lg:px-10">
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {featureCards.map((feature) => (
             <Link

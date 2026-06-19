@@ -54,7 +54,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   return (
     <main className="min-h-screen">
       <header className="border-b border-[var(--panel-border)] bg-[var(--panel)]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-5 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-6 py-5 lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <Link className="text-lg font-bold text-[var(--foreground)]" href="/">
             Pokemon Central
           </Link>
@@ -73,7 +73,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       </header>
       {children}
       <footer className="border-t border-[var(--panel-border)] bg-[var(--panel)]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-sm leading-6 text-[var(--muted)] lg:flex-row lg:items-center lg:justify-between lg:px-10">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-6 py-5 text-sm leading-6 text-[var(--muted)] lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <p>
             Pokemon Central은 팬메이드 공략 사이트이며 Pokemon Champions 또는 Pokemon 공식
             서비스가 아닙니다.
@@ -105,7 +105,7 @@ export function PageHeader({
 }) {
   return (
     <section className="border-b border-[var(--panel-border)] bg-[var(--panel)]">
-      <div className="mx-auto grid max-w-7xl gap-6 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:px-10">
+      <div className="mx-auto grid max-w-[1440px] gap-6 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-10">
         <div>
           <p className="text-sm font-semibold uppercase tracking-wide text-[var(--accent)]">
             {eyebrow}
@@ -133,7 +133,7 @@ export function ThreeColumnLayout({
   right: ReactNode;
 }) {
   return (
-    <section className="mx-auto grid max-w-7xl gap-4 px-6 py-6 lg:grid-cols-[220px_minmax(0,1fr)_300px] lg:px-10">
+    <section className="mx-auto grid max-w-[1440px] gap-4 px-6 py-6 lg:grid-cols-[240px_minmax(0,1fr)_320px] xl:grid-cols-[260px_minmax(0,1fr)_340px] lg:px-10">
       <aside className="min-w-0">{left}</aside>
       <div className="min-w-0">{center}</div>
       <aside className="min-w-0">{right}</aside>

@@ -374,7 +374,7 @@ data/sources.md
 
 - 사이트 하단 또는 About에서 고지를 확인할 수 있다.
 
-## Phase R. Desktop UX Pass
+## Phase R. Desktop UX Pass ✅
 
 목표: 데스크탑 공략 허브로서 정보 탐색이 편해야 한다.
 
