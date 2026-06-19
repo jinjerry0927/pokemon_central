@@ -526,6 +526,12 @@ npm run build
 
 목표: 무료 운영이 계속 가능한지 확인한다.
 
+진행 상태:
+
+- 비용 검토 기록 생성: `docs/planning/cost-review.md`
+- 서버, DB, 외부 API, 도메인, 저장소 크기 기준 검토 완료
+- Cloudflare Pages 최근 30일 빌드 횟수와 트래픽 대시보드 확인 필요
+
 확인할 것:
 
 - Cloudflare Pages 빌드 횟수
