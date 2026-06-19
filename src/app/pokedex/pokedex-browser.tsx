@@ -148,7 +148,40 @@ export function PokedexBrowser({ pokemon }: PokedexBrowserProps) {
             ]}
           />
           {rows.length > 0 ? (
-            <DataTable columns={columns} rows={rows} />
+            <>
+              <div className="grid gap-3 sm:hidden">
+                {rows.map((row) => (
+                  <Link
+                    className="rounded-lg border border-[var(--panel-border)] bg-[var(--panel)] p-4"
+                    href={`/pokemon/${row.id}`}
+                    key={row.id}
+                  >
+                    <div className="flex flex-wrap items-start justify-between gap-3">
+                      <div>
+                        <h2 className="text-base font-bold text-[var(--support-strong)]">
+                          {row.nameKo}
+                        </h2>
+                        <p className="mt-1 text-sm text-[var(--muted)]">{row.nameEn}</p>
+                      </div>
+                      <Badge tone="warning">{row.status}</Badge>
+                    </div>
+                    <div className="mt-3 flex flex-wrap gap-1">
+                      {row.types.map((type) => (
+                        <Badge key={type} tone="type">
+                          {type}
+                        </Badge>
+                      ))}
+                    </div>
+                    <p className="mt-3 text-sm font-semibold text-[var(--muted)]">
+                      스피드 {row.speed}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+              <div className="hidden sm:block">
+                <DataTable columns={columns} rows={rows} />
+              </div>
+            </>
           ) : (
             <InfoCard
               description="검색어를 줄이거나 타입 필터를 전체로 바꾸면 다시 결과를 볼 수 있습니다."

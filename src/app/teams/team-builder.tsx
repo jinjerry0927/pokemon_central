@@ -174,6 +174,13 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
       }
       center={
         <div className="grid gap-4">
+          <div className="lg:hidden">
+            <InfoCard
+              description="모바일에서는 포켓몬 추가, 슬롯 확인, 약점 요약 조회를 우선 지원합니다. 긴 후보 비교와 반복 편집은 데스크탑 화면이 더 적합합니다."
+              title="모바일 팀빌더 안내"
+            />
+          </div>
+
           <Tabs
             items={[
               { label: `팀 ${selectedPokemon.length}/6`, active: true },

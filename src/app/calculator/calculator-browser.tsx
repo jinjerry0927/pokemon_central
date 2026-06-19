@@ -201,6 +201,13 @@ export function CalculatorBrowser({
       }
       center={
         <div className="grid gap-4">
+          <div className="lg:hidden">
+            <InfoCard
+              description="모바일에서는 기본 조건 선택과 핵심 결과 확인을 우선 지원합니다. 세부 보정값을 많이 비교할 때는 데스크탑 화면이 더 적합합니다."
+              title="모바일 계산기 안내"
+            />
+          </div>
+
           <Tabs
             items={[
               { label: `${attacker.nameKo} 공격`, active: true },
@@ -226,19 +233,19 @@ export function CalculatorBrowser({
               <div className="grid gap-3 md:grid-cols-3">
                 <div className="rounded-lg border border-[var(--panel-border)] bg-white p-4">
                   <p className="text-sm font-semibold text-[var(--muted)]">데미지</p>
-                  <p className="mt-2 text-2xl font-bold">
+                  <p className="mt-2 break-words text-xl font-bold sm:text-2xl">
                     {result.minDamage}-{result.maxDamage}
                   </p>
                 </div>
                 <div className="rounded-lg border border-[var(--panel-border)] bg-white p-4">
                   <p className="text-sm font-semibold text-[var(--muted)]">HP 비율</p>
-                  <p className="mt-2 text-2xl font-bold">
+                  <p className="mt-2 break-words text-xl font-bold sm:text-2xl">
                     {formatPercent(result.minPercent)}-{formatPercent(result.maxPercent)}
                   </p>
                 </div>
                 <div className="rounded-lg border border-[var(--panel-border)] bg-white p-4">
                   <p className="text-sm font-semibold text-[var(--muted)]">확정 타수</p>
-                  <p className="mt-2 text-2xl font-bold">
+                  <p className="mt-2 break-words text-xl font-bold sm:text-2xl">
                     {formatHits(result.minHitsToKo, result.maxHitsToKo)}
                   </p>
                 </div>

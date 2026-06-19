@@ -23,7 +23,7 @@ export default function GuidesPage() {
         title="가이드"
       />
 
-      <section className="mx-auto grid max-w-7xl gap-4 px-6 py-6 lg:grid-cols-2 lg:px-10">
+      <section className="mx-auto grid max-w-7xl gap-4 px-4 py-5 sm:px-6 lg:grid-cols-2 lg:px-10 lg:py-6">
         {guides.map((guide) => (
           <Link
             className="rounded-lg border border-[var(--panel-border)] bg-[var(--panel)] p-5 hover:bg-[var(--chip)]"

@@ -389,7 +389,7 @@ data/sources.md
 
 - 주요 작업을 데스크탑에서 3클릭 이내 시작할 수 있다.
 
-## Phase S. Mobile Readability Pass
+## Phase S. Mobile Readability Pass ✅
 
 목표: 모바일에서도 최소 조회는 가능하게 한다.
 

@@ -54,14 +54,14 @@ export function AppShell({ children }: { children: ReactNode }) {
   return (
     <main className="min-h-screen">
       <header className="border-b border-[var(--panel-border)] bg-[var(--panel)]">
-        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-6 py-5 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <Link className="text-lg font-bold text-[var(--foreground)]" href="/">
             Pokemon Central
           </Link>
-          <nav className="flex flex-wrap gap-2 text-sm font-semibold text-[var(--muted)]">
+          <nav className="-mx-4 flex gap-2 overflow-x-auto px-4 text-sm font-semibold text-[var(--muted)] sm:mx-0 sm:flex-wrap sm:px-0">
             {navigationItems.map((item) => (
               <Link
-                className="rounded-md px-3 py-2 hover:bg-[var(--chip)] hover:text-[var(--foreground)]"
+                className="shrink-0 rounded-md px-3 py-2 hover:bg-[var(--chip)] hover:text-[var(--foreground)]"
                 href={item.href}
                 key={item.href}
               >
@@ -73,7 +73,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       </header>
       {children}
       <footer className="border-t border-[var(--panel-border)] bg-[var(--panel)]">
-        <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-6 py-5 text-sm leading-6 text-[var(--muted)] lg:flex-row lg:items-center lg:justify-between lg:px-10">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-4 py-5 text-sm leading-6 text-[var(--muted)] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <p>
             Pokemon Central은 팬메이드 공략 사이트이며 Pokemon Champions 또는 Pokemon 공식
             서비스가 아닙니다.
@@ -105,12 +105,12 @@ export function PageHeader({
 }) {
   return (
     <section className="border-b border-[var(--panel-border)] bg-[var(--panel)]">
-      <div className="mx-auto grid max-w-[1440px] gap-6 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-10">
+      <div className="mx-auto grid max-w-[1440px] gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-10 lg:py-10">
         <div>
           <p className="text-sm font-semibold uppercase tracking-wide text-[var(--accent)]">
             {eyebrow}
           </p>
-          <h1 className="mt-3 max-w-4xl text-3xl font-bold leading-tight text-[var(--foreground)] lg:text-5xl">
+          <h1 className="mt-3 max-w-4xl text-2xl font-bold leading-tight text-[var(--foreground)] sm:text-3xl lg:text-5xl">
             {title}
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--muted)] lg:text-lg">
@@ -133,7 +133,7 @@ export function ThreeColumnLayout({
   right: ReactNode;
 }) {
   return (
-    <section className="mx-auto grid max-w-[1440px] gap-4 px-6 py-6 lg:grid-cols-[240px_minmax(0,1fr)_320px] xl:grid-cols-[260px_minmax(0,1fr)_340px] lg:px-10">
+    <section className="mx-auto grid max-w-[1440px] gap-4 px-4 py-5 sm:px-6 lg:grid-cols-[240px_minmax(0,1fr)_320px] lg:px-10 lg:py-6 xl:grid-cols-[260px_minmax(0,1fr)_340px]">
       <aside className="min-w-0">{left}</aside>
       <div className="min-w-0">{center}</div>
       <aside className="min-w-0">{right}</aside>
@@ -154,7 +154,7 @@ export function InfoCard({
 }) {
   return (
     <section className="rounded-lg border border-[var(--panel-border)] bg-[var(--panel)] p-4">
-      <div className="flex items-start justify-between gap-3">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h2 className="text-base font-bold text-[var(--foreground)]">{title}</h2>
           {description ? (
@@ -250,10 +250,10 @@ export function FilterBar({
 
 export function Tabs({ items }: { items: TabItem[] }) {
   return (
-    <div className="flex gap-1 rounded-lg border border-[var(--panel-border)] bg-[var(--chip)] p-1">
+    <div className="flex gap-1 overflow-x-auto rounded-lg border border-[var(--panel-border)] bg-[var(--chip)] p-1">
       {items.map((item) => (
         <button
-          className={`min-h-9 flex-1 rounded-md px-3 text-sm font-bold ${
+          className={`min-h-9 min-w-max flex-1 rounded-md px-3 text-sm font-bold ${
             item.active
               ? "bg-white text-[var(--foreground)] shadow-sm"
               : "text-[var(--muted)] hover:text-[var(--foreground)]"

@@ -58,7 +58,7 @@ export default async function GuideDetailPage({ params }: GuideRoute) {
         title={guide.titleKo}
       />
 
-      <section className="mx-auto grid max-w-7xl gap-4 px-6 py-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:px-10">
+      <section className="mx-auto grid max-w-7xl gap-4 px-4 py-5 sm:px-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:px-10 lg:py-6">
         <article className="grid gap-4">
           {guide.sections.map((section) => (
             <InfoCard description={section.bodyKo} key={section.headingKo} title={section.headingKo} />
