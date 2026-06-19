@@ -547,7 +547,7 @@ npm run build
 - 유료 도메인 없음
 - 외부 API는 빌드 시점 또는 수동 데이터로 제한
 
-## Phase Z. Long-Term Operation
+## Phase Z. Long-Term Operation ✅
 
 목표: 사이트가 방치되지 않도록 운영 리듬을 만든다.
 
@@ -564,6 +564,16 @@ npm run build
 ```text
 issue/backlog -> branch -> implement -> lint/build -> commit -> push -> Cloudflare deploy -> check live URL
 ```
+
+완료 기준:
+
+- 월간 점검 항목, 기록 위치, 릴리즈 절차가 하나의 반복 가능한 운영 런북으로 연결된다.
+- 확인할 수 없는 외부 지표를 추정하지 않고 상태와 재확인 시점을 남긴다.
+
+완료 기록:
+
+- 장기 운영 런북: `docs/planning/long-term-operation.md`
+- 월간 운영 기록 템플릿: `docs/planning/operation-log.md`
 
 장기 목표:
 
