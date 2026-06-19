@@ -316,6 +316,10 @@ data/sources.md
 
 목표: 검색 노출을 준비한다.
 
+로컬 준비 문서:
+
+- `docs/setup/search-console.md`
+
 해야 할 일:
 
 - 페이지별 title/description 작성

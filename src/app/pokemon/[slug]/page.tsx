@@ -4,6 +4,7 @@ import builds from "../../../../data/builds.json";
 import moves from "../../../../data/moves.json";
 import pokemon from "../../../../data/pokemon.json";
 import { AppShell, Badge, InfoCard, PageHeader } from "../../_components/design-system";
+import { createPageMetadata } from "../../_lib/seo";
 import { formatMultiplier, getDefensiveProfile } from "../../_lib/type-matchups";
 
 type PokemonRoute = {
@@ -29,6 +30,25 @@ export function generateStaticParams() {
   return pokemon.map((entry) => ({
     slug: entry.id
   }));
+}
+
+export async function generateMetadata({ params }: PokemonRoute) {
+  const { slug } = await params;
+  const entry = pokemon.find((item) => item.id === slug);
+
+  if (!entry) {
+    return createPageMetadata({
+      title: "포켓몬 상세",
+      description: "Pokemon Champions 포켓몬 상세 정보를 확인합니다.",
+      path: `/pokemon/${slug}`
+    });
+  }
+
+  return createPageMetadata({
+    title: `${entry.nameKo} / ${entry.nameEn}`,
+    description: entry.championsNotes,
+    path: `/pokemon/${entry.id}`
+  });
 }
 
 function formatId(value: string) {

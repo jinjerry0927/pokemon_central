@@ -2,7 +2,14 @@ import { Suspense } from "react";
 import moves from "../../../data/moves.json";
 import pokemon from "../../../data/pokemon.json";
 import { AppShell, Badge, InfoCard, PageHeader } from "../_components/design-system";
+import { createPageMetadata } from "../_lib/seo";
 import { CalculatorBrowser } from "./calculator-browser";
+
+export const metadata = createPageMetadata({
+  title: "데미지 계산기",
+  description: "공격자, 방어자, 기술을 선택해 데미지 범위와 확정 타수를 한국어로 확인합니다.",
+  path: "/calculator"
+});
 
 export default function CalculatorPage() {
   return (

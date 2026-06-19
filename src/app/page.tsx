@@ -1,5 +1,16 @@
 import Link from "next/link";
 import { AppShell, Badge, InfoCard, PageHeader } from "./_components/design-system";
+import { createPageMetadata, siteDescription, siteName } from "./_lib/seo";
+
+export const metadata = {
+  ...createPageMetadata({
+    title: siteName,
+    description: siteDescription
+  }),
+  title: {
+    absolute: siteName
+  }
+};
 
 const featureCards = [
   {

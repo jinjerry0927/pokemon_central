@@ -1,6 +1,13 @@
 import pokemon from "../../../data/pokemon.json";
 import { AppShell, InfoCard, PageHeader } from "../_components/design-system";
+import { createPageMetadata } from "../_lib/seo";
 import { PokedexBrowser } from "./pokedex-browser";
+
+export const metadata = createPageMetadata({
+  title: "도감",
+  description: "Pokemon Champions 포켓몬 목록, 타입 필터, 검색, 상세 정보를 한국어로 확인합니다.",
+  path: "/pokedex"
+});
 
 export default function PokedexPage() {
   return (

@@ -2,6 +2,13 @@ import Link from "next/link";
 import builds from "../../../data/builds.json";
 import pokemon from "../../../data/pokemon.json";
 import { AppShell, Badge, InfoCard, PageHeader } from "../_components/design-system";
+import { createPageMetadata } from "../_lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "빌드",
+  description: "Pokemon Champions 추천 빌드의 성격, 노력치, 기술, 아이템, 운영법을 한국어로 정리합니다.",
+  path: "/builds"
+});
 
 function formatId(value: string) {
   return value

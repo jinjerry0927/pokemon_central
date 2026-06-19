@@ -1,5 +1,12 @@
 import { AppShell, InfoCard, PageHeader } from "../_components/design-system";
+import { createPageMetadata } from "../_lib/seo";
 import { TypeChartBrowser } from "./type-chart-browser";
+
+export const metadata = createPageMetadata({
+  title: "타입 상성표",
+  description: "단일 타입과 복합 타입의 공격, 방어 상성을 빠르게 확인합니다.",
+  path: "/type-chart"
+});
 
 export default function TypeChartPage() {
   return (

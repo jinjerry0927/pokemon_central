@@ -1,6 +1,13 @@
 import pokemon from "../../../data/pokemon.json";
 import { AppShell, InfoCard, PageHeader } from "../_components/design-system";
+import { createPageMetadata } from "../_lib/seo";
 import { TeamBuilder } from "./team-builder";
+
+export const metadata = createPageMetadata({
+  title: "팀빌더",
+  description: "6마리 팀을 구성하고 타입 약점과 역할 균형을 브라우저에서 바로 확인합니다.",
+  path: "/teams"
+});
 
 export default function TeamsPage() {
   return (

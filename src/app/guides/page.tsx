@@ -1,6 +1,13 @@
 import Link from "next/link";
 import guides from "../../../data/guides.json";
 import { AppShell, Badge, InfoCard, PageHeader } from "../_components/design-system";
+import { createPageMetadata } from "../_lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "가이드",
+  description: "Pokemon Champions 입문, 첫 랭크 팀, 타입 상성, 도구 사용법을 한국어 가이드로 정리합니다.",
+  path: "/guides"
+});
 
 export default function GuidesPage() {
   return (

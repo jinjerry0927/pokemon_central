@@ -1,6 +1,13 @@
 import pokemon from "../../../data/pokemon.json";
 import { AppShell, InfoCard, PageHeader } from "../_components/design-system";
+import { createPageMetadata } from "../_lib/seo";
 import { SpeedTiersBrowser } from "./speed-tiers-browser";
+
+export const metadata = createPageMetadata({
+  title: "스피드 티어",
+  description: "Pokemon Champions 주요 포켓몬의 스피드 순위를 성격과 노력치 기준으로 비교합니다.",
+  path: "/speed-tiers"
+});
 
 export default function SpeedTiersPage() {
   return (

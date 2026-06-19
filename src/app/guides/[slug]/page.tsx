@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import guides from "../../../../data/guides.json";
 import { AppShell, Badge, InfoCard, PageHeader } from "../../_components/design-system";
+import { createPageMetadata } from "../../_lib/seo";
 
 type GuideRoute = {
   params: Promise<{
@@ -15,6 +16,25 @@ export function generateStaticParams() {
   return guides.map((guide) => ({
     slug: guide.id
   }));
+}
+
+export async function generateMetadata({ params }: GuideRoute) {
+  const { slug } = await params;
+  const guide = guides.find((entry) => entry.id === slug);
+
+  if (!guide) {
+    return createPageMetadata({
+      title: "가이드 상세",
+      description: "Pokemon Champions 한국어 가이드를 확인합니다.",
+      path: `/guides/${slug}`
+    });
+  }
+
+  return createPageMetadata({
+    title: guide.titleKo,
+    description: guide.summaryKo,
+    path: `/guides/${guide.id}`
+  });
 }
 
 export default async function GuideDetailPage({ params }: GuideRoute) {

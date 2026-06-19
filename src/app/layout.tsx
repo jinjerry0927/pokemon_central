@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { siteDescription, siteName, siteUrl } from "./_lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pokemon Central",
-  description: "Pokemon Champions 한국어 공략, 도감, 빌드, 팀빌딩 허브"
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`
+  },
+  description: siteDescription
 };
 
 export default function RootLayout({

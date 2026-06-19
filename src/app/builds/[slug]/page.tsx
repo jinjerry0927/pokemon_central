@@ -4,6 +4,7 @@ import pokemon from "../../../../data/pokemon.json";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AppShell, Badge, InfoCard, PageHeader } from "../../_components/design-system";
+import { createPageMetadata } from "../../_lib/seo";
 
 type BuildRoute = {
   params: Promise<{
@@ -17,6 +18,28 @@ export function generateStaticParams() {
   return builds.map((entry) => ({
     slug: entry.id
   }));
+}
+
+export async function generateMetadata({ params }: BuildRoute) {
+  const { slug } = await params;
+  const entry = builds.find((item) => item.id === slug);
+  const pokemonEntry = entry ? pokemon.find((item) => item.id === entry.pokemonId) : null;
+
+  if (!entry) {
+    return createPageMetadata({
+      title: "빌드 상세",
+      description: "Pokemon Champions 추천 빌드 상세 정보를 확인합니다.",
+      path: `/builds/${slug}`
+    });
+  }
+
+  const pokemonName = pokemonEntry ? `${pokemonEntry.nameKo} / ${pokemonEntry.nameEn}` : entry.pokemonId;
+
+  return createPageMetadata({
+    title: entry.titleKo,
+    description: `${pokemonName} 빌드: ${entry.usageKo}`,
+    path: `/builds/${entry.id}`
+  });
 }
 
 const statLabels: Record<keyof (typeof builds)[number]["evs"], string> = {
