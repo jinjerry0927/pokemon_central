@@ -279,7 +279,7 @@ data/sources.md
 - 단일/복합 타입 방어 상성을 표시한다.
 - 팀 전체 약점/저항 요약에 재사용된다.
 
-## Phase M. Damage Calculator MVP
+## Phase M. Damage Calculator MVP ✅
 
 목표: 초보자가 결과를 이해할 수 있는 계산기를 만든다.
 

@@ -156,8 +156,9 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
           <InfoCard title="주요 기술">
             <div className="grid gap-3">
               {keyMoves.map((move) => (
-                <div
-                  className="rounded-lg border border-[var(--panel-border)] bg-white p-3"
+                <Link
+                  className="rounded-lg border border-[var(--panel-border)] bg-white p-3 hover:bg-[var(--chip)]"
+                  href={`/calculator?attacker=${entry.id}&move=${move.id}`}
                   key={move.id}
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2">
@@ -172,7 +173,10 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
                     {move.power ? ` / 위력 ${move.power}` : ""}
                     {move.accuracy ? ` / 명중 ${move.accuracy}` : ""}
                   </p>
-                </div>
+                  <p className="mt-2 text-xs font-bold text-[var(--support-strong)]">
+                    계산기로 확인
+                  </p>
+                </Link>
               ))}
             </div>
           </InfoCard>
