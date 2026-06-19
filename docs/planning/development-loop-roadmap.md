@@ -437,6 +437,14 @@ npm run build
 - Search Console 등록
 - 지인/커뮤니티 소규모 피드백 수집
 
+진행 상태:
+
+- 공개 URL: https://pokemon-central.pages.dev/
+- README 공개 URL 및 피드백 로그 연결 완료
+- 피드백 기록 문서: `docs/planning/mvp-feedback.md`
+- Search Console 대시보드 등록 상태 확인 필요
+- 실제 사용자 피드백 수집 필요
+
 완료 기준:
 
 - 외부 사용자가 접속 가능하다.
@@ -451,6 +459,13 @@ npm run build
 - `docs/planning/backlog.md` 생성
 - 피드백을 기능, 데이터 오류, 콘텐츠 요청, UI 불편으로 분류
 - 매주 우선순위 3개만 선정
+
+진행 상태:
+
+- `docs/planning/backlog.md` 생성 완료
+- 기능, 데이터 오류, 콘텐츠 요청, UI 불편 분류 기준 작성 완료
+- 주간 Top 3 선정 규칙 및 기록 형식 작성 완료
+- 실제 사용자 피드백 수집 후 첫 우선순위 선정 필요
 
 완료 기준:
 
