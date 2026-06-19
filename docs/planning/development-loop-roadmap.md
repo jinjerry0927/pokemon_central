@@ -295,7 +295,7 @@ data/sources.md
 - 포켓몬 상세에서 계산기로 값을 넘길 수 있다.
 - 계산 결과가 사람에게 읽히는 문장으로 표시된다.
 
-## Phase N. Guide Content MVP
+## Phase N. Guide Content MVP ✅
 
 목표: 검색 유입과 초보자 체류를 만든다.
 
