@@ -350,6 +350,11 @@ data/sources.md
 - 이탈이 많은 페이지
 - 계산기/팀빌더 사용 흐름
 
+진행 상태:
+
+- Cloudflare Web Analytics 토큰 기반 스크립트 연결
+- 설정 체크리스트: `docs/setup/analytics.md`
+
 완료 기준:
 
 - 방문자 수와 검색 노출을 확인할 수 있다.

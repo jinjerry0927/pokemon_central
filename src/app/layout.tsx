@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CloudflareWebAnalytics } from "./_components/cloudflare-web-analytics";
 import { siteDescription, siteName, siteUrl } from "./_lib/seo";
 import "./globals.css";
 
@@ -16,9 +17,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cloudflareAnalyticsToken =
+    process.env.NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN;
+
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        {children}
+        <CloudflareWebAnalytics token={cloudflareAnalyticsToken} />
+      </body>
     </html>
   );
 }
