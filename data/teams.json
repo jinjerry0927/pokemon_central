@@ -1,0 +1,12 @@
+[
+  {
+    "id": "starter-balance-sample",
+    "titleKo": "입문 밸런스 샘플",
+    "format": "Pokemon Champions MVP sample",
+    "pokemonIds": ["charizard"],
+    "roleSummary": ["special-attacker"],
+    "publishStatus": "schema-sample",
+    "notesKo": "팀빌더 데이터 구조 확인용 샘플이다. 공개 추천 팀은 별도 검증 후 추가한다.",
+    "sources": ["manual-curation"]
+  }
+]

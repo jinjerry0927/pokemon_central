@@ -1,0 +1,9 @@
+[
+  {
+    "id": "blaze",
+    "nameKo": "맹화",
+    "nameEn": "Blaze",
+    "effectKo": "HP가 낮을 때 불꽃 타입 기술의 위력이 오른다.",
+    "sources": ["pokeapi", "pokemondb"]
+  }
+]

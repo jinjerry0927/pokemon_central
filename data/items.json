@@ -1,0 +1,9 @@
+[
+  {
+    "id": "life-orb",
+    "nameKo": "생명의구슬",
+    "nameEn": "Life Orb",
+    "effectKo": "공격 기술의 위력이 오르지만 공격할 때마다 HP를 잃는다.",
+    "sources": ["pokemondb", "smogon"]
+  }
+]

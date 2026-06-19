@@ -132,7 +132,7 @@ npm run build
 
 - https://pokemon-central.pages.dev/
 
-## Phase E. Data Source Policy
+## Phase E. Data Source Policy ✅
 
 목표: 데이터 출처와 저장 방식을 먼저 정한다.
 
@@ -160,7 +160,7 @@ data/sources.md
 - 각 데이터 파일에 최소 샘플이 있다.
 - `data/sources.md`에 출처와 사용 범위가 적혀 있다.
 
-## Phase F. Information Architecture
+## Phase F. Information Architecture ✅
 
 목표: 페이지 구조와 URL을 고정한다.
 
@@ -186,7 +186,7 @@ data/sources.md
 - 주요 페이지 라우트가 생성되어 있다.
 - 빈 페이지라도 목적이 명확하다.
 
-## Phase G. Design System
+## Phase G. Design System ✅
 
 목표: 데스크탑 정보 밀도에 맞는 UI 기준을 만든다.
 
@@ -201,7 +201,7 @@ data/sources.md
 - 공통 레이아웃과 기본 컴포넌트가 재사용 가능하다.
 - 데스크탑에서 도감/상세/보조 패널이 동시에 보인다.
 
-## Phase H. Pokedex MVP
+## Phase H. Pokedex MVP ✅
 
 목표: 유저가 포켓몬을 빠르게 찾고 핵심 정보를 볼 수 있게 한다.
 
@@ -218,7 +218,7 @@ data/sources.md
 - 최소 20마리 샘플 데이터로 목록/상세가 동작한다.
 - 검색/필터가 브라우저에서 즉시 반응한다.
 
-## Phase I. Build Library
+## Phase I. Build Library ✅
 
 목표: 초보자가 바로 따라 할 수 있는 샘플 빌드를 제공한다.
 

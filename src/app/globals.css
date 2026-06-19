@@ -9,9 +9,20 @@
   --muted: #5f6b7a;
   --panel: #ffffff;
   --panel-border: #dce2ea;
+  --chip: #eef2f7;
   --accent: #d83a4b;
   --accent-strong: #b92738;
+  --accent-soft: #fde8ec;
   --support: #2d6cdf;
+  --support-strong: #184aa8;
+  --support-soft: #e7efff;
+  --success-strong: #1f7a4d;
+  --success-soft: #e4f6ed;
+  --warning-strong: #8a5a00;
+  --warning-soft: #fff2cc;
+  --type-text: #374151;
+  --type-bg: #f3f4f6;
+  --type-border: #d1d5db;
 }
 
 * {
