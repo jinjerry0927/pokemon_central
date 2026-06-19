@@ -23,6 +23,11 @@ const featureCards = [
     description: "랭크전에서 자주 만나는 속도 기준을 검색하고 비교합니다."
   },
   {
+    href: "/type-chart",
+    title: "타입 상성표",
+    description: "단일/복합 타입의 약점, 반감, 무효 상성을 빠르게 확인합니다."
+  },
+  {
     href: "/calculator",
     title: "데미지 계산기",
     description: "공격자, 방어자, 기술을 고르고 초보자가 읽기 쉬운 결과를 제공합니다."

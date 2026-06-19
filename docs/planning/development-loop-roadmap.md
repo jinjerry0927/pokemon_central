@@ -233,7 +233,7 @@ data/sources.md
 - 최소 10개 샘플 빌드가 있다.
 - 포켓몬 상세에서 관련 빌드로 이동할 수 있다.
 
-## Phase J. Team Builder MVP
+## Phase J. Team Builder MVP ✅
 
 목표: 6마리 팀 구성과 약점 요약을 제공한다.
 
@@ -250,7 +250,7 @@ data/sources.md
 - 새로고침 후에도 팀이 유지된다.
 - 팀 약점이 시각적으로 표시된다.
 
-## Phase K. Speed Tiers
+## Phase K. Speed Tiers ✅
 
 목표: 실전에서 중요한 스피드 비교를 쉽게 보여준다.
 
@@ -265,7 +265,7 @@ data/sources.md
 - 주요 포켓몬의 스피드 순위를 비교할 수 있다.
 - 빌드 상세에서 스피드 티어로 이동할 수 있다.
 
-## Phase L. Type Chart
+## Phase L. Type Chart ✅
 
 목표: 상성 확인을 빠르게 한다.
 

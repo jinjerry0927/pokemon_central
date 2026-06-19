@@ -35,6 +35,7 @@ const navigationItems: NavigationItem[] = [
   { href: "/builds", label: "빌드" },
   { href: "/teams", label: "팀빌더" },
   { href: "/speed-tiers", label: "스피드" },
+  { href: "/type-chart", label: "상성표" },
   { href: "/calculator", label: "계산기" },
   { href: "/guides", label: "가이드" }
 ];

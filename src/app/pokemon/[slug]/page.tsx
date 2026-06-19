@@ -4,6 +4,7 @@ import builds from "../../../../data/builds.json";
 import moves from "../../../../data/moves.json";
 import pokemon from "../../../../data/pokemon.json";
 import { AppShell, Badge, InfoCard, PageHeader } from "../../_components/design-system";
+import { formatMultiplier, getDefensiveProfile } from "../../_lib/type-matchups";
 
 type PokemonRoute = {
   params: Promise<{
@@ -49,6 +50,10 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
   const keyMoves = entry.keyMoveIds
     .map((moveId) => moves.find((move) => move.id === moveId))
     .filter((move): move is (typeof moves)[number] => Boolean(move));
+  const defensiveProfile = getDefensiveProfile(entry.types);
+  const defensiveWeaknesses = defensiveProfile.filter((item) => item.multiplier > 1);
+  const defensiveResists = defensiveProfile.filter((item) => item.multiplier > 0 && item.multiplier < 1);
+  const defensiveImmunities = defensiveProfile.filter((item) => item.multiplier === 0);
   const title = `${entry.nameKo} / ${entry.nameEn}`;
 
   return (
@@ -112,6 +117,37 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
                   <span className="text-right text-sm font-bold">{value}</span>
                 </div>
               ))}
+            </div>
+          </InfoCard>
+
+          <InfoCard
+            action={{ href: "/type-chart", label: "상성표" }}
+            title="방어 상성"
+          >
+            <div className="grid gap-4">
+              <div>
+                <p className="text-sm font-semibold text-[var(--muted)]">약점</p>
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {defensiveWeaknesses.map((item) => (
+                    <Badge key={item.type} tone="warning">
+                      {item.type} {formatMultiplier(item.multiplier)}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[var(--muted)]">반감 / 무효</p>
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {defensiveResists.slice(0, 8).map((item) => (
+                    <Badge key={item.type} tone="success">
+                      {item.type} {formatMultiplier(item.multiplier)}
+                    </Badge>
+                  ))}
+                  {defensiveImmunities.map((item) => (
+                    <Badge key={item.type}>{item.type} 0x</Badge>
+                  ))}
+                </div>
+              </div>
             </div>
           </InfoCard>
         </div>

@@ -1,6 +1,7 @@
 import builds from "../../../../data/builds.json";
 import moves from "../../../../data/moves.json";
 import pokemon from "../../../../data/pokemon.json";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AppShell, Badge, InfoCard, PageHeader } from "../../_components/design-system";
 
@@ -141,6 +142,14 @@ export default async function BuildDetailPage({ params }: BuildRoute) {
                 </div>
               ))}
             </div>
+            {pokemonEntry ? (
+              <Link
+                className="mt-4 inline-flex rounded-md border border-[var(--panel-border)] px-3 py-2 text-sm font-semibold text-[var(--foreground)] hover:bg-[var(--chip)]"
+                href={`/speed-tiers?pokemon=${pokemonEntry.id}`}
+              >
+                스피드 티어에서 비교
+              </Link>
+            ) : null}
           </InfoCard>
         </div>
       </section>

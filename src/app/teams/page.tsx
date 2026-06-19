@@ -1,12 +1,26 @@
-import { SectionPage } from "../_components/section-page";
+import pokemon from "../../../data/pokemon.json";
+import { AppShell, InfoCard, PageHeader } from "../_components/design-system";
+import { TeamBuilder } from "./team-builder";
 
 export default function TeamsPage() {
   return (
-    <SectionPage
-      description="6마리 팀 슬롯, 타입 약점 요약, 역할 태그 요약, 로컬 저장 흐름을 담당합니다."
-      eyebrow="Team Builder"
-      items={["6개 슬롯", "포켓몬 검색", "약점 요약", "localStorage 저장"]}
-      title="팀빌더"
-    />
+    <AppShell>
+      <PageHeader
+        aside={
+          <InfoCard description="팀은 이 브라우저의 localStorage에 저장됩니다." title="MVP 저장 방식">
+            <div className="grid gap-2 text-sm font-semibold text-[var(--muted)]">
+              <span>6개 슬롯 구성</span>
+              <span>타입 약점 시각화</span>
+              <span>역할 태그 요약</span>
+            </div>
+          </InfoCard>
+        }
+        description="포켓몬을 검색해 6마리 팀을 구성하고, 타입 약점과 역할 균형을 빠르게 확인합니다."
+        eyebrow="Team Builder"
+        title="팀빌더"
+      />
+
+      <TeamBuilder pokemon={pokemon} />
+    </AppShell>
   );
 }
