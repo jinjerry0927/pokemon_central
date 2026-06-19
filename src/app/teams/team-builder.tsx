@@ -33,6 +33,7 @@ type TeamBuilderProps = {
 type TeamSlot = string | null;
 
 const storageKey = "pokemon-central-team-builder";
+const shareQueryKey = "team";
 const emptyTeam: TeamSlot[] = [null, null, null, null, null, null];
 
 function getRoleTags(entry: PokemonEntry) {
@@ -82,11 +83,39 @@ function readStoredTeam(validIds: Set<string>) {
   }
 }
 
+function readSharedTeam(validIds: Set<string>) {
+  const params = new URLSearchParams(window.location.search);
+  const sharedTeam = params.get(shareQueryKey);
+
+  if (sharedTeam === null) {
+    return null;
+  }
+
+  const slots = sharedTeam.split(",").slice(0, emptyTeam.length);
+
+  return emptyTeam.map((_, index) => {
+    const value = slots[index];
+    return value && validIds.has(value) ? value : null;
+  });
+}
+
+function clearSharedTeamFromAddress() {
+  const url = new URL(window.location.href);
+
+  if (!url.searchParams.has(shareQueryKey)) {
+    return;
+  }
+
+  url.searchParams.delete(shareQueryKey);
+  window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
 export function TeamBuilder({ pokemon }: TeamBuilderProps) {
   const [query, setQuery] = useState("");
   const [selectedType, setSelectedType] = useState("전체");
   const [team, setTeam] = useState<TeamSlot[]>(emptyTeam);
   const [isHydrated, setIsHydrated] = useState(false);
+  const [shareStatus, setShareStatus] = useState("");
 
   const pokemonById = useMemo(() => new Map(pokemon.map((entry) => [entry.id, entry])), [pokemon]);
   const validIds = useMemo(() => new Set(pokemon.map((entry) => entry.id)), [pokemon]);
@@ -125,7 +154,12 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
   }, [selectedPokemon]);
 
   useEffect(() => {
-    setTeam(readStoredTeam(validIds));
+    const sharedTeam = readSharedTeam(validIds);
+
+    setTeam(sharedTeam ?? readStoredTeam(validIds));
+    if (sharedTeam) {
+      setShareStatus("공유 링크에서 팀을 불러왔습니다.");
+    }
     setIsHydrated(true);
   }, [validIds]);
 
@@ -136,6 +170,8 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
   }, [isHydrated, team]);
 
   function addPokemon(id: string) {
+    setShareStatus("");
+    clearSharedTeamFromAddress();
     setTeam((currentTeam) => {
       const openIndex = currentTeam.findIndex((slot) => slot === null);
       if (openIndex === -1) {
@@ -147,7 +183,33 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
   }
 
   function removeSlot(slotIndex: number) {
+    setShareStatus("");
+    clearSharedTeamFromAddress();
     setTeam((currentTeam) => currentTeam.map((slot, index) => (index === slotIndex ? null : slot)));
+  }
+
+  function resetTeam() {
+    setShareStatus("");
+    clearSharedTeamFromAddress();
+    setTeam(emptyTeam);
+  }
+
+  async function copyShareLink() {
+    const url = new URL(window.location.href);
+    url.searchParams.set(shareQueryKey, team.map((slot) => slot ?? "").join(","));
+    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+
+    if (!navigator.clipboard) {
+      setShareStatus("공유 링크를 주소창에 표시했습니다. 주소를 직접 복사해 주세요.");
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(url.toString());
+      setShareStatus("팀 공유 링크를 복사했습니다.");
+    } catch {
+      setShareStatus("복사 권한을 사용할 수 없어 주소창에 공유 링크를 표시했습니다.");
+    }
   }
 
   return (
@@ -327,13 +389,28 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
             )}
           </InfoCard>
 
-          <button
-            className="h-11 rounded-md border border-[var(--panel-border)] bg-white px-4 text-sm font-bold text-[var(--foreground)] hover:bg-[var(--chip)]"
-            onClick={() => setTeam(emptyTeam)}
-            type="button"
-          >
-            팀 초기화
-          </button>
+          <div className="grid gap-2">
+            <button
+              className="h-11 rounded-md bg-[var(--support)] px-4 text-sm font-bold text-white disabled:cursor-not-allowed disabled:bg-[var(--panel-border)] disabled:text-[var(--muted)]"
+              disabled={selectedPokemon.length === 0}
+              onClick={copyShareLink}
+              type="button"
+            >
+              팀 공유 링크 복사
+            </button>
+            <button
+              className="h-11 rounded-md border border-[var(--panel-border)] bg-white px-4 text-sm font-bold text-[var(--foreground)] hover:bg-[var(--chip)]"
+              onClick={resetTeam}
+              type="button"
+            >
+              팀 초기화
+            </button>
+            {shareStatus ? (
+              <p aria-live="polite" className="text-sm font-semibold text-[var(--muted)]">
+                {shareStatus}
+              </p>
+            ) : null}
+          </div>
         </div>
       }
     />
