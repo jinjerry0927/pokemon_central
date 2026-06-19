@@ -28,11 +28,11 @@
 
 ## Backlog
 
-실제 사용자 피드백이 아직 수집되지 않아 등록된 후보가 없다.
+실제 사용자 피드백은 아직 수집되지 않았다. 아래 항목은 분류와 선정 흐름을 검증하기 위한 테스트 데이터다.
 
 | ID | Category | Summary | Evidence | Priority | Status | Source |
 | --- | --- | --- | ---: | --- | --- | --- |
-| - | - | - | 0 | - | - | - |
+| FB-TEST-001 | UI | `[TEST]` 모바일 팀빌더 버튼 터치 영역 개선 | 1 | P2 | Selected | 2026-06-20 / Test |
 
 Priority는 `mvp-feedback.md`의 `P0`~`P3` 기준을 사용한다. Source에는 피드백 로그의
 날짜와 채널을 적어 원문을 다시 찾을 수 있게 한다.
@@ -41,11 +41,11 @@ Priority는 `mvp-feedback.md`의 `P0`~`P3` 기준을 사용한다. Source에는 
 
 ### 2026-06-15 ~ 2026-06-21
 
-실제 피드백이 없어 이번 주 우선순위를 선정하지 않았다.
+테스트 피드백 1건으로 선정 흐름을 검증했다. 실제 개발 우선순위로 사용하지 않는다.
 
 | Rank | Backlog ID | Decision Basis | Status |
 | ---: | --- | --- | --- |
-| - | - | 피드백 수집 대기 | Waiting |
+| 1 | FB-TEST-001 | P2, 테스트 1회, 모바일 팀빌더 조작 흐름에 영향 | Selected |
 
 ## Weekly Selection Order
 

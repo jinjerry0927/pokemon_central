@@ -21,7 +21,9 @@ Phase U 공개 이후 받은 피드백을 한곳에서 기록한다.
 
 | Date | Channel | Area | Feedback | Priority | Status |
 | --- | --- | --- | --- | --- | --- |
-| - | - | - | - | - | Waiting |
+| 2026-06-20 | Test | UI | `[TEST]` 모바일에서 팀빌더 버튼이 작아 누르기 어렵다. | P2 | Backlog |
+
+`Test` 채널 항목은 운영 흐름 검증용이며 실제 사용자 피드백 수집 건수에 포함하지 않는다.
 
 ## Area Values
 
