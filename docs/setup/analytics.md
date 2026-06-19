@@ -2,6 +2,8 @@
 
 Phase P의 무료 분석 설정을 위한 체크리스트다.
 
+Status: Complete. Cloudflare Web Analytics shows live page views and visits.
+
 ## Primary Tool
 
 - Cloudflare Web Analytics

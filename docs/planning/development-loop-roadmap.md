@@ -333,7 +333,7 @@ data/sources.md
 - 주요 페이지가 검색엔진에 색인 가능하다.
 - Search Console에서 사이트맵 제출이 완료된다.
 
-## Phase P. Analytics Setup
+## Phase P. Analytics Setup ✅
 
 목표: 무료 분석으로 어떤 콘텐츠가 필요한지 판단한다.
 
