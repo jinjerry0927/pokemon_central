@@ -71,6 +71,7 @@ Mobile should collapse these panels into tabs or stacked sections, but MVP decis
 
 ## Backlog
 
+- Phase N guide candidate: Starter-choice guide for the early free team flow. Cover the initial choices shown in Pokemon Champions, explain why Pikachu is recommended for beginners, and compare alternate picks such as Charizard, Tyranitar, Armarouge, Palafin, Lucario, Gardevoir, Absol, Altaria, and Snorlax. If this later becomes interactive, move the "choose one starter -> receive the other five team members" flow to Phase J Team Builder.
 - Advanced damage calculator options such as weather, field, boosts, ability, and item modifiers.
 - Account sync, cloud save, or cross-device team storage.
 - Community submissions, voting, comments, or build sharing.
