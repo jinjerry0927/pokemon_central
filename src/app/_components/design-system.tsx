@@ -37,7 +37,8 @@ const navigationItems: NavigationItem[] = [
   { href: "/speed-tiers", label: "스피드" },
   { href: "/type-chart", label: "상성표" },
   { href: "/calculator", label: "계산기" },
-  { href: "/guides", label: "가이드" }
+  { href: "/guides", label: "가이드" },
+  { href: "/about", label: "About" }
 ];
 
 const badgeToneClass: Record<BadgeTone, string> = {
@@ -71,6 +72,22 @@ export function AppShell({ children }: { children: ReactNode }) {
         </div>
       </header>
       {children}
+      <footer className="border-t border-[var(--panel-border)] bg-[var(--panel)]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-sm leading-6 text-[var(--muted)] lg:flex-row lg:items-center lg:justify-between lg:px-10">
+          <p>
+            Pokemon Central은 팬메이드 공략 사이트이며 Pokemon Champions 또는 Pokemon 공식
+            서비스가 아닙니다.
+          </p>
+          <div className="flex flex-wrap gap-3 font-semibold">
+            <Link className="text-[var(--foreground)] hover:text-[var(--accent)]" href="/about">
+              팬메이드 고지
+            </Link>
+            <Link className="text-[var(--foreground)] hover:text-[var(--accent)]" href="/sources">
+              데이터 출처
+            </Link>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

@@ -15,7 +15,8 @@ const staticRoutes = [
   "/type-chart",
   "/calculator",
   "/guides",
-  "/about"
+  "/about",
+  "/sources"
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

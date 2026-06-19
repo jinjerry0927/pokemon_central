@@ -359,7 +359,7 @@ data/sources.md
 
 - 방문자 수와 검색 노출을 확인할 수 있다.
 
-## Phase Q. Attribution / Disclaimer
+## Phase Q. Attribution / Disclaimer ✅
 
 목표: 팬사이트 운영 리스크를 줄인다.
 
