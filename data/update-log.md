@@ -21,6 +21,24 @@ Pokemon Central 운영 데이터의 변경 이유와 출처를 보존한다. 새
 - 검증: 실행한 명령과 결과
 ```
 
+## 2026-06-20 - Regulation M-B 공식 포켓몬 데이터 승격
+
+- 상태: 검증 완료
+- 적용 범위: pokemon, ruleset
+- 대상 ID: Regulation M-B 공식 Eligible Pokémon 235개 폼
+- 변경 전: `data/pokemon.json`의 MVP 샘플 20개
+- 변경 후: M-B 공식 로스터와 PokeAPI 기본 정보가 결합된 공개 데이터 235개
+- 변경 이유: Pokemon Champions에 실제 존재하고 M-B에서 사용 가능한 포켓몬만 도감과 도구에 제공하기 위함
+- 출처:
+  - Pokémon Champions 공식 Regulation Set M-B 공지 - https://champions-news.pokemon-home.com/en/page/776.html (확인일: 2026-06-20)
+  - Pokémon Champions 공식 Eligible Pokémon 목록 - https://web-view.app.pokemonchampions.jp/battle/pages/events/rs178066986988lmoqpm/en/pokemon.html (확인일: 2026-06-20)
+  - PokeAPI - https://pokeapi.co/ (확인일: 2026-06-20)
+- 변경 파일: `data/pokemon.json`, `data/generated/champions-roster-m-b.json`, `data/generated/pokemon-m-b-preview.json`, `scripts/sync-champions-roster.mjs`, `scripts/sync-pokemon.mjs`, `scripts/promote-pokemon-data.mjs`, `scripts/validate-data.mjs`
+- 관련 공략:
+  - 기존 `data/builds.json`의 포켓몬 ID는 모두 M-B 공개 데이터에 존재함을 확인
+  - 주요 기술은 별도 큐레이션 대상이므로 `keyMoveIds`를 빈 배열로 유지하며 `data/guides.json`, `data/teams.json`은 이번 변경에서 수정하지 않음
+- 검증: `npm.cmd run data:roster:verify`, `npm.cmd run data:sync`, `npm.cmd run data:promote`, `npm.cmd run data:validate`, `npm.cmd run lint`, `npm.cmd run build` 성공; 포켓몬 정적 경로와 사이트맵 URL 235개 생성 확인
+
 ## 2026-06-20 - Phase W 운영 기준선
 
 - 상태: 검증 완료

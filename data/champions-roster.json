@@ -1,0 +1,52 @@
+[
+  {
+    "pokeapiId": 6,
+    "slug": "charizard",
+    "status": "unverified",
+    "publishStatus": "mvp-sample",
+    "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+    "evidenceUrl": null,
+    "lastChecked": null,
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다."
+  },
+  {
+    "pokeapiId": 3,
+    "slug": "venusaur",
+    "status": "unverified",
+    "publishStatus": "mvp-sample",
+    "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+    "evidenceUrl": null,
+    "lastChecked": null,
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다."
+  },
+  {
+    "pokeapiId": 9,
+    "slug": "blastoise",
+    "status": "unverified",
+    "publishStatus": "mvp-sample",
+    "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+    "evidenceUrl": null,
+    "lastChecked": null,
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다."
+  },
+  {
+    "pokeapiId": 25,
+    "slug": "pikachu",
+    "status": "unverified",
+    "publishStatus": "mvp-sample",
+    "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+    "evidenceUrl": null,
+    "lastChecked": null,
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다."
+  },
+  {
+    "pokeapiId": 94,
+    "slug": "gengar",
+    "status": "unverified",
+    "publishStatus": "mvp-sample",
+    "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+    "evidenceUrl": null,
+    "lastChecked": null,
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다."
+  }
+]

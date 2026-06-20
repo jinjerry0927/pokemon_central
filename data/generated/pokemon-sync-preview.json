@@ -1,0 +1,209 @@
+[
+  {
+    "id": "charizard",
+    "pokeapiId": 6,
+    "championsId": null,
+    "speciesId": null,
+    "pokeapiSlug": "charizard",
+    "form": "base",
+    "nameKo": "리자몽",
+    "nameEn": "Charizard",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "baseStats": {
+      "hp": 78,
+      "attack": 84,
+      "defense": 78,
+      "specialAttack": 109,
+      "specialDefense": 85,
+      "speed": 100
+    },
+    "abilities": [
+      "blaze",
+      "solar-power"
+    ],
+    "keyMoveIds": [],
+    "championsAvailability": {
+      "status": "unverified",
+      "currentEligible": false,
+      "regulationId": null,
+      "firstSeenRegulation": null,
+      "lastChecked": null,
+      "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+      "evidenceUrl": null
+    },
+    "publishStatus": "mvp-sample",
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다.",
+    "sources": [
+      "pokeapi",
+      "manual-curation"
+    ]
+  },
+  {
+    "id": "venusaur",
+    "pokeapiId": 3,
+    "championsId": null,
+    "speciesId": null,
+    "pokeapiSlug": "venusaur",
+    "form": "base",
+    "nameKo": "이상해꽃",
+    "nameEn": "Venusaur",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "attack": 82,
+      "defense": 83,
+      "specialAttack": 100,
+      "specialDefense": 100,
+      "speed": 80
+    },
+    "abilities": [
+      "overgrow",
+      "chlorophyll"
+    ],
+    "keyMoveIds": [],
+    "championsAvailability": {
+      "status": "unverified",
+      "currentEligible": false,
+      "regulationId": null,
+      "firstSeenRegulation": null,
+      "lastChecked": null,
+      "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+      "evidenceUrl": null
+    },
+    "publishStatus": "mvp-sample",
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다.",
+    "sources": [
+      "pokeapi",
+      "manual-curation"
+    ]
+  },
+  {
+    "id": "blastoise",
+    "pokeapiId": 9,
+    "championsId": null,
+    "speciesId": null,
+    "pokeapiSlug": "blastoise",
+    "form": "base",
+    "nameKo": "거북왕",
+    "nameEn": "Blastoise",
+    "types": [
+      "Water"
+    ],
+    "baseStats": {
+      "hp": 79,
+      "attack": 83,
+      "defense": 100,
+      "specialAttack": 85,
+      "specialDefense": 105,
+      "speed": 78
+    },
+    "abilities": [
+      "torrent",
+      "rain-dish"
+    ],
+    "keyMoveIds": [],
+    "championsAvailability": {
+      "status": "unverified",
+      "currentEligible": false,
+      "regulationId": null,
+      "firstSeenRegulation": null,
+      "lastChecked": null,
+      "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+      "evidenceUrl": null
+    },
+    "publishStatus": "mvp-sample",
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다.",
+    "sources": [
+      "pokeapi",
+      "manual-curation"
+    ]
+  },
+  {
+    "id": "pikachu",
+    "pokeapiId": 25,
+    "championsId": null,
+    "speciesId": null,
+    "pokeapiSlug": "pikachu",
+    "form": "base",
+    "nameKo": "피카츄",
+    "nameEn": "Pikachu",
+    "types": [
+      "Electric"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "attack": 55,
+      "defense": 40,
+      "specialAttack": 50,
+      "specialDefense": 50,
+      "speed": 90
+    },
+    "abilities": [
+      "static",
+      "lightning-rod"
+    ],
+    "keyMoveIds": [],
+    "championsAvailability": {
+      "status": "unverified",
+      "currentEligible": false,
+      "regulationId": null,
+      "firstSeenRegulation": null,
+      "lastChecked": null,
+      "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+      "evidenceUrl": null
+    },
+    "publishStatus": "mvp-sample",
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다.",
+    "sources": [
+      "pokeapi",
+      "manual-curation"
+    ]
+  },
+  {
+    "id": "gengar",
+    "pokeapiId": 94,
+    "championsId": null,
+    "speciesId": null,
+    "pokeapiSlug": "gengar",
+    "form": "base",
+    "nameKo": "팬텀",
+    "nameEn": "Gengar",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "attack": 65,
+      "defense": 60,
+      "specialAttack": 130,
+      "specialDefense": 75,
+      "speed": 110
+    },
+    "abilities": [
+      "cursed-body"
+    ],
+    "keyMoveIds": [],
+    "championsAvailability": {
+      "status": "unverified",
+      "currentEligible": false,
+      "regulationId": null,
+      "firstSeenRegulation": null,
+      "lastChecked": null,
+      "evidence": "Temporary PokeAPI sync verification entry. Pokemon Champions availability is not confirmed.",
+      "evidenceUrl": null
+    },
+    "publishStatus": "mvp-sample",
+    "championsNotes": "동기화 기반 검증용 임시 항목. 공식 등록 근거 확인 전에는 공개 데이터로 사용하지 않는다.",
+    "sources": [
+      "pokeapi",
+      "manual-curation"
+    ]
+  }
+]

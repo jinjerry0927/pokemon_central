@@ -5,7 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "eslint src next.config.ts tailwind.config.ts --max-warnings=0"
+    "lint": "eslint src next.config.ts tailwind.config.ts --max-warnings=0",
+    "data:roster": "node scripts/sync-champions-roster.mjs --regulation=M-B",
+    "data:roster:verify": "node scripts/verify-pokeapi-roster.mjs",
+    "data:sync": "node scripts/sync-pokemon.mjs --roster=data/generated/champions-roster-m-b.json --output=data/generated/pokemon-m-b-preview.json",
+    "data:sync:sample": "node scripts/sync-pokemon.mjs --roster=data/champions-roster.json --output=data/generated/pokemon-sync-preview.json",
+    "data:promote": "node scripts/promote-pokemon-data.mjs",
+    "data:validate": "node scripts/validate-data.mjs"
   },
   "dependencies": {
     "next": "^15.0.0",
