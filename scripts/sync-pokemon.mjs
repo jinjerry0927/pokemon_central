@@ -238,6 +238,9 @@ async function syncRosterEntry(rosterEntry) {
     abilities: pokemon.abilities
       .sort((left, right) => left.slot - right.slot)
       .map((entry) => entry.ability.name),
+    learnableMoveIds: Array.from(
+      new Set(pokemon.moves.map((entry) => entry.move.name))
+    ).sort(),
     keyMoveIds: [],
     championsAvailability: {
       status: rosterEntry.status,

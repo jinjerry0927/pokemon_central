@@ -27,11 +27,15 @@ const temporaryOutputPath = `${outputPath}.tmp`;
 async function main() {
   const roster = validateRegulationRosterSnapshot(await readJson(rosterPath));
   const preview = validateSyncedRegulationPokemon(await readJson(previewPath), roster);
-  const published = preview.map((entry) => ({
-    ...entry,
-    publishStatus: "public",
-    championsNotes: `Pokemon Champions Regulation ${roster.regulationId} 공식 사용 가능 포켓몬. 주요 기술은 별도 큐레이션 후 추가한다.`
-  }));
+  const published = preview.map((entry) => {
+    const publishedEntry = { ...entry };
+    delete publishedEntry.learnableMoveIds;
+    return {
+      ...publishedEntry,
+      publishStatus: "public",
+      championsNotes: `Pokemon Champions Regulation ${roster.regulationId} 공식 사용 가능 포켓몬. 주요 기술은 별도 큐레이션 후 추가한다.`
+    };
+  });
 
   validatePublishedRegulationPokemon(published, roster);
   await writeFile(temporaryOutputPath, `${JSON.stringify(published, null, 2)}\n`, "utf8");

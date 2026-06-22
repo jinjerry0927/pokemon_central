@@ -21,6 +21,54 @@ Pokemon Central 운영 데이터의 변경 이유와 출처를 보존한다. 새
 - 검증: 실행한 명령과 결과
 ```
 
+## 2026-06-20 - Serebii 현재 기술표 5마리 비교
+
+- 상태: 검토 중
+- 적용 범위: move
+- 대상 ID: venusaur, raichu-alola, rotom-wash, incineroar, gholdengo
+- 변경 전: 2026-04-16 Serebii 스크랩을 기반으로 한 커뮤니티 기술 후보만 존재
+- 변경 후: 현재 Serebii Champions Pokédex의 포켓몬·폼별 기술 ID와 이전 후보의 추가·삭제 차이를 기록
+- 변경 이유: 전체 수동 검증 대신 현재 원본과의 차이, 폼 통합 오류, M-B 신규 미수록 항목만 선별하기 위함
+- 출처:
+  - Serebii Champions Pokédex - https://www.serebii.net/pokedex-champions/ (확인일: 2026-06-20)
+  - Pokemon Champions Data - https://github.com/otterlyclueless/pokemon-champions-data (확인일: 2026-06-20)
+- 변경 파일: `data/generated/serebii-learnset-pilot-m-b.json`, `scripts/sync-serebii-learnset-pilot.mjs`, `scripts/lib/pokemon-data.mjs`, `scripts/validate-data.mjs`
+- 관련 공략:
+  - Serebii가 이전 커뮤니티 데이터셋의 원본이므로 독립 검증으로 승격하지 않고 모든 결과를 `review-candidate`로 유지함
+- 검증: `npm.cmd run data:moves:pilot:serebii`, `npm.cmd run data:validate`, `npm.cmd run lint`, `npm.cmd run build`
+
+## 2026-06-20 - Champions 기술 5마리 수집 파일럿
+
+- 상태: 검토 중
+- 적용 범위: move
+- 대상 ID: venusaur, raichu-alola, rotom-wash, incineroar, gholdengo
+- 변경 전: PokeAPI 전체 세대 기술 후보만 존재하고 Champions 포켓몬별 기술 후보 출처 없음
+- 변경 후: 커뮤니티 Champions learnset과 PokeAPI 후보의 교집합 및 차이, 폼 검토와 미수록 상태를 분리한 파일럿 스냅샷 생성
+- 변경 이유: 235마리 전체 확장 전에 외부 learnset 수집 가능성과 폼별 한계를 검증하기 위함
+- 출처:
+  - Pokemon Champions Data learnsets - https://github.com/otterlyclueless/pokemon-champions-data (확인일: 2026-06-20)
+  - PokeAPI - https://pokeapi.co/ (확인일: 2026-06-20)
+- 변경 파일: `data/generated/champions-learnset-pilot-m-b.json`, `scripts/sync-champions-learnset-pilot.mjs`, `scripts/lib/pokemon-data.mjs`, `scripts/validate-data.mjs`
+- 관련 공략:
+  - 외부 스냅샷이 M-B보다 오래됐고 폼 통합 및 미수록 항목이 있어 `data/moves.json`, `keyMoveIds`, 빌드와 공략에는 반영하지 않음
+- 검증: `npm.cmd run data:moves:pilot`, `npm.cmd run data:validate`, `npm.cmd run lint`, `npm.cmd run build`
+
+## 2026-06-20 - M-B 기술 후보 데이터 생성
+
+- 상태: 검토 중
+- 적용 범위: move
+- 대상 ID: M-B 포켓몬 235개 폼에서 확인된 PokeAPI 기술 후보 674개
+- 변경 전: M-B 전체 로스터 기준 기술 후보와 포켓몬별 학습 기술 매핑 없음
+- 변경 후: 기술 상세 후보 674개와 포켓몬별 후보 참조 19,925개 생성
+- 변경 이유: 주요 기술 큐레이션 전에 타입, 분류, 위력, 명중률, PP를 갖춘 검토 대상을 확보하기 위함
+- 출처:
+  - PokeAPI Pokémon 및 Move 리소스 - https://pokeapi.co/ (확인일: 2026-06-20)
+- 변경 파일: `data/generated/pokemon-m-b-preview.json`, `data/generated/moves-m-b-candidates.json`, `data/generated/pokemon-move-candidates-m-b.json`, `scripts/sync-pokemon.mjs`, `scripts/sync-moves.mjs`, `scripts/validate-data.mjs`
+- 관련 공략:
+  - 전체 세대 학습 이력은 Champions 확정 기술이 아니므로 `data/moves.json`, `keyMoveIds`, 공략과 빌드에는 아직 반영하지 않음
+  - PokeAPI 한국어 이름이 없는 기술 후보 46개는 추가 출처 확인 후 공개 여부를 결정함
+- 검증: `npm.cmd run data:sync`, `npm.cmd run data:moves`, `npm.cmd run data:validate` 성공; 674개 기술 ID와 235개 포켓몬 매핑의 중복 및 참조 무결성 확인
+
 ## 2026-06-20 - Regulation M-B 공식 포켓몬 데이터 승격
 
 - 상태: 검증 완료

@@ -11,6 +11,9 @@
     "data:sync": "node scripts/sync-pokemon.mjs --roster=data/generated/champions-roster-m-b.json --output=data/generated/pokemon-m-b-preview.json",
     "data:sync:sample": "node scripts/sync-pokemon.mjs --roster=data/champions-roster.json --output=data/generated/pokemon-sync-preview.json",
     "data:promote": "node scripts/promote-pokemon-data.mjs",
+    "data:moves": "node scripts/sync-moves.mjs",
+    "data:moves:pilot": "node scripts/sync-champions-learnset-pilot.mjs",
+    "data:moves:pilot:serebii": "node scripts/sync-serebii-learnset-pilot.mjs",
     "data:validate": "node scripts/validate-data.mjs"
   },
   "dependencies": {

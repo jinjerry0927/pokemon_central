@@ -2,10 +2,14 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   readJson,
+  validateChampionsLearnsetPilotSnapshot,
+  validateMoveCandidateSnapshot,
+  validatePokemonMoveCandidateSnapshot,
   validatePublishedRegulationPokemon,
   validatePokemonEntries,
   validateRegulationRosterSnapshot,
   validateRoster,
+  validateSerebiiLearnsetPilotSnapshot,
   validateSyncedRegulationPokemon
 } from "./lib/pokemon-data.mjs";
 
@@ -25,6 +29,30 @@ const regulationPokemonPath = path.join(
   "generated",
   "pokemon-m-b-preview.json"
 );
+const moveCandidatePath = path.join(
+  rootDirectory,
+  "data",
+  "generated",
+  "moves-m-b-candidates.json"
+);
+const pokemonMoveCandidatePath = path.join(
+  rootDirectory,
+  "data",
+  "generated",
+  "pokemon-move-candidates-m-b.json"
+);
+const championsLearnsetPilotPath = path.join(
+  rootDirectory,
+  "data",
+  "generated",
+  "champions-learnset-pilot-m-b.json"
+);
+const serebiiLearnsetPilotPath = path.join(
+  rootDirectory,
+  "data",
+  "generated",
+  "serebii-learnset-pilot-m-b.json"
+);
 
 async function main() {
   const roster = validateRoster(await readJson(rosterPath));
@@ -34,6 +62,25 @@ async function main() {
   const regulationPokemon = validateSyncedRegulationPokemon(
     await readJson(regulationPokemonPath),
     regulationRoster
+  );
+  const moveCandidates = validateMoveCandidateSnapshot(await readJson(moveCandidatePath));
+  const pokemonMoveCandidates = validatePokemonMoveCandidateSnapshot(
+    await readJson(pokemonMoveCandidatePath),
+    regulationPokemon,
+    moveCandidates
+  );
+  const championsLearnsetPilot = validateChampionsLearnsetPilotSnapshot(
+    await readJson(championsLearnsetPilotPath),
+    regulationPokemon,
+    pokemonMoveCandidates,
+    moveCandidates
+  );
+  const serebiiLearnsetPilot = validateSerebiiLearnsetPilotSnapshot(
+    await readJson(serebiiLearnsetPilotPath),
+    championsLearnsetPilot,
+    regulationPokemon,
+    pokemonMoveCandidates,
+    moveCandidates
   );
   validatePublishedRegulationPokemon(currentPokemon, regulationRoster);
   const rosterBySlug = new Map(roster.map((entry) => [entry.slug, entry]));
@@ -56,7 +103,7 @@ async function main() {
   }
 
   console.log(
-    `Data validation passed. Temporary roster: ${roster.length}; Preview: ${preview.length}; Current Pokemon: ${currentPokemon.length}; ${regulationRoster.regulationId} roster: ${regulationRoster.entries.length}; Synced: ${regulationPokemon.length}`
+    `Data validation passed. Temporary roster: ${roster.length}; Preview: ${preview.length}; Current Pokemon: ${currentPokemon.length}; ${regulationRoster.regulationId} roster: ${regulationRoster.entries.length}; Synced: ${regulationPokemon.length}; Move candidates: ${moveCandidates.entries.length}; Move mappings: ${pokemonMoveCandidates.entries.length}; Champions learnset pilot: ${championsLearnsetPilot.summary.mappedPokemonCount}/${championsLearnsetPilot.summary.pilotPokemonCount}; Serebii pilot: ${serebiiLearnsetPilot.summary.exactMatchCount} exact, ${serebiiLearnsetPilot.summary.changedCount} changed, ${serebiiLearnsetPilot.summary.newlyCoveredCount} new`
   );
 }
 
