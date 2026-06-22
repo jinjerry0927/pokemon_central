@@ -21,6 +21,41 @@ Pokemon Central 운영 데이터의 변경 이유와 출처를 보존한다. 새
 - 검증: 실행한 명령과 결과
 ```
 
+## 2026-06-22 - 학습 기술 상세 및 팀빌더 UI 연결
+
+- 상태: 검증 완료
+- 적용 범위: move, UI
+- 대상 ID: Regulation M-B 포켓몬 235개 폼과 기술 상세 후보 675개
+- 변경 전: 학습 기술 후보가 생성 JSON에만 존재하고 사용자 화면과 팀 구성에 사용되지 않음
+- 변경 후: 포켓몬 상세에서 기술 검색·타입·분류 필터를 제공하고, 팀빌더 슬롯에서 해당 포켓몬이 배울 수 있는 기술만 최대 4개까지 선택·저장·공유함
+- 변경 이유: 포켓몬별 기술 제한을 실제 팀 구성 흐름에 적용하고 잘못된 기술 선택을 방지하기 위함
+- 출처:
+  - Serebii Champions Pokédex - https://www.serebii.net/pokedex-champions/ (확인일: 2026-06-22)
+  - PokeAPI - https://pokeapi.co/ (확인일: 2026-06-22)
+- 변경 파일: `src/app/pokemon/[slug]/page.tsx`, `src/app/pokemon/[slug]/learnable-moves-browser.tsx`, `src/app/teams/page.tsx`, `src/app/teams/team-builder.tsx`
+- 관련 공략:
+  - 학습 기술은 `검토 후보`로 표시하며 주요 기술, 추천 빌드, 계산기 기본값에는 자동 반영하지 않음
+  - 기존 문자열 배열 localStorage 팀 데이터는 기술이 비어 있는 새 슬롯 형식으로 자동 변환함
+- 검증: `npm.cmd run lint`, `npm.cmd run build` 성공; 정적 페이지 265개 생성. 브라우저에서 어흥염 기술 77개 표시, 검색 결과 필터, 플레어드라이브 선택, 다음 기술 슬롯 활성화, 중복 선택 차단, localStorage 저장 확인
+
+## 2026-06-22 - M-B 전체 Serebii 기술 후보 확장
+
+- 상태: 검토 중
+- 적용 범위: move
+- 대상 ID: Regulation M-B 포켓몬 235개 폼
+- 변경 전: 5마리 Serebii 기술표 비교 파일럿
+- 변경 후: 고유 페이지 208개에서 235개 폼과 기술 참조 14,371개를 수집하고 기술 상세 후보를 675개로 보강함. 이전 스냅샷 일치 121개, 현재 원본 갱신 74개, 폼별 갱신 18개, M-B 신규 22개로 분류했으며 파싱 실패와 미연결 기술은 0개임
+- 변경 이유: 일반 포켓몬의 수동 검토를 생략하고 변경·신규·폼·파싱 예외만 후속 검토하기 위함
+- 출처:
+  - Serebii Champions Pokédex - https://www.serebii.net/pokedex-champions/ (확인일: 2026-06-22)
+  - Pokemon Champions Data - https://github.com/otterlyclueless/pokemon-champions-data (확인일: 2026-06-22)
+  - PokeAPI - https://pokeapi.co/ (확인일: 2026-06-22)
+- 변경 파일: `data/generated/serebii-learnsets-m-b.json`, `data/generated/serebii-learnset-review-m-b.json`, `scripts/sync-serebii-learnsets.mjs`, `scripts/lib/serebii-learnset-data.mjs`, `scripts/validate-data.mjs`
+- 관련 공략:
+  - 전체 결과는 `review-candidate`이며 `data/moves.json`, `keyMoveIds`, 빌드와 공략에는 아직 반영하지 않음
+  - 현재 원본 갱신과 자동 분리된 폼은 상태만 보존하고, 파싱 실패·기술 상세 미연결만 차단 검토 목록에 포함함
+- 검증: `npm.cmd run data:moves:serebii`, `npm.cmd run data:validate`, `npm.cmd run lint`, `npm.cmd run build` 성공; 235개 폼, 파싱 실패 0개, 알 수 없는 기술 ID 0개, 정적 페이지 265개, 어흥염 `Knock Off` 제외 및 `Psybeam` 사용자 0개 확인
+
 ## 2026-06-20 - Serebii 현재 기술표 5마리 비교
 
 - 상태: 검토 중

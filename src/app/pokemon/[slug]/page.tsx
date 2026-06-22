@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import builds from "../../../../data/builds.json";
+import moveCandidates from "../../../../data/generated/moves-m-b-candidates.json";
+import learnsets from "../../../../data/generated/serebii-learnsets-m-b.json";
 import moves from "../../../../data/moves.json";
 import pokemon from "../../../../data/pokemon.json";
 import {
@@ -12,6 +14,7 @@ import {
 } from "../../_components/design-system";
 import { createPageMetadata } from "../../_lib/seo";
 import { formatMultiplier, getDefensiveProfile } from "../../_lib/type-matchups";
+import { LearnableMovesBrowser } from "./learnable-moves-browser";
 
 type PokemonRoute = {
   params: Promise<{
@@ -76,6 +79,16 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
   const keyMoves = entry.keyMoveIds
     .map((moveId) => moves.find((move) => move.id === moveId))
     .filter((move): move is (typeof moves)[number] => Boolean(move));
+  const learnsetEntry = learnsets.entries.find((item) => item.pokemonId === entry.id);
+  const moveCandidatesById = new Map(
+    moveCandidates.entries.map((move) => [move.id, move])
+  );
+  const learnableMoves = (learnsetEntry?.serebiiMoveIds ?? [])
+    .map((moveId) => moveCandidatesById.get(moveId))
+    .filter((move): move is (typeof moveCandidates.entries)[number] => Boolean(move))
+    .sort((left, right) =>
+      (left.nameKo ?? left.nameEn).localeCompare(right.nameKo ?? right.nameEn, "ko")
+    );
   const defensiveProfile = getDefensiveProfile(entry.types);
   const defensiveWeaknesses = defensiveProfile.filter((item) => item.multiplier > 1);
   const defensiveResists = defensiveProfile.filter((item) => item.multiplier > 0 && item.multiplier < 1);
@@ -152,8 +165,9 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
         center={
           <div className="grid gap-4">
             <InfoCard title="주요 기술">
-              <div className="grid gap-3">
-                {keyMoves.map((move) => (
+              {keyMoves.length > 0 ? (
+                <div className="grid gap-3">
+                  {keyMoves.map((move) => (
                   <Link
                     className="rounded-lg border border-[var(--panel-border)] bg-white p-3 hover:bg-[var(--chip)]"
                     href={`/calculator?attacker=${entry.id}&move=${move.id}`}
@@ -175,8 +189,28 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
                       계산기로 확인
                     </p>
                   </Link>
-                ))}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm leading-6 text-[var(--muted)]">
+                  주요 기술은 메타 검토 후 별도로 선정합니다.
+                </p>
+              )}
+            </InfoCard>
+
+            <InfoCard
+              description="현재 Serebii Champions Pokédex에서 확인한 학습 가능 기술 후보입니다. 게임 내 변경과 시즌 패치에 따라 달라질 수 있습니다."
+              title={`학습 가능 기술 ${learnableMoves.length}개`}
+            >
+              {learnsetEntry ? (
+                <LearnableMovesBrowser
+                  checkedAt={learnsets.checkedAt}
+                  moves={learnableMoves}
+                  sourceUrl={learnsetEntry.pageUrl}
+                />
+              ) : (
+                <p className="text-sm text-[var(--muted)]">학습 기술 데이터가 없습니다.</p>
+              )}
             </InfoCard>
 
             <InfoCard title="추천 빌드">

@@ -1,4 +1,4 @@
-import { mkdir, rename, writeFile } from "node:fs/promises";
+import { access, mkdir, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -15,6 +15,7 @@ const pokemonPath = path.join(rootDirectory, "data", "generated", "pokemon-m-b-p
 const outputDirectory = path.join(rootDirectory, "data", "generated");
 const movesOutputPath = path.join(outputDirectory, "moves-m-b-candidates.json");
 const mappingOutputPath = path.join(outputDirectory, "pokemon-move-candidates-m-b.json");
+const serebiiLearnsetsPath = path.join(outputDirectory, "serebii-learnsets-m-b.json");
 const apiBaseUrl = "https://pokeapi.co/api/v2";
 const concurrency = 10;
 
@@ -94,12 +95,33 @@ async function writeJsonAtomically(filePath, value) {
   await rename(temporaryPath, filePath);
 }
 
+async function readOptionalSerebiiMoveIds() {
+  try {
+    await access(serebiiLearnsetsPath);
+  } catch {
+    return [];
+  }
+  const snapshot = await readJson(serebiiLearnsetsPath);
+  if (
+    snapshot?.scope !== "serebii-current-learnsets" ||
+    !Array.isArray(snapshot.entries)
+  ) {
+    throw new Error("Existing Serebii learnset snapshot is invalid.");
+  }
+  return Array.from(
+    new Set(snapshot.entries.flatMap((entry) => entry.serebiiMoveIds ?? []))
+  ).sort();
+}
+
 async function main() {
   const roster = validateRegulationRosterSnapshot(await readJson(rosterPath));
   const pokemon = validateSyncedRegulationPokemon(await readJson(pokemonPath), roster);
-  const moveIds = Array.from(
+  const pokeapiLearnsetMoveIds = Array.from(
     new Set(pokemon.flatMap((entry) => entry.learnableMoveIds))
   ).sort();
+  const serebiiMoveIds = await readOptionalSerebiiMoveIds();
+  const pokeapiLearnsetMoveIdSet = new Set(pokeapiLearnsetMoveIds);
+  const moveIds = Array.from(new Set([...pokeapiLearnsetMoveIds, ...serebiiMoveIds])).sort();
   console.log(`Loading ${moveIds.length} unique PokeAPI move candidates...`);
 
   const moveEntries = await mapWithConcurrency(moveIds, concurrency, async (moveId) => {
@@ -118,7 +140,12 @@ async function main() {
       generation: move.generation.name,
       localizationStatus: nameKo ? "complete" : "missing-ko",
       publishStatus: "review-candidate",
-      sources: ["pokeapi"]
+      sources: [
+        "pokeapi",
+        ...(!pokeapiLearnsetMoveIdSet.has(move.name) && serebiiMoveIds.includes(move.name)
+          ? ["serebii-champions-pokedex"]
+          : [])
+      ]
     };
   });
   const moveSnapshot = {

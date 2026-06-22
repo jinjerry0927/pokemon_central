@@ -26,14 +26,29 @@ type PokemonEntry = {
   };
 };
 
+type MoveEntry = {
+  id: string;
+  nameKo: string | null;
+  nameEn: string;
+  type: string;
+  category: string;
+};
+
 type TeamBuilderProps = {
+  checkedAt: string;
+  learnsets: Record<string, string[]>;
+  moves: MoveEntry[];
   pokemon: PokemonEntry[];
 };
 
-type TeamSlot = string | null;
+type TeamSlot = {
+  pokemonId: string;
+  moveIds: string[];
+} | null;
 
 const storageKey = "pokemon-central-team-builder";
 const shareQueryKey = "team";
+const shareMovesQueryKey = "moves";
 const emptyTeam: TeamSlot[] = [null, null, null, null, null, null];
 
 function getRoleTags(entry: PokemonEntry) {
@@ -62,7 +77,25 @@ function getRoleTags(entry: PokemonEntry) {
   return Array.from(tags).slice(0, 3);
 }
 
-function readStoredTeam(validIds: Set<string>) {
+function normalizeMoveIds(value: unknown, validMoveIds: Set<string>) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return Array.from(
+    new Set(
+      value.filter(
+        (moveId): moveId is string =>
+          typeof moveId === "string" && validMoveIds.has(moveId)
+      )
+    )
+  ).slice(0, 4);
+}
+
+function readStoredTeam(
+  validIds: Set<string>,
+  validMoveIdsByPokemon: Map<string, Set<string>>
+) {
   try {
     const stored = window.localStorage.getItem(storageKey);
     if (!stored) {
@@ -76,14 +109,35 @@ function readStoredTeam(validIds: Set<string>) {
 
     return emptyTeam.map((_, index) => {
       const value = parsed[index];
-      return typeof value === "string" && validIds.has(value) ? value : null;
+      if (typeof value === "string" && validIds.has(value)) {
+        return { pokemonId: value, moveIds: [] };
+      }
+      if (
+        typeof value === "object" &&
+        value !== null &&
+        "pokemonId" in value &&
+        typeof value.pokemonId === "string" &&
+        validIds.has(value.pokemonId)
+      ) {
+        return {
+          pokemonId: value.pokemonId,
+          moveIds: normalizeMoveIds(
+            "moveIds" in value ? value.moveIds : [],
+            validMoveIdsByPokemon.get(value.pokemonId) ?? new Set()
+          )
+        };
+      }
+      return null;
     });
   } catch {
     return emptyTeam;
   }
 }
 
-function readSharedTeam(validIds: Set<string>) {
+function readSharedTeam(
+  validIds: Set<string>,
+  validMoveIdsByPokemon: Map<string, Set<string>>
+) {
   const params = new URLSearchParams(window.location.search);
   const sharedTeam = params.get(shareQueryKey);
 
@@ -92,10 +146,20 @@ function readSharedTeam(validIds: Set<string>) {
   }
 
   const slots = sharedTeam.split(",").slice(0, emptyTeam.length);
+  const sharedMoveSlots = (params.get(shareMovesQueryKey) ?? "").split(";");
 
   return emptyTeam.map((_, index) => {
     const value = slots[index];
-    return value && validIds.has(value) ? value : null;
+    if (!value || !validIds.has(value)) {
+      return null;
+    }
+    return {
+      pokemonId: value,
+      moveIds: normalizeMoveIds(
+        sharedMoveSlots[index]?.split(",") ?? [],
+        validMoveIdsByPokemon.get(value) ?? new Set()
+      )
+    };
   });
 }
 
@@ -107,10 +171,11 @@ function clearSharedTeamFromAddress() {
   }
 
   url.searchParams.delete(shareQueryKey);
+  url.searchParams.delete(shareMovesQueryKey);
   window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 }
 
-export function TeamBuilder({ pokemon }: TeamBuilderProps) {
+export function TeamBuilder({ checkedAt, learnsets, moves, pokemon }: TeamBuilderProps) {
   const [query, setQuery] = useState("");
   const [selectedType, setSelectedType] = useState("전체");
   const [team, setTeam] = useState<TeamSlot[]>(emptyTeam);
@@ -118,9 +183,23 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
   const [shareStatus, setShareStatus] = useState("");
 
   const pokemonById = useMemo(() => new Map(pokemon.map((entry) => [entry.id, entry])), [pokemon]);
+  const moveById = useMemo(() => new Map(moves.map((entry) => [entry.id, entry])), [moves]);
   const validIds = useMemo(() => new Set(pokemon.map((entry) => entry.id)), [pokemon]);
+  const validMoveIdsByPokemon = useMemo(
+    () =>
+      new Map(
+        Object.entries(learnsets).map(([pokemonId, moveIds]) => [
+          pokemonId,
+          new Set(moveIds.filter((moveId) => moveById.has(moveId)))
+        ])
+      ),
+    [learnsets, moveById]
+  );
   const selectedPokemon = useMemo(
-    () => team.flatMap((id) => (id ? [pokemonById.get(id)].filter(Boolean) : [])) as PokemonEntry[],
+    () =>
+      team.flatMap((slot) =>
+        slot ? [pokemonById.get(slot.pokemonId)].filter(Boolean) : []
+      ) as PokemonEntry[],
     [pokemonById, team]
   );
   const types = useMemo(
@@ -154,14 +233,14 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
   }, [selectedPokemon]);
 
   useEffect(() => {
-    const sharedTeam = readSharedTeam(validIds);
+    const sharedTeam = readSharedTeam(validIds, validMoveIdsByPokemon);
 
-    setTeam(sharedTeam ?? readStoredTeam(validIds));
+    setTeam(sharedTeam ?? readStoredTeam(validIds, validMoveIdsByPokemon));
     if (sharedTeam) {
       setShareStatus("공유 링크에서 팀을 불러왔습니다.");
     }
     setIsHydrated(true);
-  }, [validIds]);
+  }, [validIds, validMoveIdsByPokemon]);
 
   useEffect(() => {
     if (isHydrated) {
@@ -178,8 +257,34 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
         return currentTeam;
       }
 
-      return currentTeam.map((slot, index) => (index === openIndex ? id : slot));
+      return currentTeam.map((slot, index) =>
+        index === openIndex ? { pokemonId: id, moveIds: [] } : slot
+      );
     });
+  }
+
+  function updateSlotMove(slotIndex: number, moveIndex: number, moveId: string) {
+    setShareStatus("");
+    clearSharedTeamFromAddress();
+    setTeam((currentTeam) =>
+      currentTeam.map((slot, index) => {
+        if (index !== slotIndex || !slot) {
+          return slot;
+        }
+        if (moveId === "") {
+          return { ...slot, moveIds: slot.moveIds.slice(0, moveIndex) };
+        }
+        const validMoveIds = validMoveIdsByPokemon.get(slot.pokemonId);
+        if (!validMoveIds?.has(moveId)) {
+          return slot;
+        }
+        const nextMoveIds = slot.moveIds.slice(0, moveIndex);
+        if (!nextMoveIds.includes(moveId)) {
+          nextMoveIds[moveIndex] = moveId;
+        }
+        return { ...slot, moveIds: nextMoveIds };
+      })
+    );
   }
 
   function removeSlot(slotIndex: number) {
@@ -196,7 +301,14 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
 
   async function copyShareLink() {
     const url = new URL(window.location.href);
-    url.searchParams.set(shareQueryKey, team.map((slot) => slot ?? "").join(","));
+    url.searchParams.set(
+      shareQueryKey,
+      team.map((slot) => slot?.pokemonId ?? "").join(",")
+    );
+    url.searchParams.set(
+      shareMovesQueryKey,
+      team.map((slot) => slot?.moveIds.join(",") ?? "").join(";")
+    );
     window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 
     if (!navigator.clipboard) {
@@ -251,8 +363,19 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
           />
 
           <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-            {team.map((pokemonId, index) => {
-              const entry = pokemonId ? pokemonById.get(pokemonId) : null;
+            {team.map((slot, index) => {
+              const entry = slot ? pokemonById.get(slot.pokemonId) : null;
+              const learnableMoves = entry
+                ? (learnsets[entry.id] ?? [])
+                    .map((moveId) => moveById.get(moveId))
+                    .filter((move): move is MoveEntry => Boolean(move))
+                    .sort((left, right) =>
+                      (left.nameKo ?? left.nameEn).localeCompare(
+                        right.nameKo ?? right.nameEn,
+                        "ko"
+                      )
+                    )
+                : [];
 
               return (
                 <div
@@ -292,6 +415,46 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
                             {role}
                           </Badge>
                         ))}
+                      </div>
+                      <div className="grid gap-2 border-t border-[var(--panel-border)] pt-3">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="text-xs font-bold text-[var(--muted)]">기술 선택</p>
+                          <Badge tone="warning">{slot?.moveIds.length ?? 0}/4</Badge>
+                        </div>
+                        {Array.from({ length: 4 }, (_, moveIndex) => {
+                          const selectedMoveId = slot?.moveIds[moveIndex] ?? "";
+                          const previousMoveSelected =
+                            moveIndex === 0 || Boolean(slot?.moveIds[moveIndex - 1]);
+
+                          return (
+                            <select
+                              aria-label={`${entry.nameKo} 기술 ${moveIndex + 1}`}
+                              className="h-10 w-full rounded-md border border-[var(--panel-border)] bg-white px-2 text-sm outline-none focus:border-[var(--support)] disabled:bg-[var(--chip)] disabled:text-[var(--muted)]"
+                              disabled={!previousMoveSelected}
+                              key={moveIndex}
+                              onChange={(event) =>
+                                updateSlotMove(index, moveIndex, event.target.value)
+                              }
+                              value={selectedMoveId}
+                            >
+                              <option value="">기술 {moveIndex + 1} 선택</option>
+                              {learnableMoves.map((move) => (
+                                <option
+                                  disabled={
+                                    slot?.moveIds.some(
+                                      (moveId, selectedIndex) =>
+                                        selectedIndex !== moveIndex && moveId === move.id
+                                    )
+                                  }
+                                  key={move.id}
+                                  value={move.id}
+                                >
+                                  {move.nameKo ?? move.nameEn} · {move.type} · {move.category}
+                                </option>
+                              ))}
+                            </select>
+                          );
+                        })}
                       </div>
                     </div>
                   ) : (
@@ -347,6 +510,13 @@ export function TeamBuilder({ pokemon }: TeamBuilderProps) {
       }
       right={
         <div className="grid gap-4">
+          <InfoCard
+            description={`Regulation M-B · ${checkedAt} 확인. Serebii Champions Pokédex 기반 검토 후보이며 패치에 따라 달라질 수 있습니다.`}
+            title="학습 기술 데이터"
+          >
+            <Badge tone="warning">포켓몬별 최대 4개 선택</Badge>
+          </InfoCard>
+
           <InfoCard
             action={{ href: "/type-chart", label: "상성표" }}
             title="약점 요약"

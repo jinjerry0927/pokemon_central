@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "regulationId": "M-B",
+  "checkedAt": "2026-06-22",
+  "scope": "serebii-learnset-review",
+  "sourceSnapshot": "data/generated/serebii-learnsets-m-b.json",
+  "summary": {
+    "reviewCount": 0,
+    "sourceUpdatedCount": 0,
+    "formReviewCount": 0,
+    "newlyCoveredCount": 0,
+    "parseFailedCount": 0
+  },
+  "entries": []
+}

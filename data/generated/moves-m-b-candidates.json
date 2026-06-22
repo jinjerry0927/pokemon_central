@@ -9712,6 +9712,24 @@
       ]
     },
     {
+      "id": "stuff-cheeks",
+      "nameKo": "볼가득넣기",
+      "nameEn": "Stuff Cheeks",
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "priority": 0,
+      "generation": "generation-viii",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi",
+        "serebii-champions-pokedex"
+      ]
+    },
+    {
       "id": "stun-spore",
       "nameKo": "저리가루",
       "nameEn": "Stun Spore",
