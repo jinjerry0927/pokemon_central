@@ -16,6 +16,7 @@ import {
   validateFullSerebiiLearnsetSnapshot,
   validateSerebiiLearnsetReviewSnapshot
 } from "./lib/serebii-learnset-data.mjs";
+import { validateChampionsItemSnapshot } from "./lib/champions-item-data.mjs";
 
 const rootDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rosterPath = path.join(rootDirectory, "data", "champions-roster.json");
@@ -69,6 +70,12 @@ const serebiiLearnsetReviewPath = path.join(
   "generated",
   "serebii-learnset-review-m-b.json"
 );
+const championsItemsPath = path.join(
+  rootDirectory,
+  "data",
+  "generated",
+  "champions-items-m-b.json"
+);
 
 async function main() {
   const roster = validateRoster(await readJson(rosterPath));
@@ -109,6 +116,7 @@ async function main() {
     await readJson(serebiiLearnsetReviewPath),
     serebiiLearnsets
   );
+  const championsItems = validateChampionsItemSnapshot(await readJson(championsItemsPath));
   validatePublishedRegulationPokemon(currentPokemon, regulationRoster);
   const rosterBySlug = new Map(roster.map((entry) => [entry.slug, entry]));
 
@@ -130,7 +138,7 @@ async function main() {
   }
 
   console.log(
-    `Data validation passed. Temporary roster: ${roster.length}; Preview: ${preview.length}; Current Pokemon: ${currentPokemon.length}; ${regulationRoster.regulationId} roster: ${regulationRoster.entries.length}; Synced: ${regulationPokemon.length}; Move candidates: ${moveCandidates.entries.length}; Move mappings: ${pokemonMoveCandidates.entries.length}; Champions learnset pilot: ${championsLearnsetPilot.summary.mappedPokemonCount}/${championsLearnsetPilot.summary.pilotPokemonCount}; Serebii pilot: ${serebiiLearnsetPilot.summary.exactMatchCount} exact, ${serebiiLearnsetPilot.summary.changedCount} changed, ${serebiiLearnsetPilot.summary.newlyCoveredCount} new; Full Serebii: ${serebiiLearnsets.summary.exactMatchCount} exact, ${serebiiLearnsetReview.summary.reviewCount} review`
+    `Data validation passed. Temporary roster: ${roster.length}; Preview: ${preview.length}; Current Pokemon: ${currentPokemon.length}; ${regulationRoster.regulationId} roster: ${regulationRoster.entries.length}; Synced: ${regulationPokemon.length}; Move candidates: ${moveCandidates.entries.length}; Move mappings: ${pokemonMoveCandidates.entries.length}; Champions learnset pilot: ${championsLearnsetPilot.summary.mappedPokemonCount}/${championsLearnsetPilot.summary.pilotPokemonCount}; Serebii pilot: ${serebiiLearnsetPilot.summary.exactMatchCount} exact, ${serebiiLearnsetPilot.summary.changedCount} changed, ${serebiiLearnsetPilot.summary.newlyCoveredCount} new; Full Serebii: ${serebiiLearnsets.summary.exactMatchCount} exact, ${serebiiLearnsetReview.summary.reviewCount} review; Items: ${championsItems.summary.itemCount}`
   );
 }
 

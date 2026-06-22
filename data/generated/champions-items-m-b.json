@@ -1,0 +1,1127 @@
+{
+  "schemaVersion": 1,
+  "regulationId": "M-B",
+  "checkedAt": "2026-06-22",
+  "scope": "serebii-champions-held-items",
+  "source": {
+    "id": "serebii-champions-items",
+    "itemsUrl": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "officialRegulationUrl": "https://champions-news.pokemon-home.com/en/page/776.html",
+    "contentUsage": "factual-item-identifiers-only"
+  },
+  "rules": {
+    "duplicateHeldItemsAllowed": false,
+    "evidence": "Duplicate held items are not allowed.",
+    "evidenceUrl": "https://champions-news.pokemon-home.com/en/page/776.html"
+  },
+  "limitations": [
+    "Only Hold Items and Berries are collected; miscellaneous non-held items are excluded.",
+    "Serebii item descriptions are not copied; only factual identifiers and categories are retained.",
+    "Entries remain review candidates until promoted for public item guidance."
+  ],
+  "summary": {
+    "itemCount": 73,
+    "heldItemCount": 45,
+    "berryCount": 28,
+    "pokeapiMatchedCount": 73,
+    "pokeapiMissingCount": 0,
+    "missingKoreanNameCount": 1
+  },
+  "entries": [
+    {
+      "id": "aspear-berry",
+      "nameKo": "배리열매",
+      "nameEn": "Aspear Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/aspearberry.shtml",
+      "pokeapiId": 130,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "babiri-berry",
+      "nameKo": "바리비열매",
+      "nameEn": "Babiri Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/babiriberry.shtml",
+      "pokeapiId": 176,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "big-root",
+      "nameKo": "큰뿌리",
+      "nameEn": "Big Root",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/bigroot.shtml",
+      "pokeapiId": 273,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "black-belt",
+      "nameKo": "검은띠",
+      "nameEn": "Black Belt",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/blackbelt.shtml",
+      "pokeapiId": 218,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "black-glasses",
+      "nameKo": "검은안경",
+      "nameEn": "Black Glasses",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/blackglasses.shtml",
+      "pokeapiId": 217,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "bright-powder",
+      "nameKo": "반짝가루",
+      "nameEn": "Bright Powder",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/brightpowder.shtml",
+      "pokeapiId": 190,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "charcoal",
+      "nameKo": "목탄",
+      "nameEn": "Charcoal",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/charcoal.shtml",
+      "pokeapiId": 226,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "charti-berry",
+      "nameKo": "루미열매",
+      "nameEn": "Charti Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/chartiberry.shtml",
+      "pokeapiId": 172,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "cheri-berry",
+      "nameKo": "버치열매",
+      "nameEn": "Cheri Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/cheriberry.shtml",
+      "pokeapiId": 126,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "chesto-berry",
+      "nameKo": "유루열매",
+      "nameEn": "Chesto Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/chestoberry.shtml",
+      "pokeapiId": 127,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "chilan-berry",
+      "nameKo": "카리열매",
+      "nameEn": "Chilan Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/chilanberry.shtml",
+      "pokeapiId": 177,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "choice-scarf",
+      "nameKo": "구애스카프",
+      "nameEn": "Choice Scarf",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/choicescarf.shtml",
+      "pokeapiId": 264,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "chople-berry",
+      "nameKo": "로플열매",
+      "nameEn": "Chople Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/chopleberry.shtml",
+      "pokeapiId": 166,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "coba-berry",
+      "nameKo": "바코열매",
+      "nameEn": "Coba Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/cobaberry.shtml",
+      "pokeapiId": 169,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "colbur-berry",
+      "nameKo": "마코열매",
+      "nameEn": "Colbur Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/colburberry.shtml",
+      "pokeapiId": 175,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "damp-rock",
+      "nameKo": "축축한바위",
+      "nameEn": "Damp Rock",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/damprock.shtml",
+      "pokeapiId": 262,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "dragon-fang",
+      "nameKo": "용의이빨",
+      "nameEn": "Dragon Fang",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/dragonfang.shtml",
+      "pokeapiId": 227,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "expert-belt",
+      "nameKo": "달인의띠",
+      "nameEn": "Expert Belt",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/expertbelt.shtml",
+      "pokeapiId": 245,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "fairy-feather",
+      "nameKo": null,
+      "nameEn": "Fairy Feather",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/fairyfeather.shtml",
+      "pokeapiId": 2105,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "missing-ko",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "focus-band",
+      "nameKo": "기합의머리띠",
+      "nameEn": "Focus Band",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/focusband.shtml",
+      "pokeapiId": 207,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "focus-sash",
+      "nameKo": "기합의띠",
+      "nameEn": "Focus Sash",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/focussash.shtml",
+      "pokeapiId": 252,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "haban-berry",
+      "nameKo": "하반열매",
+      "nameEn": "Haban Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/habanberry.shtml",
+      "pokeapiId": 174,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "hard-stone",
+      "nameKo": "딱딱한돌",
+      "nameEn": "Hard Stone",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/hardstone.shtml",
+      "pokeapiId": 215,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "heat-rock",
+      "nameKo": "뜨거운바위",
+      "nameEn": "Heat Rock",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/heatrock.shtml",
+      "pokeapiId": 261,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "icy-rock",
+      "nameKo": "차가운바위",
+      "nameEn": "Icy Rock",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/icyrock.shtml",
+      "pokeapiId": 259,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "iron-ball",
+      "nameKo": "검은철구",
+      "nameEn": "Iron Ball",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/ironball.shtml",
+      "pokeapiId": 255,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "kasib-berry",
+      "nameKo": "수불열매",
+      "nameEn": "Kasib Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/kasibberry.shtml",
+      "pokeapiId": 173,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "kebia-berry",
+      "nameKo": "으름열매",
+      "nameEn": "Kebia Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/kebiaberry.shtml",
+      "pokeapiId": 167,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "kings-rock",
+      "nameKo": "왕의징표석",
+      "nameEn": "King's Rock",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/kingsrock.shtml",
+      "pokeapiId": 198,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "leftovers",
+      "nameKo": "먹다남은음식",
+      "nameEn": "Leftovers",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/leftovers.shtml",
+      "pokeapiId": 211,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "leppa-berry",
+      "nameKo": "과사열매",
+      "nameEn": "Leppa Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/leppaberry.shtml",
+      "pokeapiId": 131,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "life-orb",
+      "nameKo": "생명의구슬",
+      "nameEn": "Life Orb",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/lifeorb.shtml",
+      "pokeapiId": 247,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "light-ball",
+      "nameKo": "전기구슬",
+      "nameEn": "Light Ball",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/lightball.shtml",
+      "pokeapiId": 213,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "light-clay",
+      "nameKo": "빛의점토",
+      "nameEn": "Light Clay",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/lightclay.shtml",
+      "pokeapiId": 246,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "lum-berry",
+      "nameKo": "리샘열매",
+      "nameEn": "Lum Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/lumberry.shtml",
+      "pokeapiId": 134,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "magnet",
+      "nameKo": "자석",
+      "nameEn": "Magnet",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/magnet.shtml",
+      "pokeapiId": 219,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "mental-herb",
+      "nameKo": "멘탈허브",
+      "nameEn": "Mental Herb",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/mentalherb.shtml",
+      "pokeapiId": 196,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "metal-coat",
+      "nameKo": "금속코트",
+      "nameEn": "Metal Coat",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/metalcoat.shtml",
+      "pokeapiId": 210,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "metronome",
+      "nameKo": "메트로놈",
+      "nameEn": "Metronome",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/metronome.shtml",
+      "pokeapiId": 254,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "miracle-seed",
+      "nameKo": "기적의씨",
+      "nameEn": "Miracle Seed",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/miracleseed.shtml",
+      "pokeapiId": 216,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "muscle-band",
+      "nameKo": "힘의머리띠",
+      "nameEn": "Muscle Band",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/muscleband.shtml",
+      "pokeapiId": 243,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "mystic-water",
+      "nameKo": "신비의물방울",
+      "nameEn": "Mystic Water",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/mysticwater.shtml",
+      "pokeapiId": 220,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "never-melt-ice",
+      "nameKo": "녹지않는얼음",
+      "nameEn": "Never-Melt Ice",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/never-meltice.shtml",
+      "pokeapiId": 223,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "occa-berry",
+      "nameKo": "오카열매",
+      "nameEn": "Occa Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/occaberry.shtml",
+      "pokeapiId": 161,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "oran-berry",
+      "nameKo": "오랭열매",
+      "nameEn": "Oran Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/oranberry.shtml",
+      "pokeapiId": 132,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "passho-berry",
+      "nameKo": "꼬시개열매",
+      "nameEn": "Passho Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/passhoberry.shtml",
+      "pokeapiId": 162,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "payapa-berry",
+      "nameKo": "야파열매",
+      "nameEn": "Payapa Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/payapaberry.shtml",
+      "pokeapiId": 170,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "pecha-berry",
+      "nameKo": "복슝열매",
+      "nameEn": "Pecha Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/pechaberry.shtml",
+      "pokeapiId": 128,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "persim-berry",
+      "nameKo": "시몬열매",
+      "nameEn": "Persim Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/persimberry.shtml",
+      "pokeapiId": 133,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "poison-barb",
+      "nameKo": "독바늘",
+      "nameEn": "Poison Barb",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/poisonbarb.shtml",
+      "pokeapiId": 222,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "quick-claw",
+      "nameKo": "선제공격손톱",
+      "nameEn": "Quick Claw",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/quickclaw.shtml",
+      "pokeapiId": 194,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "rawst-berry",
+      "nameKo": "복분열매",
+      "nameEn": "Rawst Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/rawstberry.shtml",
+      "pokeapiId": 129,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "rindo-berry",
+      "nameKo": "린드열매",
+      "nameEn": "Rindo Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/rindoberry.shtml",
+      "pokeapiId": 164,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "roseli-berry",
+      "nameKo": "로셀열매",
+      "nameEn": "Roseli Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/roseliberry.shtml",
+      "pokeapiId": 723,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "scope-lens",
+      "nameKo": "초점렌즈",
+      "nameEn": "Scope Lens",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/scopelens.shtml",
+      "pokeapiId": 209,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sharp-beak",
+      "nameKo": "예리한부리",
+      "nameEn": "Sharp Beak",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/sharpbeak.shtml",
+      "pokeapiId": 221,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "shed-shell",
+      "nameKo": "아름다운허물",
+      "nameEn": "Shed Shell",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/shedshell.shtml",
+      "pokeapiId": 272,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "shell-bell",
+      "nameKo": "조개껍질방울",
+      "nameEn": "Shell Bell",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/shellbell.shtml",
+      "pokeapiId": 230,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "shuca-berry",
+      "nameKo": "슈캐열매",
+      "nameEn": "Shuca Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/shucaberry.shtml",
+      "pokeapiId": 168,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "silk-scarf",
+      "nameKo": "실크스카프",
+      "nameEn": "Silk Scarf",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/silkscarf.shtml",
+      "pokeapiId": 228,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "silver-powder",
+      "nameKo": "은빛가루",
+      "nameEn": "Silver Powder",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/silverpowder.shtml",
+      "pokeapiId": 199,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sitrus-berry",
+      "nameKo": "자뭉열매",
+      "nameEn": "Sitrus Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/sitrusberry.shtml",
+      "pokeapiId": 135,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "smooth-rock",
+      "nameKo": "보송보송바위",
+      "nameEn": "Smooth Rock",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/smoothrock.shtml",
+      "pokeapiId": 260,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "soft-sand",
+      "nameKo": "부드러운모래",
+      "nameEn": "Soft Sand",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/softsand.shtml",
+      "pokeapiId": 214,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "spell-tag",
+      "nameKo": "저주의부적",
+      "nameEn": "Spell Tag",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/spelltag.shtml",
+      "pokeapiId": 224,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "tanga-berry",
+      "nameKo": "리체열매",
+      "nameEn": "Tanga Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/tangaberry.shtml",
+      "pokeapiId": 171,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "twisted-spoon",
+      "nameKo": "휘어진스푼",
+      "nameEn": "Twisted Spoon",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/twistedspoon.shtml",
+      "pokeapiId": 225,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "wacan-berry",
+      "nameKo": "초나열매",
+      "nameEn": "Wacan Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/wacanberry.shtml",
+      "pokeapiId": 163,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "white-herb",
+      "nameKo": "하양허브",
+      "nameEn": "White Herb",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/whiteherb.shtml",
+      "pokeapiId": 191,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "wide-lens",
+      "nameKo": "광각렌즈",
+      "nameEn": "Wide Lens",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/widelens.shtml",
+      "pokeapiId": 242,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "wise-glasses",
+      "nameKo": "박식안경",
+      "nameEn": "Wise Glasses",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/wiseglasses.shtml",
+      "pokeapiId": 244,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "yache-berry",
+      "nameKo": "플카열매",
+      "nameEn": "Yache Berry",
+      "category": "berry",
+      "itemDexUrl": "https://www.serebii.net/itemdex/yacheberry.shtml",
+      "pokeapiId": 165,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "zoom-lens",
+      "nameKo": "포커스렌즈",
+      "nameEn": "Zoom Lens",
+      "category": "held-item",
+      "itemDexUrl": "https://www.serebii.net/itemdex/zoomlens.shtml",
+      "pokeapiId": 253,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "pokeapi"
+      ]
+    }
+  ]
+}

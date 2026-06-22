@@ -21,6 +21,24 @@ Pokemon Central 운영 데이터의 변경 이유와 출처를 보존한다. 새
 - 검증: 실행한 명령과 결과
 ```
 
+## 2026-06-22 - Champions 사용 가능 도구 수집 및 팀빌더 연결
+
+- 상태: 검증 완료
+- 적용 범위: item, ruleset, UI
+- 대상 ID: Regulation M-B 소지 도구 73개
+- 변경 전: 샘플 도구 데이터만 존재하며 팀빌더에서 도구를 선택할 수 없음
+- 변경 후: Hold Items 45개와 Berries 28개를 수집해 PokeAPI 이름을 연결하고, 팀 슬롯별 도구 선택·저장·공유와 동일 도구 중복 차단을 제공함
+- 변경 이유: Champions에서 실제 사용할 수 있는 도구만 팀 구성 흐름에 연결하고 공식 M-B 중복 제한을 적용하기 위함
+- 출처:
+  - Serebii Champions Items - https://www.serebii.net/pokemonchampions/items.shtml (확인일: 2026-06-22)
+  - Pokémon Champions 공식 Regulation Set M-B 공지 - https://champions-news.pokemon-home.com/en/page/776.html (확인일: 2026-06-22)
+  - PokeAPI - https://pokeapi.co/ (확인일: 2026-06-22)
+- 변경 파일: `data/generated/champions-items-m-b.json`, `scripts/sync-champions-items.mjs`, `scripts/lib/champions-item-data.mjs`, `scripts/validate-data.mjs`, `src/app/teams/page.tsx`, `src/app/teams/team-builder.tsx`
+- 관련 공략:
+  - 생성 데이터는 `review-candidate`이며 도구 설명과 추천 빌드에는 자동 반영하지 않음
+  - 기존 팀 저장 데이터는 `itemId: null`을 보완해 자동 변환함
+- 검증: `npm.cmd run data:items`, `npm.cmd run data:validate`, `npm.cmd run lint`, `npm.cmd run build` 성공; 73개 모두 PokeAPI 연결, 브라우저에서 도구 선택·동일 도구 비활성화·localStorage 저장 확인
+
 ## 2026-06-22 - 학습 기술 상세 및 팀빌더 UI 연결
 
 - 상태: 검증 완료

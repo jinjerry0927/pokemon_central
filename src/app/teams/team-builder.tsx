@@ -34,8 +34,18 @@ type MoveEntry = {
   category: string;
 };
 
+type ItemEntry = {
+  id: string;
+  nameKo: string | null;
+  nameEn: string;
+  category: string;
+};
+
 type TeamBuilderProps = {
   checkedAt: string;
+  duplicateHeldItemsAllowed: boolean;
+  itemCheckedAt: string;
+  items: ItemEntry[];
   learnsets: Record<string, string[]>;
   moves: MoveEntry[];
   pokemon: PokemonEntry[];
@@ -44,11 +54,13 @@ type TeamBuilderProps = {
 type TeamSlot = {
   pokemonId: string;
   moveIds: string[];
+  itemId: string | null;
 } | null;
 
 const storageKey = "pokemon-central-team-builder";
 const shareQueryKey = "team";
 const shareMovesQueryKey = "moves";
+const shareItemsQueryKey = "items";
 const emptyTeam: TeamSlot[] = [null, null, null, null, null, null];
 
 function getRoleTags(entry: PokemonEntry) {
@@ -92,9 +104,28 @@ function normalizeMoveIds(value: unknown, validMoveIds: Set<string>) {
   ).slice(0, 4);
 }
 
+function enforceHeldItemRule(team: TeamSlot[], duplicateHeldItemsAllowed: boolean) {
+  if (duplicateHeldItemsAllowed) {
+    return team;
+  }
+
+  const usedItemIds = new Set<string>();
+  return team.map((slot) => {
+    if (!slot?.itemId) {
+      return slot;
+    }
+    if (usedItemIds.has(slot.itemId)) {
+      return { ...slot, itemId: null };
+    }
+    usedItemIds.add(slot.itemId);
+    return slot;
+  });
+}
+
 function readStoredTeam(
   validIds: Set<string>,
-  validMoveIdsByPokemon: Map<string, Set<string>>
+  validMoveIdsByPokemon: Map<string, Set<string>>,
+  validItemIds: Set<string>
 ) {
   try {
     const stored = window.localStorage.getItem(storageKey);
@@ -110,7 +141,7 @@ function readStoredTeam(
     return emptyTeam.map((_, index) => {
       const value = parsed[index];
       if (typeof value === "string" && validIds.has(value)) {
-        return { pokemonId: value, moveIds: [] };
+        return { pokemonId: value, moveIds: [], itemId: null };
       }
       if (
         typeof value === "object" &&
@@ -124,7 +155,13 @@ function readStoredTeam(
           moveIds: normalizeMoveIds(
             "moveIds" in value ? value.moveIds : [],
             validMoveIdsByPokemon.get(value.pokemonId) ?? new Set()
-          )
+          ),
+          itemId:
+            "itemId" in value &&
+            typeof value.itemId === "string" &&
+            validItemIds.has(value.itemId)
+              ? value.itemId
+              : null
         };
       }
       return null;
@@ -136,7 +173,8 @@ function readStoredTeam(
 
 function readSharedTeam(
   validIds: Set<string>,
-  validMoveIdsByPokemon: Map<string, Set<string>>
+  validMoveIdsByPokemon: Map<string, Set<string>>,
+  validItemIds: Set<string>
 ) {
   const params = new URLSearchParams(window.location.search);
   const sharedTeam = params.get(shareQueryKey);
@@ -147,6 +185,7 @@ function readSharedTeam(
 
   const slots = sharedTeam.split(",").slice(0, emptyTeam.length);
   const sharedMoveSlots = (params.get(shareMovesQueryKey) ?? "").split(";");
+  const sharedItemSlots = (params.get(shareItemsQueryKey) ?? "").split(",");
 
   return emptyTeam.map((_, index) => {
     const value = slots[index];
@@ -158,7 +197,11 @@ function readSharedTeam(
       moveIds: normalizeMoveIds(
         sharedMoveSlots[index]?.split(",") ?? [],
         validMoveIdsByPokemon.get(value) ?? new Set()
-      )
+      ),
+      itemId:
+        sharedItemSlots[index] && validItemIds.has(sharedItemSlots[index])
+          ? sharedItemSlots[index]
+          : null
     };
   });
 }
@@ -172,10 +215,19 @@ function clearSharedTeamFromAddress() {
 
   url.searchParams.delete(shareQueryKey);
   url.searchParams.delete(shareMovesQueryKey);
+  url.searchParams.delete(shareItemsQueryKey);
   window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 }
 
-export function TeamBuilder({ checkedAt, learnsets, moves, pokemon }: TeamBuilderProps) {
+export function TeamBuilder({
+  checkedAt,
+  duplicateHeldItemsAllowed,
+  itemCheckedAt,
+  items,
+  learnsets,
+  moves,
+  pokemon
+}: TeamBuilderProps) {
   const [query, setQuery] = useState("");
   const [selectedType, setSelectedType] = useState("전체");
   const [team, setTeam] = useState<TeamSlot[]>(emptyTeam);
@@ -185,6 +237,14 @@ export function TeamBuilder({ checkedAt, learnsets, moves, pokemon }: TeamBuilde
   const pokemonById = useMemo(() => new Map(pokemon.map((entry) => [entry.id, entry])), [pokemon]);
   const moveById = useMemo(() => new Map(moves.map((entry) => [entry.id, entry])), [moves]);
   const validIds = useMemo(() => new Set(pokemon.map((entry) => entry.id)), [pokemon]);
+  const validItemIds = useMemo(() => new Set(items.map((entry) => entry.id)), [items]);
+  const sortedItems = useMemo(
+    () =>
+      [...items].sort((left, right) =>
+        (left.nameKo ?? left.nameEn).localeCompare(right.nameKo ?? right.nameEn, "ko")
+      ),
+    [items]
+  );
   const validMoveIdsByPokemon = useMemo(
     () =>
       new Map(
@@ -233,14 +293,19 @@ export function TeamBuilder({ checkedAt, learnsets, moves, pokemon }: TeamBuilde
   }, [selectedPokemon]);
 
   useEffect(() => {
-    const sharedTeam = readSharedTeam(validIds, validMoveIdsByPokemon);
+    const sharedTeam = readSharedTeam(validIds, validMoveIdsByPokemon, validItemIds);
 
-    setTeam(sharedTeam ?? readStoredTeam(validIds, validMoveIdsByPokemon));
+    setTeam(
+      enforceHeldItemRule(
+        sharedTeam ?? readStoredTeam(validIds, validMoveIdsByPokemon, validItemIds),
+        duplicateHeldItemsAllowed
+      )
+    );
     if (sharedTeam) {
       setShareStatus("공유 링크에서 팀을 불러왔습니다.");
     }
     setIsHydrated(true);
-  }, [validIds, validMoveIdsByPokemon]);
+  }, [duplicateHeldItemsAllowed, validIds, validItemIds, validMoveIdsByPokemon]);
 
   useEffect(() => {
     if (isHydrated) {
@@ -258,7 +323,7 @@ export function TeamBuilder({ checkedAt, learnsets, moves, pokemon }: TeamBuilde
       }
 
       return currentTeam.map((slot, index) =>
-        index === openIndex ? { pokemonId: id, moveIds: [] } : slot
+        index === openIndex ? { pokemonId: id, moveIds: [], itemId: null } : slot
       );
     });
   }
@@ -287,6 +352,29 @@ export function TeamBuilder({ checkedAt, learnsets, moves, pokemon }: TeamBuilde
     );
   }
 
+  function updateSlotItem(slotIndex: number, itemId: string) {
+    setShareStatus("");
+    clearSharedTeamFromAddress();
+    setTeam((currentTeam) => {
+      const normalizedItemId = itemId === "" ? null : itemId;
+      if (normalizedItemId && !validItemIds.has(normalizedItemId)) {
+        return currentTeam;
+      }
+      if (
+        normalizedItemId &&
+        !duplicateHeldItemsAllowed &&
+        currentTeam.some(
+          (slot, index) => index !== slotIndex && slot?.itemId === normalizedItemId
+        )
+      ) {
+        return currentTeam;
+      }
+      return currentTeam.map((slot, index) =>
+        index === slotIndex && slot ? { ...slot, itemId: normalizedItemId } : slot
+      );
+    });
+  }
+
   function removeSlot(slotIndex: number) {
     setShareStatus("");
     clearSharedTeamFromAddress();
@@ -308,6 +396,10 @@ export function TeamBuilder({ checkedAt, learnsets, moves, pokemon }: TeamBuilde
     url.searchParams.set(
       shareMovesQueryKey,
       team.map((slot) => slot?.moveIds.join(",") ?? "").join(";")
+    );
+    url.searchParams.set(
+      shareItemsQueryKey,
+      team.map((slot) => slot?.itemId ?? "").join(",")
     );
     window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 
@@ -418,6 +510,35 @@ export function TeamBuilder({ checkedAt, learnsets, moves, pokemon }: TeamBuilde
                       </div>
                       <div className="grid gap-2 border-t border-[var(--panel-border)] pt-3">
                         <div className="flex items-center justify-between gap-2">
+                          <p className="text-xs font-bold text-[var(--muted)]">소지 도구</p>
+                          <Badge tone="warning">중복 불가</Badge>
+                        </div>
+                        <select
+                          aria-label={`${entry.nameKo} 소지 도구`}
+                          className="h-10 w-full rounded-md border border-[var(--panel-border)] bg-white px-2 text-sm outline-none focus:border-[var(--support)]"
+                          onChange={(event) => updateSlotItem(index, event.target.value)}
+                          value={slot?.itemId ?? ""}
+                        >
+                          <option value="">도구 없음</option>
+                          {sortedItems.map((item) => (
+                            <option
+                              disabled={
+                                !duplicateHeldItemsAllowed &&
+                                team.some(
+                                  (teamSlot, teamIndex) =>
+                                    teamIndex !== index && teamSlot?.itemId === item.id
+                                )
+                              }
+                              key={item.id}
+                              value={item.id}
+                            >
+                              {item.nameKo ?? item.nameEn} · {item.category === "berry" ? "Berry" : "Item"}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="grid gap-2 border-t border-[var(--panel-border)] pt-3">
+                        <div className="flex items-center justify-between gap-2">
                           <p className="text-xs font-bold text-[var(--muted)]">기술 선택</p>
                           <Badge tone="warning">{slot?.moveIds.length ?? 0}/4</Badge>
                         </div>
@@ -512,9 +633,14 @@ export function TeamBuilder({ checkedAt, learnsets, moves, pokemon }: TeamBuilde
         <div className="grid gap-4">
           <InfoCard
             description={`Regulation M-B · ${checkedAt} 확인. Serebii Champions Pokédex 기반 검토 후보이며 패치에 따라 달라질 수 있습니다.`}
-            title="학습 기술 데이터"
+            title="팀 데이터 상태"
           >
-            <Badge tone="warning">포켓몬별 최대 4개 선택</Badge>
+            <div className="grid gap-2">
+              <Badge tone="warning">포켓몬별 기술 최대 4개</Badge>
+              <span className="text-xs font-semibold text-[var(--muted)]">
+                도구 {items.length}개 · {itemCheckedAt} 확인 · 동일 도구 중복 불가
+              </span>
+            </div>
           </InfoCard>
 
           <InfoCard
