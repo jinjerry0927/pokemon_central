@@ -40,7 +40,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
   },
   {
     "id": "charizard",
@@ -83,7 +84,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
   },
   {
     "id": "blastoise",
@@ -125,7 +127,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
   },
   {
     "id": "beedrill",
@@ -168,7 +171,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png"
   },
   {
     "id": "pidgeot",
@@ -212,7 +216,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png"
   },
   {
     "id": "arbok",
@@ -255,7 +260,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png"
   },
   {
     "id": "pikachu",
@@ -297,7 +303,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
   },
   {
     "id": "raichu",
@@ -339,7 +346,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png"
   },
   {
     "id": "raichu-alola",
@@ -381,7 +389,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10100.png"
   },
   {
     "id": "clefable",
@@ -424,7 +433,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png"
   },
   {
     "id": "ninetales",
@@ -466,7 +476,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png"
   },
   {
     "id": "ninetales-alola",
@@ -509,7 +520,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10104.png"
   },
   {
     "id": "vileplume",
@@ -552,7 +564,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png"
   },
   {
     "id": "arcanine",
@@ -595,7 +608,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png"
   },
   {
     "id": "arcanine-hisui",
@@ -639,7 +653,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10230.png"
   },
   {
     "id": "alakazam",
@@ -682,7 +697,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png"
   },
   {
     "id": "machamp",
@@ -725,7 +741,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png"
   },
   {
     "id": "victreebel",
@@ -768,7 +785,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png"
   },
   {
     "id": "slowbro",
@@ -812,7 +830,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png"
   },
   {
     "id": "slowbro-galar",
@@ -856,7 +875,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10165.png"
   },
   {
     "id": "gengar",
@@ -898,7 +918,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"
   },
   {
     "id": "kangaskhan",
@@ -941,7 +962,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png"
   },
   {
     "id": "starmie",
@@ -985,7 +1007,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png"
   },
   {
     "id": "pinsir",
@@ -1028,7 +1051,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png"
   },
   {
     "id": "tauros",
@@ -1071,7 +1095,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png"
   },
   {
     "id": "tauros-paldea-combat-breed",
@@ -1114,7 +1139,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10250.png"
   },
   {
     "id": "tauros-paldea-blaze-breed",
@@ -1158,7 +1184,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10251.png"
   },
   {
     "id": "tauros-paldea-aqua-breed",
@@ -1202,7 +1229,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10252.png"
   },
   {
     "id": "gyarados",
@@ -1245,7 +1273,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png"
   },
   {
     "id": "ditto",
@@ -1287,7 +1316,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
   },
   {
     "id": "vaporeon",
@@ -1329,7 +1359,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png"
   },
   {
     "id": "jolteon",
@@ -1371,7 +1402,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png"
   },
   {
     "id": "flareon",
@@ -1413,7 +1445,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png"
   },
   {
     "id": "aerodactyl",
@@ -1457,7 +1490,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png"
   },
   {
     "id": "snorlax",
@@ -1500,7 +1534,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"
   },
   {
     "id": "dragonite",
@@ -1543,7 +1578,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png"
   },
   {
     "id": "meganium",
@@ -1585,7 +1621,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png"
   },
   {
     "id": "typhlosion",
@@ -1627,7 +1664,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png"
   },
   {
     "id": "typhlosion-hisui",
@@ -1670,7 +1708,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10233.png"
   },
   {
     "id": "feraligatr",
@@ -1712,7 +1751,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png"
   },
   {
     "id": "ariados",
@@ -1756,7 +1796,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/168.png"
   },
   {
     "id": "ampharos",
@@ -1798,7 +1839,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png"
   },
   {
     "id": "azumarill",
@@ -1842,7 +1884,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/184.png"
   },
   {
     "id": "politoed",
@@ -1885,7 +1928,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/186.png"
   },
   {
     "id": "espeon",
@@ -1927,7 +1971,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png"
   },
   {
     "id": "umbreon",
@@ -1969,7 +2014,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png"
   },
   {
     "id": "slowking",
@@ -2013,7 +2059,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png"
   },
   {
     "id": "slowking-galar",
@@ -2057,7 +2104,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10172.png"
   },
   {
     "id": "forretress",
@@ -2100,7 +2148,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/205.png"
   },
   {
     "id": "steelix",
@@ -2144,7 +2193,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png"
   },
   {
     "id": "qwilfish",
@@ -2188,7 +2238,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png"
   },
   {
     "id": "scizor",
@@ -2232,7 +2283,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png"
   },
   {
     "id": "heracross",
@@ -2276,7 +2328,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png"
   },
   {
     "id": "skarmory",
@@ -2320,7 +2373,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png"
   },
   {
     "id": "houndoom",
@@ -2364,7 +2418,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png"
   },
   {
     "id": "tyranitar",
@@ -2407,7 +2462,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png"
   },
   {
     "id": "sceptile",
@@ -2449,7 +2505,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png"
   },
   {
     "id": "blaziken",
@@ -2492,7 +2549,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png"
   },
   {
     "id": "swampert",
@@ -2535,7 +2593,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png"
   },
   {
     "id": "pelipper",
@@ -2579,7 +2638,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/279.png"
   },
   {
     "id": "gardevoir",
@@ -2623,7 +2683,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png"
   },
   {
     "id": "sableye",
@@ -2667,7 +2728,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/302.png"
   },
   {
     "id": "mawile",
@@ -2711,7 +2773,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/303.png"
   },
   {
     "id": "aggron",
@@ -2755,7 +2818,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/306.png"
   },
   {
     "id": "medicham",
@@ -2798,7 +2862,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/308.png"
   },
   {
     "id": "manectric",
@@ -2841,7 +2906,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/310.png"
   },
   {
     "id": "sharpedo",
@@ -2884,7 +2950,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/319.png"
   },
   {
     "id": "camerupt",
@@ -2928,7 +2995,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/323.png"
   },
   {
     "id": "torkoal",
@@ -2971,7 +3039,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/324.png"
   },
   {
     "id": "altaria",
@@ -3014,7 +3083,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png"
   },
   {
     "id": "milotic",
@@ -3057,7 +3127,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/350.png"
   },
   {
     "id": "castform",
@@ -3098,7 +3169,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/351.png"
   },
   {
     "id": "banette",
@@ -3141,7 +3213,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/354.png"
   },
   {
     "id": "chimecho",
@@ -3182,7 +3255,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/358.png"
   },
   {
     "id": "absol",
@@ -3225,7 +3299,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/359.png"
   },
   {
     "id": "glalie",
@@ -3268,7 +3343,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/362.png"
   },
   {
     "id": "metagross",
@@ -3311,7 +3387,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/376.png"
   },
   {
     "id": "torterra",
@@ -3354,7 +3431,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/389.png"
   },
   {
     "id": "infernape",
@@ -3397,7 +3475,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/392.png"
   },
   {
     "id": "empoleon",
@@ -3440,7 +3519,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/395.png"
   },
   {
     "id": "staraptor",
@@ -3483,7 +3563,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png"
   },
   {
     "id": "luxray",
@@ -3526,7 +3607,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/405.png"
   },
   {
     "id": "roserade",
@@ -3570,7 +3652,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/407.png"
   },
   {
     "id": "rampardos",
@@ -3612,7 +3695,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/409.png"
   },
   {
     "id": "bastiodon",
@@ -3655,7 +3739,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/411.png"
   },
   {
     "id": "lopunny",
@@ -3698,7 +3783,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/428.png"
   },
   {
     "id": "spiritomb",
@@ -3741,7 +3827,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/442.png"
   },
   {
     "id": "garchomp",
@@ -3784,7 +3871,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png"
   },
   {
     "id": "lucario",
@@ -3828,7 +3916,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png"
   },
   {
     "id": "hippowdon",
@@ -3870,7 +3959,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/450.png"
   },
   {
     "id": "toxicroak",
@@ -3914,7 +4004,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/454.png"
   },
   {
     "id": "abomasnow",
@@ -3957,7 +4048,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/460.png"
   },
   {
     "id": "weavile",
@@ -4000,7 +4092,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/461.png"
   },
   {
     "id": "rhyperior",
@@ -4044,7 +4137,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/464.png"
   },
   {
     "id": "leafeon",
@@ -4086,7 +4180,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png"
   },
   {
     "id": "glaceon",
@@ -4128,7 +4223,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png"
   },
   {
     "id": "gliscor",
@@ -4172,7 +4268,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/472.png"
   },
   {
     "id": "mamoswine",
@@ -4216,7 +4313,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png"
   },
   {
     "id": "gallade",
@@ -4260,7 +4358,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/475.png"
   },
   {
     "id": "froslass",
@@ -4303,7 +4402,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/478.png"
   },
   {
     "id": "rotom",
@@ -4345,7 +4445,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png"
   },
   {
     "id": "rotom-heat",
@@ -4387,7 +4488,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10008.png"
   },
   {
     "id": "rotom-wash",
@@ -4429,7 +4531,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10009.png"
   },
   {
     "id": "rotom-frost",
@@ -4471,7 +4574,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10010.png"
   },
   {
     "id": "rotom-fan",
@@ -4513,7 +4617,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10011.png"
   },
   {
     "id": "rotom-mow",
@@ -4555,7 +4660,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10012.png"
   },
   {
     "id": "serperior",
@@ -4597,7 +4703,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/497.png"
   },
   {
     "id": "emboar",
@@ -4640,7 +4747,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/500.png"
   },
   {
     "id": "samurott",
@@ -4682,7 +4790,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/503.png"
   },
   {
     "id": "samurott-hisui",
@@ -4725,7 +4834,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10236.png"
   },
   {
     "id": "watchog",
@@ -4768,7 +4878,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/505.png"
   },
   {
     "id": "liepard",
@@ -4811,7 +4922,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/510.png"
   },
   {
     "id": "simisage",
@@ -4853,7 +4965,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/512.png"
   },
   {
     "id": "simisear",
@@ -4895,7 +5008,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/514.png"
   },
   {
     "id": "simipour",
@@ -4937,7 +5051,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/516.png"
   },
   {
     "id": "musharna",
@@ -4980,7 +5095,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/518.png"
   },
   {
     "id": "excadrill",
@@ -5024,7 +5140,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png"
   },
   {
     "id": "audino",
@@ -5067,7 +5184,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/531.png"
   },
   {
     "id": "conkeldurr",
@@ -5110,7 +5228,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/534.png"
   },
   {
     "id": "scolipede",
@@ -5154,7 +5273,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/545.png"
   },
   {
     "id": "whimsicott",
@@ -5198,7 +5318,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/547.png"
   },
   {
     "id": "krookodile",
@@ -5242,7 +5363,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/553.png"
   },
   {
     "id": "scrafty",
@@ -5286,7 +5408,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/560.png"
   },
   {
     "id": "cofagrigus",
@@ -5327,7 +5450,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/563.png"
   },
   {
     "id": "garbodor",
@@ -5370,7 +5494,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/569.png"
   },
   {
     "id": "zoroark",
@@ -5411,7 +5536,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/571.png"
   },
   {
     "id": "zoroark-hisui",
@@ -5453,7 +5579,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10239.png"
   },
   {
     "id": "reuniclus",
@@ -5496,7 +5623,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/579.png"
   },
   {
     "id": "vanilluxe",
@@ -5539,7 +5667,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/584.png"
   },
   {
     "id": "emolga",
@@ -5582,7 +5711,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/587.png"
   },
   {
     "id": "eelektross",
@@ -5623,7 +5753,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/604.png"
   },
   {
     "id": "chandelure",
@@ -5667,7 +5798,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png"
   },
   {
     "id": "beartic",
@@ -5710,7 +5842,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/614.png"
   },
   {
     "id": "stunfisk",
@@ -5754,7 +5887,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/618.png"
   },
   {
     "id": "stunfisk-galar",
@@ -5796,7 +5930,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10180.png"
   },
   {
     "id": "golurk",
@@ -5840,7 +5975,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/623.png"
   },
   {
     "id": "hydreigon",
@@ -5882,7 +6018,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/635.png"
   },
   {
     "id": "volcarona",
@@ -5925,7 +6062,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png"
   },
   {
     "id": "chesnaught",
@@ -5968,7 +6106,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/652.png"
   },
   {
     "id": "delphox",
@@ -6011,7 +6150,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/655.png"
   },
   {
     "id": "greninja",
@@ -6054,7 +6194,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/658.png"
   },
   {
     "id": "diggersby",
@@ -6098,7 +6239,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/660.png"
   },
   {
     "id": "talonflame",
@@ -6141,7 +6283,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/663.png"
   },
   {
     "id": "vivillon",
@@ -6185,7 +6328,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/666.png"
   },
   {
     "id": "pyroar-male",
@@ -6229,7 +6373,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/668.png"
   },
   {
     "id": "floette-eternal",
@@ -6271,7 +6416,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10061.png"
   },
   {
     "id": "florges",
@@ -6313,7 +6459,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/671.png"
   },
   {
     "id": "pangoro",
@@ -6357,7 +6504,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/675.png"
   },
   {
     "id": "furfrou",
@@ -6398,7 +6546,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/676.png"
   },
   {
     "id": "meowstic-male",
@@ -6441,7 +6590,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png"
   },
   {
     "id": "meowstic-female",
@@ -6484,7 +6634,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10025.png"
   },
   {
     "id": "aegislash-shield",
@@ -6526,7 +6677,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png"
   },
   {
     "id": "aromatisse",
@@ -6568,7 +6720,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/683.png"
   },
   {
     "id": "slurpuff",
@@ -6610,7 +6763,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/685.png"
   },
   {
     "id": "malamar",
@@ -6654,7 +6808,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/687.png"
   },
   {
     "id": "barbaracle",
@@ -6698,7 +6853,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/689.png"
   },
   {
     "id": "dragalge",
@@ -6742,7 +6898,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/691.png"
   },
   {
     "id": "clawitzer",
@@ -6783,7 +6940,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/693.png"
   },
   {
     "id": "heliolisk",
@@ -6827,7 +6985,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/695.png"
   },
   {
     "id": "tyrantrum",
@@ -6870,7 +7029,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/697.png"
   },
   {
     "id": "aurorus",
@@ -6913,7 +7073,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/699.png"
   },
   {
     "id": "sylveon",
@@ -6955,7 +7116,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/700.png"
   },
   {
     "id": "hawlucha",
@@ -6999,7 +7161,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/701.png"
   },
   {
     "id": "dedenne",
@@ -7043,7 +7206,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/702.png"
   },
   {
     "id": "goodra",
@@ -7086,7 +7250,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/706.png"
   },
   {
     "id": "goodra-hisui",
@@ -7130,7 +7295,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10242.png"
   },
   {
     "id": "klefki",
@@ -7173,7 +7339,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/707.png"
   },
   {
     "id": "trevenant",
@@ -7217,7 +7384,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/709.png"
   },
   {
     "id": "gourgeist-average",
@@ -7261,7 +7429,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/711.png"
   },
   {
     "id": "gourgeist-small",
@@ -7305,7 +7474,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10030.png"
   },
   {
     "id": "gourgeist-large",
@@ -7349,7 +7519,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10031.png"
   },
   {
     "id": "gourgeist-super",
@@ -7393,7 +7564,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10032.png"
   },
   {
     "id": "avalugg",
@@ -7436,7 +7608,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/713.png"
   },
   {
     "id": "avalugg-hisui",
@@ -7480,7 +7653,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10243.png"
   },
   {
     "id": "noivern",
@@ -7524,7 +7698,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/715.png"
   },
   {
     "id": "decidueye",
@@ -7567,7 +7742,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/724.png"
   },
   {
     "id": "decidueye-hisui",
@@ -7610,7 +7786,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10244.png"
   },
   {
     "id": "incineroar",
@@ -7653,7 +7830,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/727.png"
   },
   {
     "id": "primarina",
@@ -7696,7 +7874,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/730.png"
   },
   {
     "id": "toucannon",
@@ -7740,7 +7919,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/733.png"
   },
   {
     "id": "crabominable",
@@ -7784,7 +7964,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/740.png"
   },
   {
     "id": "lycanroc-midday",
@@ -7827,7 +8008,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png"
   },
   {
     "id": "lycanroc-midnight",
@@ -7870,7 +8052,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10126.png"
   },
   {
     "id": "lycanroc-dusk",
@@ -7911,7 +8094,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10152.png"
   },
   {
     "id": "toxapex",
@@ -7955,7 +8139,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/748.png"
   },
   {
     "id": "mudsdale",
@@ -7998,7 +8183,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/750.png"
   },
   {
     "id": "araquanid",
@@ -8041,7 +8227,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/752.png"
   },
   {
     "id": "salazzle",
@@ -8084,7 +8271,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/758.png"
   },
   {
     "id": "tsareena",
@@ -8127,7 +8315,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/763.png"
   },
   {
     "id": "oranguru",
@@ -8171,7 +8360,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/765.png"
   },
   {
     "id": "passimian",
@@ -8213,7 +8403,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/766.png"
   },
   {
     "id": "mimikyu-disguised",
@@ -8255,7 +8446,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/778.png"
   },
   {
     "id": "drampa",
@@ -8299,7 +8491,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/780.png"
   },
   {
     "id": "kommo-o",
@@ -8343,7 +8536,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/784.png"
   },
   {
     "id": "corviknight",
@@ -8387,7 +8581,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/823.png"
   },
   {
     "id": "flapple",
@@ -8431,7 +8626,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/841.png"
   },
   {
     "id": "appletun",
@@ -8475,7 +8671,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/842.png"
   },
   {
     "id": "sandaconda",
@@ -8518,7 +8715,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/844.png"
   },
   {
     "id": "polteageist",
@@ -8560,7 +8758,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/855.png"
   },
   {
     "id": "hatterene",
@@ -8604,7 +8803,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/858.png"
   },
   {
     "id": "grimmsnarl",
@@ -8648,7 +8848,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/861.png"
   },
   {
     "id": "mr-rime",
@@ -8692,7 +8893,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/866.png"
   },
   {
     "id": "runerigus",
@@ -8734,7 +8936,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/867.png"
   },
   {
     "id": "alcremie",
@@ -8776,7 +8979,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/869.png"
   },
   {
     "id": "falinks",
@@ -8818,7 +9022,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/870.png"
   },
   {
     "id": "morpeko-full-belly",
@@ -8860,7 +9065,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/877.png"
   },
   {
     "id": "dragapult",
@@ -8904,7 +9110,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/887.png"
   },
   {
     "id": "wyrdeer",
@@ -8948,7 +9155,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/899.png"
   },
   {
     "id": "kleavor",
@@ -8992,7 +9200,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/900.png"
   },
   {
     "id": "basculegion-male",
@@ -9036,7 +9245,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/902.png"
   },
   {
     "id": "basculegion-female",
@@ -9080,7 +9290,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10248.png"
   },
   {
     "id": "sneasler",
@@ -9124,7 +9335,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/903.png"
   },
   {
     "id": "overqwil",
@@ -9168,7 +9380,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/904.png"
   },
   {
     "id": "meowscarada",
@@ -9211,7 +9424,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/908.png"
   },
   {
     "id": "skeledirge",
@@ -9254,7 +9468,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/911.png"
   },
   {
     "id": "quaquaval",
@@ -9297,7 +9512,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/914.png"
   },
   {
     "id": "maushold-family-of-four",
@@ -9340,7 +9556,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/925.png"
   },
   {
     "id": "garganacl",
@@ -9383,7 +9600,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/934.png"
   },
   {
     "id": "armarouge",
@@ -9426,7 +9644,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/936.png"
   },
   {
     "id": "ceruledge",
@@ -9469,7 +9688,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/937.png"
   },
   {
     "id": "bellibolt",
@@ -9512,7 +9732,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/939.png"
   },
   {
     "id": "scovillain",
@@ -9556,7 +9777,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/952.png"
   },
   {
     "id": "espathra",
@@ -9599,7 +9821,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/956.png"
   },
   {
     "id": "tinkaton",
@@ -9643,7 +9866,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/959.png"
   },
   {
     "id": "palafin-zero",
@@ -9684,7 +9908,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/964.png"
   },
   {
     "id": "orthworm",
@@ -9726,7 +9951,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/968.png"
   },
   {
     "id": "glimmora",
@@ -9769,7 +9995,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/970.png"
   },
   {
     "id": "houndstone",
@@ -9811,7 +10038,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/972.png"
   },
   {
     "id": "annihilape",
@@ -9855,7 +10083,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/979.png"
   },
   {
     "id": "farigiraf",
@@ -9899,7 +10128,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/981.png"
   },
   {
     "id": "kingambit",
@@ -9943,7 +10173,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/983.png"
   },
   {
     "id": "gholdengo",
@@ -9985,7 +10216,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1000.png"
   },
   {
     "id": "sinistcha",
@@ -10028,7 +10260,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1013.png"
   },
   {
     "id": "archaludon",
@@ -10072,7 +10305,8 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1018.png"
   },
   {
     "id": "hydrapple",
@@ -10116,6 +10350,7 @@
     "sources": [
       "pokeapi",
       "official-regulation"
-    ]
+    ],
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1019.png"
   }
 ]

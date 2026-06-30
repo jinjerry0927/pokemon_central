@@ -15,6 +15,7 @@ type PokemonEntry = {
   id: string;
   nameKo: string;
   nameEn: string;
+  spriteUrl: string | null;
   types: string[];
   baseStats: {
     hp: number;
@@ -60,11 +61,21 @@ type TeamBuilderProps = {
   pokemon: PokemonEntry[];
 };
 
+type StatPoints = {
+  hp: number;
+  attack: number;
+  specialAttack: number;
+  defense: number;
+  specialDefense: number;
+  speed: number;
+};
+
 type TeamSlot = {
   pokemonId: string;
   moveIds: string[];
   itemId: string | null;
   abilityId: string | null;
+  statPoints: StatPoints;
 } | null;
 
 const storageKey = "pokemon-central-team-builder";
@@ -72,7 +83,60 @@ const shareQueryKey = "team";
 const shareMovesQueryKey = "moves";
 const shareItemsQueryKey = "items";
 const shareAbilitiesQueryKey = "abilities";
+const shareStatsQueryKey = "stats";
 const emptyTeam: TeamSlot[] = [null, null, null, null, null, null];
+const maxStatPoints = 66;
+const emptyStatPoints: StatPoints = {
+  hp: 0,
+  attack: 0,
+  specialAttack: 0,
+  defense: 0,
+  specialDefense: 0,
+  speed: 0
+};
+const statPointFields: { key: keyof StatPoints; label: string; shortLabel: string }[] = [
+  { key: "hp", label: "HP", shortLabel: "H" },
+  { key: "attack", label: "공격", shortLabel: "A" },
+  { key: "specialAttack", label: "특수공격", shortLabel: "B" },
+  { key: "defense", label: "방어", shortLabel: "C" },
+  { key: "specialDefense", label: "특수방어", shortLabel: "D" },
+  { key: "speed", label: "스피드", shortLabel: "S" }
+];
+const typeNameKo: Record<string, string> = {
+  Bug: "벌레",
+  Dark: "악",
+  Dragon: "드래곤",
+  Electric: "전기",
+  Fairy: "페어리",
+  Fighting: "격투",
+  Fire: "불꽃",
+  Flying: "비행",
+  Ghost: "고스트",
+  Grass: "풀",
+  Ground: "땅",
+  Ice: "얼음",
+  Normal: "노말",
+  Poison: "독",
+  Psychic: "에스퍼",
+  Rock: "바위",
+  Steel: "강철",
+  Water: "물"
+};
+const moveCategoryKo: Record<string, string> = {
+  Physical: "물리",
+  Special: "특수",
+  Status: "변화"
+};
+
+function createTeamSlot(pokemonId: string): NonNullable<TeamSlot> {
+  return {
+    pokemonId,
+    moveIds: [],
+    itemId: null,
+    abilityId: null,
+    statPoints: { ...emptyStatPoints }
+  };
+}
 
 function getRoleTags(entry: PokemonEntry) {
   const tags = new Set<string>();
@@ -115,6 +179,67 @@ function normalizeMoveIds(value: unknown, validMoveIds: Set<string>) {
   ).slice(0, 4);
 }
 
+function normalizeStatPointValue(value: unknown) {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return Math.max(0, Math.min(maxStatPoints, Math.trunc(value)));
+  }
+  if (typeof value === "string" && /^\d+$/.test(value)) {
+    return Math.max(0, Math.min(maxStatPoints, Number(value)));
+  }
+  return 0;
+}
+
+function normalizeStatPoints(value: unknown): StatPoints {
+  const points =
+    typeof value === "object" && value !== null
+      ? {
+          hp: normalizeStatPointValue("hp" in value ? value.hp : 0),
+          attack: normalizeStatPointValue("attack" in value ? value.attack : 0),
+          specialAttack: normalizeStatPointValue(
+            "specialAttack" in value ? value.specialAttack : 0
+          ),
+          defense: normalizeStatPointValue("defense" in value ? value.defense : 0),
+          specialDefense: normalizeStatPointValue(
+            "specialDefense" in value ? value.specialDefense : 0
+          ),
+          speed: normalizeStatPointValue("speed" in value ? value.speed : 0)
+        }
+      : { ...emptyStatPoints };
+  let remaining = maxStatPoints;
+
+  for (const field of statPointFields) {
+    const nextValue = Math.min(points[field.key], remaining);
+    points[field.key] = nextValue;
+    remaining -= nextValue;
+  }
+
+  return points;
+}
+
+function parseSharedStatPoints(value: string | undefined): StatPoints {
+  if (!value) {
+    return { ...emptyStatPoints };
+  }
+
+  const values = value.split("-").map(normalizeStatPointValue);
+  return normalizeStatPoints({
+    hp: values[0] ?? 0,
+    attack: values[1] ?? 0,
+    specialAttack: values[2] ?? 0,
+    defense: values[3] ?? 0,
+    specialDefense: values[4] ?? 0,
+    speed: values[5] ?? 0
+  });
+}
+
+function serializeStatPoints(points: StatPoints) {
+  return statPointFields.map((field) => points[field.key]).join("-");
+}
+
+function getStatPointTotal(points: StatPoints) {
+  return statPointFields.reduce((total, field) => total + points[field.key], 0);
+}
+
 function enforceHeldItemRule(team: TeamSlot[], duplicateHeldItemsAllowed: boolean) {
   if (duplicateHeldItemsAllowed) {
     return team;
@@ -153,7 +278,7 @@ function readStoredTeam(
     return emptyTeam.map((_, index) => {
       const value = parsed[index];
       if (typeof value === "string" && validIds.has(value)) {
-        return { pokemonId: value, moveIds: [], itemId: null, abilityId: null };
+        return createTeamSlot(value);
       }
       if (
         typeof value === "object" &&
@@ -179,7 +304,10 @@ function readStoredTeam(
             typeof value.abilityId === "string" &&
             validAbilityIdsByPokemon.get(value.pokemonId)?.has(value.abilityId)
               ? value.abilityId
-              : null
+              : null,
+          statPoints: normalizeStatPoints(
+            "statPoints" in value ? value.statPoints : emptyStatPoints
+          )
         };
       }
       return null;
@@ -206,6 +334,7 @@ function readSharedTeam(
   const sharedMoveSlots = (params.get(shareMovesQueryKey) ?? "").split(";");
   const sharedItemSlots = (params.get(shareItemsQueryKey) ?? "").split(",");
   const sharedAbilitySlots = (params.get(shareAbilitiesQueryKey) ?? "").split(",");
+  const sharedStatSlots = (params.get(shareStatsQueryKey) ?? "").split(";");
 
   return emptyTeam.map((_, index) => {
     const value = slots[index];
@@ -226,7 +355,8 @@ function readSharedTeam(
         sharedAbilitySlots[index] &&
         validAbilityIdsByPokemon.get(value)?.has(sharedAbilitySlots[index])
           ? sharedAbilitySlots[index]
-          : null
+          : null,
+      statPoints: parseSharedStatPoints(sharedStatSlots[index])
     };
   });
 }
@@ -242,6 +372,7 @@ function clearSharedTeamFromAddress() {
   url.searchParams.delete(shareMovesQueryKey);
   url.searchParams.delete(shareItemsQueryKey);
   url.searchParams.delete(shareAbilitiesQueryKey);
+  url.searchParams.delete(shareStatsQueryKey);
   window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 }
 
@@ -383,9 +514,7 @@ export function TeamBuilder({
       }
 
       return currentTeam.map((slot, index) =>
-        index === openIndex
-          ? { pokemonId: id, moveIds: [], itemId: null, abilityId: null }
-          : slot
+        index === openIndex ? createTeamSlot(id) : slot
       );
     });
   }
@@ -457,6 +586,34 @@ export function TeamBuilder({
     );
   }
 
+  function updateSlotStatPoint(
+    slotIndex: number,
+    statKey: keyof StatPoints,
+    rawValue: string
+  ) {
+    setShareStatus("");
+    clearSharedTeamFromAddress();
+    setTeam((currentTeam) =>
+      currentTeam.map((slot, index) => {
+        if (index !== slotIndex || !slot) {
+          return slot;
+        }
+
+        const requestedValue = normalizeStatPointValue(rawValue);
+        const currentOtherTotal = getStatPointTotal(slot.statPoints) - slot.statPoints[statKey];
+        const nextValue = Math.min(requestedValue, maxStatPoints - currentOtherTotal);
+
+        return {
+          ...slot,
+          statPoints: {
+            ...slot.statPoints,
+            [statKey]: nextValue
+          }
+        };
+      })
+    );
+  }
+
   function removeSlot(slotIndex: number) {
     setShareStatus("");
     clearSharedTeamFromAddress();
@@ -486,6 +643,10 @@ export function TeamBuilder({
     url.searchParams.set(
       shareAbilitiesQueryKey,
       team.map((slot) => slot?.abilityId ?? "").join(",")
+    );
+    url.searchParams.set(
+      shareStatsQueryKey,
+      team.map((slot) => (slot ? serializeStatPoints(slot.statPoints) : "")).join(";")
     );
     window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 
@@ -565,6 +726,7 @@ export function TeamBuilder({
                       )
                     )
                 : [];
+              const statPointTotal = slot ? getStatPointTotal(slot.statPoints) : 0;
 
               return (
                 <div
@@ -587,9 +749,24 @@ export function TeamBuilder({
                   </div>
                   {entry ? (
                     <div className="mt-4 grid gap-3">
-                      <div>
-                        <h2 className="text-lg font-bold text-[var(--foreground)]">{entry.nameKo}</h2>
-                        <p className="text-sm text-[var(--muted)]">{entry.nameEn}</p>
+                      <div className="flex items-center gap-3">
+                        {entry.spriteUrl ? (
+                          // eslint-disable-next-line @next/next/no-img-element -- Static export uses already-small external sprites without Next image optimization.
+                          <img
+                            alt=""
+                            className="h-12 w-12 shrink-0 rounded-md bg-[var(--chip)] object-contain"
+                            height={48}
+                            loading="lazy"
+                            src={entry.spriteUrl}
+                            width={48}
+                          />
+                        ) : null}
+                        <div className="min-w-0">
+                          <h2 className="truncate text-lg font-bold text-[var(--foreground)]">
+                            {entry.nameKo}
+                          </h2>
+                          <p className="truncate text-sm text-[var(--muted)]">{entry.nameEn}</p>
+                        </div>
                       </div>
                       <div className="flex flex-wrap gap-1">
                         {entry.types.map((type) => (
@@ -604,6 +781,38 @@ export function TeamBuilder({
                             {role}
                           </Badge>
                         ))}
+                      </div>
+                      <div className="grid gap-2 border-t border-[var(--panel-border)] pt-3">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="text-xs font-bold text-[var(--muted)]">스탯 포인트</p>
+                          <Badge tone={statPointTotal === maxStatPoints ? "success" : "warning"}>
+                            {statPointTotal}/{maxStatPoints}
+                          </Badge>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          {statPointFields.map((field) => (
+                            <label
+                              className="grid grid-cols-[2rem_minmax(0,1fr)_4.25rem] items-center gap-2 text-xs font-semibold text-[var(--muted)]"
+                              key={field.key}
+                            >
+                              <span className="font-bold text-[var(--foreground)]">
+                                {field.shortLabel}
+                              </span>
+                              <span>{field.label}</span>
+                              <input
+                                aria-label={`${entry.nameKo} ${field.label} 스탯 포인트`}
+                                className="h-9 w-full rounded-md border border-[var(--panel-border)] bg-white px-2 text-right text-sm font-bold text-[var(--foreground)] outline-none focus:border-[var(--support)]"
+                                max={maxStatPoints}
+                                min={0}
+                                onChange={(event) =>
+                                  updateSlotStatPoint(index, field.key, event.target.value)
+                                }
+                                type="number"
+                                value={slot?.statPoints[field.key] ?? 0}
+                              />
+                            </label>
+                          ))}
+                        </div>
                       </div>
                       <div className="grid gap-2 border-t border-[var(--panel-border)] pt-3">
                         <p className="text-xs font-bold text-[var(--muted)]">특성</p>
@@ -685,7 +894,8 @@ export function TeamBuilder({
                                   key={move.id}
                                   value={move.id}
                                 >
-                                  {move.nameKo ?? move.nameEn} · {move.type} · {move.category}
+                                  {move.nameKo ?? move.nameEn} · {typeNameKo[move.type] ?? move.type} ·{" "}
+                                  {moveCategoryKo[move.category] ?? move.category}
                                 </option>
                               ))}
                             </select>

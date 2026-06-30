@@ -544,6 +544,7 @@ export function validatePokemonEntries(entries, label = "pokemon") {
     assert(!ids.has(entry.id), `${entryLabel}.id is duplicated.`);
     assert(typeof entry.nameKo === "string" && entry.nameKo.length > 0, `${entryLabel}.nameKo is required.`);
     assert(typeof entry.nameEn === "string" && entry.nameEn.length > 0, `${entryLabel}.nameEn is required.`);
+    assert(entry.spriteUrl === null || (typeof entry.spriteUrl === "string" && entry.spriteUrl.startsWith("https://")), `${entryLabel}.spriteUrl must be an HTTPS URL or null.`);
     assertUniqueStrings(entry.types, `${entryLabel}.types`);
     assert(entry.types.length >= 1 && entry.types.length <= 2, `${entryLabel}.types must contain one or two values.`);
     assert(typeof entry.baseStats === "object" && entry.baseStats !== null, `${entryLabel}.baseStats is required.`);

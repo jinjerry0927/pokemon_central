@@ -224,6 +224,7 @@ async function syncRosterEntry(rosterEntry) {
     nameKo: formatKoreanName(baseNameKo, formNameKo),
     nameEn:
       rosterEntry.nameEn ?? getLocalizedName(species.names, "en", toTitleCase(pokemon.name)),
+    spriteUrl: pokemon.sprites.front_default,
     types: pokemon.types
       .sort((left, right) => left.slot - right.slot)
       .map((entry) => toTitleCase(entry.type.name)),

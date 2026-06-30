@@ -33,6 +33,7 @@
 | ID | Category | Summary | Evidence | Priority | Status | Source |
 | --- | --- | --- | ---: | --- | --- | --- |
 | FB-TEST-001 | UI | `[TEST]` 모바일 팀빌더 버튼 터치 영역 개선 | 1 | P2 | Selected | 2026-06-20 / Test |
+| FB-DATA-001 | Data | 메가스톤 수집 및 포켓몬별 전용 도구 필터링 | 1 | P2 | Candidate | 2026-06-30 / Planning |
 
 Priority는 `mvp-feedback.md`의 `P0`~`P3` 기준을 사용한다. Source에는 피드백 로그의
 날짜와 채널을 적어 원문을 다시 찾을 수 있게 한다.
