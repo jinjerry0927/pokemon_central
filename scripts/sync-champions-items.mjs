@@ -13,6 +13,120 @@ const itemsUrl = "https://www.serebii.net/pokemonchampions/items.shtml";
 const officialRegulationUrl = "https://champions-news.pokemon-home.com/en/page/776.html";
 const pokeapiBaseUrl = "https://pokeapi.co/api/v2";
 const concurrency = 10;
+const megaStoneAllowedPokemonIds = new Map([
+  ["abomasite", ["abomasnow"]],
+  ["absolite", ["absol"]],
+  ["aerodactylite", ["aerodactyl"]],
+  ["aggronite", ["aggron"]],
+  ["alakazite", ["alakazam"]],
+  ["altarianite", ["altaria"]],
+  ["ampharosite", ["ampharos"]],
+  ["audinite", ["audino"]],
+  ["banettite", ["banette"]],
+  ["barbaracite", ["barbaracle"]],
+  ["beedrillite", ["beedrill"]],
+  ["blastoisinite", ["blastoise"]],
+  ["blazikenite", ["blaziken"]],
+  ["cameruptite", ["camerupt"]],
+  ["chandelurite", ["chandelure"]],
+  ["charizardite-x", ["charizard"]],
+  ["charizardite-y", ["charizard"]],
+  ["chesnaughtite", ["chesnaught"]],
+  ["chimechite", ["chimecho"]],
+  ["clefablite", ["clefable"]],
+  ["crabominite", ["crabominable"]],
+  ["delphoxite", ["delphox"]],
+  ["dragalgite", ["dragalge"]],
+  ["dragoninite", ["dragonite"]],
+  ["drampanite", ["drampa"]],
+  ["eelektrossite", ["eelektross"]],
+  ["emboarite", ["emboar"]],
+  ["excadrite", ["excadrill"]],
+  ["falinksite", ["falinks"]],
+  ["feraligite", ["feraligatr"]],
+  ["floettite", ["floette-eternal"]],
+  ["froslassite", ["froslass"]],
+  ["galladite", ["gallade"]],
+  ["garchompite", ["garchomp"]],
+  ["gardevoirite", ["gardevoir"]],
+  ["gengarite", ["gengar"]],
+  ["glalitite", ["glalie"]],
+  ["glimmoranite", ["glimmora"]],
+  ["golurkite", ["golurk"]],
+  ["greninjite", ["greninja"]],
+  ["gyaradosite", ["gyarados"]],
+  ["hawluchanite", ["hawlucha"]],
+  ["heracronite", ["heracross"]],
+  ["houndoominite", ["houndoom"]],
+  ["kangaskhanite", ["kangaskhan"]],
+  ["lopunnite", ["lopunny"]],
+  ["lucarionite", ["lucario"]],
+  ["malamarite", ["malamar"]],
+  ["manectite", ["manectric"]],
+  ["mawilite", ["mawile"]],
+  ["medichamite", ["medicham"]],
+  ["meganiumite", ["meganium"]],
+  ["meowsticite", ["meowstic-male", "meowstic-female"]],
+  ["metagrossite", ["metagross"]],
+  ["pidgeotite", ["pidgeot"]],
+  ["pinsirite", ["pinsir"]],
+  ["pyroarite", ["pyroar-male"]],
+  ["raichunite-x", ["raichu"]],
+  ["raichunite-y", ["raichu"]],
+  ["sablenite", ["sableye"]],
+  ["sceptilite", ["sceptile"]],
+  ["scizorite", ["scizor"]],
+  ["scolipite", ["scolipede"]],
+  ["scovillainite", ["scovillain"]],
+  ["scraftinite", ["scrafty"]],
+  ["sharpedonite", ["sharpedo"]],
+  ["skarmorite", ["skarmory"]],
+  ["slowbronite", ["slowbro"]],
+  ["staraptite", ["staraptor"]],
+  ["starminite", ["starmie"]],
+  ["steelixite", ["steelix"]],
+  ["swampertite", ["swampert"]],
+  ["tyranitarite", ["tyranitar"]],
+  ["venusaurite", ["venusaur"]],
+  ["victreebelite", ["victreebel"]]
+]);
+const megaStoneKoreanNameFallbacks = new Map([
+  ["audinite", "다부니나이트"],
+  ["barbaracite", "거북손데스나이트"],
+  ["chandelurite", "샹델라나이트"],
+  ["chesnaughtite", "브리가론나이트"],
+  ["chimechite", "치렁나이트"],
+  ["clefablite", "픽시나이트"],
+  ["crabominite", "모단단게나이트"],
+  ["delphoxite", "마폭시나이트"],
+  ["dragalgite", "드래캄나이트"],
+  ["dragoninite", "망나뇽나이트"],
+  ["drampanite", "할비롱나이트"],
+  ["eelektrossite", "저리더프나이트"],
+  ["emboarite", "염무왕나이트"],
+  ["excadrite", "몰드류나이트"],
+  ["falinksite", "대여르나이트"],
+  ["feraligite", "장크로다일나이트"],
+  ["floettite", "플라엣테나이트"],
+  ["froslassite", "눈여아나이트"],
+  ["glimmoranite", "킬라플로르나이트"],
+  ["golurkite", "골루그나이트"],
+  ["greninjite", "개굴닌자나이트"],
+  ["hawluchanite", "루차불나이트"],
+  ["malamarite", "칼라마네로나이트"],
+  ["meganiumite", "메가니움나이트"],
+  ["meowsticite", "냐오닉스나이트"],
+  ["pyroarite", "화염레오나이트"],
+  ["raichunite-x", "라이츄나이트X"],
+  ["raichunite-y", "라이츄나이트Y"],
+  ["scolipite", "펜드라나이트"],
+  ["scovillainite", "스코빌런나이트"],
+  ["scraftinite", "곤율거니나이트"],
+  ["skarmorite", "무장조나이트"],
+  ["staraptite", "찌르호크나이트"],
+  ["starminite", "아쿠스타나이트"],
+  ["victreebelite", "우츠보트나이트"]
+]);
 
 function wait(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
@@ -106,18 +220,31 @@ async function main() {
   console.log(`Loading ${sourceEntries.length} Champions held item candidates...`);
   const entries = await mapWithConcurrency(sourceEntries, concurrency, async (entry) => {
     const pokeapiItem = await fetchPokeapiItem(entry.id);
-    const nameKo = pokeapiItem ? getLocalizedName(pokeapiItem.names, "ko") : null;
+    const nameKo =
+      (pokeapiItem ? getLocalizedName(pokeapiItem.names, "ko") : null) ??
+      megaStoneKoreanNameFallbacks.get(entry.id) ??
+      null;
+    const allowedPokemonIds =
+      entry.category === "mega-stone" ? megaStoneAllowedPokemonIds.get(entry.id) : undefined;
+    if (entry.category === "mega-stone" && !allowedPokemonIds) {
+      throw new Error(`Mega Stone ${entry.id} is missing a Pokémon restriction mapping.`);
+    }
     return {
       id: entry.id,
       nameKo,
       nameEn: entry.nameEn,
       category: entry.category,
+      ...(allowedPokemonIds ? { allowedPokemonIds } : {}),
       itemDexUrl: new URL(entry.itemDexPath, itemsUrl).href,
       pokeapiId: pokeapiItem?.id ?? null,
       pokeapiStatus: pokeapiItem ? "matched" : "missing",
       localizationStatus: nameKo ? "complete" : "missing-ko",
       publishStatus: "review-candidate",
-      sources: ["serebii-champions-items", ...(pokeapiItem ? ["pokeapi"] : [])]
+      sources: [
+        "serebii-champions-items",
+        ...(entry.category === "mega-stone" ? ["manual-mega-stone-curation"] : []),
+        ...(pokeapiItem ? ["pokeapi"] : [])
+      ]
     };
   });
   const snapshot = {
@@ -138,6 +265,7 @@ async function main() {
     },
     limitations: [
       "Only Hold Items and Berries are collected; miscellaneous non-held items are excluded.",
+      "Mega Stones are added by manual curation and restricted to their matching Pokémon in the team builder.",
       "Serebii item descriptions are not copied; only factual identifiers and categories are retained.",
       "Entries remain review candidates until promoted for public item guidance."
     ],
@@ -145,6 +273,7 @@ async function main() {
       itemCount: entries.length,
       heldItemCount: entries.filter((entry) => entry.category === "held-item").length,
       berryCount: entries.filter((entry) => entry.category === "berry").length,
+      megaStoneCount: entries.filter((entry) => entry.category === "mega-stone").length,
       pokeapiMatchedCount: entries.filter((entry) => entry.pokeapiStatus === "matched").length,
       pokeapiMissingCount: entries.filter((entry) => entry.pokeapiStatus === "missing").length,
       missingKoreanNameCount: entries.filter((entry) => entry.nameKo === null).length

@@ -40,6 +40,7 @@ type ItemEntry = {
   nameKo: string | null;
   nameEn: string;
   category: string;
+  allowedPokemonIds: string[] | null;
 };
 
 type AbilityEntry = {
@@ -258,10 +259,14 @@ function enforceHeldItemRule(team: TeamSlot[], duplicateHeldItemsAllowed: boolea
   });
 }
 
+function itemIsAllowedForPokemon(item: ItemEntry, pokemonId: string) {
+  return item.allowedPokemonIds === null || item.allowedPokemonIds.includes(pokemonId);
+}
+
 function readStoredTeam(
   validIds: Set<string>,
   validMoveIdsByPokemon: Map<string, Set<string>>,
-  validItemIds: Set<string>,
+  itemById: Map<string, ItemEntry>,
   validAbilityIdsByPokemon: Map<string, Set<string>>
 ) {
   try {
@@ -296,7 +301,8 @@ function readStoredTeam(
           itemId:
             "itemId" in value &&
             typeof value.itemId === "string" &&
-            validItemIds.has(value.itemId)
+            itemById.has(value.itemId) &&
+            itemIsAllowedForPokemon(itemById.get(value.itemId) as ItemEntry, value.pokemonId)
               ? value.itemId
               : null,
           abilityId:
@@ -320,7 +326,7 @@ function readStoredTeam(
 function readSharedTeam(
   validIds: Set<string>,
   validMoveIdsByPokemon: Map<string, Set<string>>,
-  validItemIds: Set<string>,
+  itemById: Map<string, ItemEntry>,
   validAbilityIdsByPokemon: Map<string, Set<string>>
 ) {
   const params = new URLSearchParams(window.location.search);
@@ -348,7 +354,9 @@ function readSharedTeam(
         validMoveIdsByPokemon.get(value) ?? new Set()
       ),
       itemId:
-        sharedItemSlots[index] && validItemIds.has(sharedItemSlots[index])
+        sharedItemSlots[index] &&
+        itemById.has(sharedItemSlots[index]) &&
+        itemIsAllowedForPokemon(itemById.get(sharedItemSlots[index]) as ItemEntry, value)
           ? sharedItemSlots[index]
           : null,
       abilityId:
@@ -401,7 +409,7 @@ export function TeamBuilder({
     [abilities]
   );
   const validIds = useMemo(() => new Set(pokemon.map((entry) => entry.id)), [pokemon]);
-  const validItemIds = useMemo(() => new Set(items.map((entry) => entry.id)), [items]);
+  const itemById = useMemo(() => new Map(items.map((entry) => [entry.id, entry])), [items]);
   const sortedItems = useMemo(
     () =>
       [...items].sort((left, right) =>
@@ -470,7 +478,7 @@ export function TeamBuilder({
     const sharedTeam = readSharedTeam(
       validIds,
       validMoveIdsByPokemon,
-      validItemIds,
+      itemById,
       validAbilityIdsByPokemon
     );
 
@@ -480,7 +488,7 @@ export function TeamBuilder({
           readStoredTeam(
             validIds,
             validMoveIdsByPokemon,
-            validItemIds,
+            itemById,
             validAbilityIdsByPokemon
           ),
         duplicateHeldItemsAllowed
@@ -494,7 +502,7 @@ export function TeamBuilder({
     duplicateHeldItemsAllowed,
     validAbilityIdsByPokemon,
     validIds,
-    validItemIds,
+    itemById,
     validMoveIdsByPokemon
   ]);
 
@@ -548,7 +556,14 @@ export function TeamBuilder({
     clearSharedTeamFromAddress();
     setTeam((currentTeam) => {
       const normalizedItemId = itemId === "" ? null : itemId;
-      if (normalizedItemId && !validItemIds.has(normalizedItemId)) {
+      const selectedSlot = currentTeam[slotIndex];
+      const selectedItem = normalizedItemId ? itemById.get(normalizedItemId) : null;
+      if (
+        normalizedItemId &&
+        (!selectedSlot ||
+          !selectedItem ||
+          !itemIsAllowedForPokemon(selectedItem, selectedSlot.pokemonId))
+      ) {
         return currentTeam;
       }
       if (
@@ -726,6 +741,9 @@ export function TeamBuilder({
                       )
                     )
                 : [];
+              const availableItems = entry
+                ? sortedItems.filter((item) => itemIsAllowedForPokemon(item, entry.id))
+                : [];
               const statPointTotal = slot ? getStatPointTotal(slot.statPoints) : 0;
 
               return (
@@ -844,7 +862,7 @@ export function TeamBuilder({
                           value={slot?.itemId ?? ""}
                         >
                           <option value="">도구 없음</option>
-                          {sortedItems.map((item) => (
+                          {availableItems.map((item) => (
                             <option
                               disabled={
                                 !duplicateHeldItemsAllowed &&
@@ -856,7 +874,12 @@ export function TeamBuilder({
                               key={item.id}
                               value={item.id}
                             >
-                              {item.nameKo ?? item.nameEn} · {item.category === "berry" ? "Berry" : "Item"}
+                              {item.nameKo ?? item.nameEn} ·{" "}
+                              {item.category === "berry"
+                                ? "열매"
+                                : item.category === "mega-stone"
+                                  ? "메가스톤"
+                                  : "도구"}
                             </option>
                           ))}
                         </select>

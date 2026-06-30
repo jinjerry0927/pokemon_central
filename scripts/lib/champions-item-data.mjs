@@ -71,6 +71,7 @@ function extractSectionItems(html, heading, category) {
 export function parseChampionsHeldItems(html) {
   const entries = [
     ...extractSectionItems(html, "Hold Items", "held-item"),
+    ...extractSectionItems(html, "Mega Stone", "mega-stone"),
     ...extractSectionItems(html, "Berries", "berry")
   ];
   const ids = new Set();
@@ -112,14 +113,24 @@ export function validateChampionsItemSnapshot(snapshot) {
     assert(!ids.has(entry.id), `${label}.id is duplicated.`);
     assert(entry.nameKo === null || (typeof entry.nameKo === "string" && entry.nameKo.length > 0), `${label}.nameKo is invalid.`);
     assert(typeof entry.nameEn === "string" && entry.nameEn.length > 0, `${label}.nameEn is required.`);
-    assert(["held-item", "berry"].includes(entry.category), `${label}.category is invalid.`);
+    assert(["held-item", "berry", "mega-stone"].includes(entry.category), `${label}.category is invalid.`);
+    if (entry.category === "mega-stone") {
+      assertUniqueStrings(entry.allowedPokemonIds, `${label}.allowedPokemonIds`);
+      assert(entry.allowedPokemonIds.length > 0, `${label}.allowedPokemonIds is required.`);
+    } else {
+      assert(entry.allowedPokemonIds === undefined, `${label}.allowedPokemonIds must be omitted.`);
+    }
     assert(typeof entry.itemDexUrl === "string" && entry.itemDexUrl.startsWith("https://"), `${label}.itemDexUrl is invalid.`);
     assert(entry.pokeapiId === null || Number.isInteger(entry.pokeapiId), `${label}.pokeapiId is invalid.`);
     assert(["matched", "missing"].includes(entry.pokeapiStatus), `${label}.pokeapiStatus is invalid.`);
     assert(entry.localizationStatus === (entry.nameKo ? "complete" : "missing-ko"), `${label}.localizationStatus is invalid.`);
     assert(entry.publishStatus === "review-candidate", `${label}.publishStatus must remain review-candidate.`);
     assertUniqueStrings(entry.sources, `${label}.sources`);
-    assert(entry.sources.includes("serebii-champions-items"), `${label}.sources must include Serebii.`);
+    assert(
+      entry.sources.includes("serebii-champions-items") ||
+        entry.sources.includes("manual-mega-stone-curation"),
+      `${label}.sources must include a supported item source.`
+    );
     assert(
       entry.pokeapiStatus === (entry.pokeapiId === null ? "missing" : "matched"),
       `${label}.pokeapiStatus does not match pokeapiId.`
@@ -133,11 +144,13 @@ export function validateChampionsItemSnapshot(snapshot) {
 
   const heldItemCount = snapshot.entries.filter((entry) => entry.category === "held-item").length;
   const berryCount = snapshot.entries.filter((entry) => entry.category === "berry").length;
+  const megaStoneCount = snapshot.entries.filter((entry) => entry.category === "mega-stone").length;
   const pokeapiMatchedCount = snapshot.entries.filter((entry) => entry.pokeapiStatus === "matched").length;
   const missingKoreanNameCount = snapshot.entries.filter((entry) => entry.nameKo === null).length;
   assert(snapshot.summary.itemCount === snapshot.entries.length, "Champions item summary itemCount is invalid.");
   assert(snapshot.summary.heldItemCount === heldItemCount, "Champions item summary heldItemCount is invalid.");
   assert(snapshot.summary.berryCount === berryCount, "Champions item summary berryCount is invalid.");
+  assert(snapshot.summary.megaStoneCount === megaStoneCount, "Champions item summary megaStoneCount is invalid.");
   assert(snapshot.summary.pokeapiMatchedCount === pokeapiMatchedCount, "Champions item summary PokeAPI count is invalid.");
   assert(snapshot.summary.pokeapiMissingCount === snapshot.entries.length - pokeapiMatchedCount, "Champions item summary missing count is invalid.");
   assert(snapshot.summary.missingKoreanNameCount === missingKoreanNameCount, "Champions item summary localization count is invalid.");

@@ -28,7 +28,11 @@ export default function TeamsPage() {
     id: item.id,
     nameKo: item.nameKo,
     nameEn: item.nameEn,
-    category: item.category
+    category: item.category,
+    allowedPokemonIds:
+      "allowedPokemonIds" in item && Array.isArray(item.allowedPokemonIds)
+        ? item.allowedPokemonIds
+        : null
   }));
   const abilities = championsAbilities.abilities.map((ability) => ({
     id: ability.id,

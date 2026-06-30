@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "regulationId": "M-B",
-  "checkedAt": "2026-06-22",
+  "checkedAt": "2026-06-30",
   "scope": "serebii-champions-held-items",
   "source": {
     "id": "serebii-champions-items",
@@ -16,18 +16,153 @@
   },
   "limitations": [
     "Only Hold Items and Berries are collected; miscellaneous non-held items are excluded.",
+    "Mega Stones are added by manual curation and restricted to their matching Pokémon in the team builder.",
     "Serebii item descriptions are not copied; only factual identifiers and categories are retained.",
     "Entries remain review candidates until promoted for public item guidance."
   ],
   "summary": {
-    "itemCount": 73,
+    "itemCount": 148,
     "heldItemCount": 45,
     "berryCount": 28,
-    "pokeapiMatchedCount": 73,
-    "pokeapiMissingCount": 0,
+    "megaStoneCount": 75,
+    "pokeapiMatchedCount": 114,
+    "pokeapiMissingCount": 34,
     "missingKoreanNameCount": 1
   },
   "entries": [
+    {
+      "id": "abomasite",
+      "nameKo": "눈설왕나이트",
+      "nameEn": "Abomasite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "abomasnow"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/abomasite.shtml",
+      "pokeapiId": 713,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "absolite",
+      "nameKo": "앱솔나이트",
+      "nameEn": "Absolite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "absol"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/absolite.shtml",
+      "pokeapiId": 716,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "aerodactylite",
+      "nameKo": "프테라나이트",
+      "nameEn": "Aerodactylite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "aerodactyl"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/aerodactylite.shtml",
+      "pokeapiId": 711,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "aggronite",
+      "nameKo": "보스로라나이트",
+      "nameEn": "Aggronite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "aggron"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/aggronite.shtml",
+      "pokeapiId": 706,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "alakazite",
+      "nameKo": "후디나이트",
+      "nameEn": "Alakazite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "alakazam"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/alakazite.shtml",
+      "pokeapiId": 718,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "altarianite",
+      "nameKo": "파비코리나이트",
+      "nameEn": "Altarianite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "altaria"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/altarianite.shtml",
+      "pokeapiId": 796,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "ampharosite",
+      "nameKo": "전룡나이트",
+      "nameEn": "Ampharosite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "ampharos"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/ampharosite.shtml",
+      "pokeapiId": 697,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
     {
       "id": "aspear-berry",
       "nameKo": "배리열매",
@@ -44,6 +179,25 @@
       ]
     },
     {
+      "id": "audinite",
+      "nameKo": "다부니나이트",
+      "nameEn": "Audinite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "audino"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/audinite.shtml",
+      "pokeapiId": 798,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
       "id": "babiri-berry",
       "nameKo": "바리비열매",
       "nameEn": "Babiri Berry",
@@ -55,6 +209,62 @@
       "publishStatus": "review-candidate",
       "sources": [
         "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "banettite",
+      "nameKo": "다크펫나이트",
+      "nameEn": "Banettite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "banette"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/banettite.shtml",
+      "pokeapiId": 707,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "barbaracite",
+      "nameKo": "거북손데스나이트",
+      "nameEn": "Barbaracite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "barbaracle"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/barbaracite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "beedrillite",
+      "nameKo": "독침붕나이트",
+      "nameEn": "Beedrillite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "beedrill"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/beedrillite.shtml",
+      "pokeapiId": 811,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
         "pokeapi"
       ]
     },
@@ -104,6 +314,44 @@
       ]
     },
     {
+      "id": "blastoisinite",
+      "nameKo": "거북왕나이트",
+      "nameEn": "Blastoisinite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "blastoise"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/blastoisinite.shtml",
+      "pokeapiId": 700,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "blazikenite",
+      "nameKo": "번치코나이트",
+      "nameEn": "Blazikenite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "blaziken"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/blazikenite.shtml",
+      "pokeapiId": 703,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
       "id": "bright-powder",
       "nameKo": "반짝가루",
       "nameEn": "Bright Powder",
@@ -119,6 +367,43 @@
       ]
     },
     {
+      "id": "cameruptite",
+      "nameKo": "폭타나이트",
+      "nameEn": "Cameruptite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "camerupt"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/cameruptite.shtml",
+      "pokeapiId": 808,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "chandelurite",
+      "nameKo": "샹델라나이트",
+      "nameEn": "Chandelurite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "chandelure"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/chandelurite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "charcoal",
       "nameKo": "목탄",
       "nameEn": "Charcoal",
@@ -130,6 +415,44 @@
       "publishStatus": "review-candidate",
       "sources": [
         "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "charizardite-x",
+      "nameKo": "리자몽나이트X",
+      "nameEn": "Charizardite X",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "charizard"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/charizarditex.shtml",
+      "pokeapiId": 699,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "charizardite-y",
+      "nameKo": "리자몽나이트Y",
+      "nameEn": "Charizardite Y",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "charizard"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/charizarditey.shtml",
+      "pokeapiId": 717,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
         "pokeapi"
       ]
     },
@@ -164,6 +487,24 @@
       ]
     },
     {
+      "id": "chesnaughtite",
+      "nameKo": "브리가론나이트",
+      "nameEn": "Chesnaughtite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "chesnaught"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/chesnaughtite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "chesto-berry",
       "nameKo": "유루열매",
       "nameEn": "Chesto Berry",
@@ -191,6 +532,24 @@
       "sources": [
         "serebii-champions-items",
         "pokeapi"
+      ]
+    },
+    {
+      "id": "chimechite",
+      "nameKo": "치렁나이트",
+      "nameEn": "Chimechite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "chimecho"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/chimechite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
       ]
     },
     {
@@ -224,6 +583,24 @@
       ]
     },
     {
+      "id": "clefablite",
+      "nameKo": "픽시나이트",
+      "nameEn": "Clefablite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "clefable"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/clefablite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "coba-berry",
       "nameKo": "바코열매",
       "nameEn": "Coba Berry",
@@ -254,6 +631,24 @@
       ]
     },
     {
+      "id": "crabominite",
+      "nameKo": "모단단게나이트",
+      "nameEn": "Crabominite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "crabominable"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/crabominite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "damp-rock",
       "nameKo": "축축한바위",
       "nameEn": "Damp Rock",
@@ -269,6 +664,42 @@
       ]
     },
     {
+      "id": "delphoxite",
+      "nameKo": "마폭시나이트",
+      "nameEn": "Delphoxite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "delphox"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/delphoxite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "dragalgite",
+      "nameKo": "드래캄나이트",
+      "nameEn": "Dragalgite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "dragalge"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/dragalgite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "dragon-fang",
       "nameKo": "용의이빨",
       "nameEn": "Dragon Fang",
@@ -281,6 +712,96 @@
       "sources": [
         "serebii-champions-items",
         "pokeapi"
+      ]
+    },
+    {
+      "id": "dragoninite",
+      "nameKo": "망나뇽나이트",
+      "nameEn": "Dragoninite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "dragonite"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/dragoninite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "drampanite",
+      "nameKo": "할비롱나이트",
+      "nameEn": "Drampanite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "drampa"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/drampanite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "eelektrossite",
+      "nameKo": "저리더프나이트",
+      "nameEn": "Eelektrossite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "eelektross"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/eelektrossite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "emboarite",
+      "nameKo": "염무왕나이트",
+      "nameEn": "Emboarite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "emboar"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/emboarite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "excadrite",
+      "nameKo": "몰드류나이트",
+      "nameEn": "Excadrite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "excadrill"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/excadrite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
       ]
     },
     {
@@ -314,6 +835,60 @@
       ]
     },
     {
+      "id": "falinksite",
+      "nameKo": "대여르나이트",
+      "nameEn": "Falinksite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "falinks"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/falinksite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "feraligite",
+      "nameKo": "장크로다일나이트",
+      "nameEn": "Feraligite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "feraligatr"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/feraligite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "floettite",
+      "nameKo": "플라엣테나이트",
+      "nameEn": "Floettite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "floette-eternal"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/floettite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "focus-band",
       "nameKo": "기합의머리띠",
       "nameEn": "Focus Band",
@@ -340,6 +915,192 @@
       "publishStatus": "review-candidate",
       "sources": [
         "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "froslassite",
+      "nameKo": "눈여아나이트",
+      "nameEn": "Froslassite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "froslass"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/froslassite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "galladite",
+      "nameKo": "엘레이드나이트",
+      "nameEn": "Galladite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "gallade"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/galladite.shtml",
+      "pokeapiId": 797,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "garchompite",
+      "nameKo": "한카리아스나이트",
+      "nameEn": "Garchompite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "garchomp"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/garchompite.shtml",
+      "pokeapiId": 722,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "gardevoirite",
+      "nameKo": "가디안나이트",
+      "nameEn": "Gardevoirite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "gardevoir"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/gardevoirite.shtml",
+      "pokeapiId": 696,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "gengarite",
+      "nameKo": "팬텀나이트",
+      "nameEn": "Gengarite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "gengar"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/gengarite.shtml",
+      "pokeapiId": 695,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "glalitite",
+      "nameKo": "얼음귀신나이트",
+      "nameEn": "Glalitite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "glalie"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/glalitite.shtml",
+      "pokeapiId": 804,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "glimmoranite",
+      "nameKo": "킬라플로르나이트",
+      "nameEn": "Glimmoranite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "glimmora"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/glimmoranite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "golurkite",
+      "nameKo": "골루그나이트",
+      "nameEn": "Golurkite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "golurk"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/golurkite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "greninjite",
+      "nameKo": "개굴닌자나이트",
+      "nameEn": "Greninjite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "greninja"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/greninjite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "gyaradosite",
+      "nameKo": "갸라도스나이트",
+      "nameEn": "Gyaradosite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "gyarados"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/gyaradosite.shtml",
+      "pokeapiId": 715,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
         "pokeapi"
       ]
     },
@@ -374,6 +1135,24 @@
       ]
     },
     {
+      "id": "hawluchanite",
+      "nameKo": "루차불나이트",
+      "nameEn": "Hawluchanite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "hawlucha"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/hawluchanite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "heat-rock",
       "nameKo": "뜨거운바위",
       "nameEn": "Heat Rock",
@@ -385,6 +1164,44 @@
       "publishStatus": "review-candidate",
       "sources": [
         "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "heracronite",
+      "nameKo": "헤라크로스나이트",
+      "nameEn": "Heracronite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "heracross"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/heracronite.shtml",
+      "pokeapiId": 719,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "houndoominite",
+      "nameKo": "헬가나이트",
+      "nameEn": "Houndoominite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "houndoom"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/houndoominite.shtml",
+      "pokeapiId": 705,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
         "pokeapi"
       ]
     },
@@ -415,6 +1232,25 @@
       "publishStatus": "review-candidate",
       "sources": [
         "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "kangaskhanite",
+      "nameKo": "캥카나이트",
+      "nameEn": "Kangaskhanite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "kangaskhan"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/kangaskhanite.shtml",
+      "pokeapiId": 714,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
         "pokeapi"
       ]
     },
@@ -539,6 +1375,44 @@
       ]
     },
     {
+      "id": "lopunnite",
+      "nameKo": "이어롭나이트",
+      "nameEn": "Lopunnite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "lopunny"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/lopunnite.shtml",
+      "pokeapiId": 809,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "lucarionite",
+      "nameKo": "루카리오나이트",
+      "nameEn": "Lucarionite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "lucario"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/lucarionite.shtml",
+      "pokeapiId": 712,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
       "id": "lum-berry",
       "nameKo": "리샘열매",
       "nameEn": "Lum Berry",
@@ -569,6 +1443,99 @@
       ]
     },
     {
+      "id": "malamarite",
+      "nameKo": "칼라마네로나이트",
+      "nameEn": "Malamarite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "malamar"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/malamarite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "manectite",
+      "nameKo": "썬더볼트나이트",
+      "nameEn": "Manectite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "manectric"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/manectite.shtml",
+      "pokeapiId": 721,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "mawilite",
+      "nameKo": "입치트나이트",
+      "nameEn": "Mawilite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "mawile"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/mawilite.shtml",
+      "pokeapiId": 720,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "medichamite",
+      "nameKo": "요가램나이트",
+      "nameEn": "Medichamite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "medicham"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/medichamite.shtml",
+      "pokeapiId": 704,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "meganiumite",
+      "nameKo": "메가니움나이트",
+      "nameEn": "Meganiumite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "meganium"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/meganiumite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "mental-herb",
       "nameKo": "멘탈허브",
       "nameEn": "Mental Herb",
@@ -580,6 +1547,44 @@
       "publishStatus": "review-candidate",
       "sources": [
         "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "meowsticite",
+      "nameKo": "냐오닉스나이트",
+      "nameEn": "Meowsticite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "meowstic-male",
+        "meowstic-female"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/meowsticite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "metagrossite",
+      "nameKo": "메타그로스나이트",
+      "nameEn": "Metagrossite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "metagross"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/metagrossite.shtml",
+      "pokeapiId": 799,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
         "pokeapi"
       ]
     },
@@ -764,6 +1769,44 @@
       ]
     },
     {
+      "id": "pidgeotite",
+      "nameKo": "피죤투나이트",
+      "nameEn": "Pidgeotite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "pidgeot"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/pidgeotite.shtml",
+      "pokeapiId": 803,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "pinsirite",
+      "nameKo": "쁘사이저나이트",
+      "nameEn": "Pinsirite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "pinsir"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/pinsirite.shtml",
+      "pokeapiId": 710,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
       "id": "poison-barb",
       "nameKo": "독바늘",
       "nameEn": "Poison Barb",
@@ -779,6 +1822,24 @@
       ]
     },
     {
+      "id": "pyroarite",
+      "nameKo": "화염레오나이트",
+      "nameEn": "Pyroarite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "pyroar-male"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/pyroarite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "quick-claw",
       "nameKo": "선제공격손톱",
       "nameEn": "Quick Claw",
@@ -791,6 +1852,42 @@
       "sources": [
         "serebii-champions-items",
         "pokeapi"
+      ]
+    },
+    {
+      "id": "raichunite-x",
+      "nameKo": "라이츄나이트X",
+      "nameEn": "Raichunite X",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "raichu"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/raichunitex.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "raichunite-y",
+      "nameKo": "라이츄나이트Y",
+      "nameEn": "Raichunite Y",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "raichu"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/raichunitey.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
       ]
     },
     {
@@ -839,6 +1936,81 @@
       ]
     },
     {
+      "id": "sablenite",
+      "nameKo": "깜까미나이트",
+      "nameEn": "Sablenite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "sableye"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/sablenite.shtml",
+      "pokeapiId": 795,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sceptilite",
+      "nameKo": "나무킹나이트",
+      "nameEn": "Sceptilite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "sceptile"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/sceptilite.shtml",
+      "pokeapiId": 794,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "scizorite",
+      "nameKo": "핫삼나이트",
+      "nameEn": "Scizorite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "scizor"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/scizorite.shtml",
+      "pokeapiId": 709,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "scolipite",
+      "nameKo": "펜드라나이트",
+      "nameEn": "Scolipite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "scolipede"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/scolipite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "scope-lens",
       "nameKo": "초점렌즈",
       "nameEn": "Scope Lens",
@@ -854,6 +2026,42 @@
       ]
     },
     {
+      "id": "scovillainite",
+      "nameKo": "스코빌런나이트",
+      "nameEn": "Scovillainite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "scovillain"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/scovillainite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "scraftinite",
+      "nameKo": "곤율거니나이트",
+      "nameEn": "Scraftinite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "scrafty"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/scraftinite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
       "id": "sharp-beak",
       "nameKo": "예리한부리",
       "nameEn": "Sharp Beak",
@@ -865,6 +2073,25 @@
       "publishStatus": "review-candidate",
       "sources": [
         "serebii-champions-items",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sharpedonite",
+      "nameKo": "샤크니아나이트",
+      "nameEn": "Sharpedonite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "sharpedo"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/sharpedonite.shtml",
+      "pokeapiId": 800,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
         "pokeapi"
       ]
     },
@@ -959,6 +2186,43 @@
       ]
     },
     {
+      "id": "skarmorite",
+      "nameKo": "무장조나이트",
+      "nameEn": "Skarmorite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "skarmory"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/skarmorite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "slowbronite",
+      "nameKo": "야도란나이트",
+      "nameEn": "Slowbronite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "slowbro"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/slowbronite.shtml",
+      "pokeapiId": 801,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
       "id": "smooth-rock",
       "nameKo": "보송보송바위",
       "nameEn": "Smooth Rock",
@@ -1004,6 +2268,80 @@
       ]
     },
     {
+      "id": "staraptite",
+      "nameKo": "찌르호크나이트",
+      "nameEn": "Staraptite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "staraptor"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/staraptite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "starminite",
+      "nameKo": "아쿠스타나이트",
+      "nameEn": "Starminite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "starmie"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/starminite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
+      ]
+    },
+    {
+      "id": "steelixite",
+      "nameKo": "강철톤나이트",
+      "nameEn": "Steelixite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "steelix"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/steelixite.shtml",
+      "pokeapiId": 802,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "swampertite",
+      "nameKo": "대짱이나이트",
+      "nameEn": "Swampertite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "swampert"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/swampertite.shtml",
+      "pokeapiId": 793,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
       "id": "tanga-berry",
       "nameKo": "리체열매",
       "nameEn": "Tanga Berry",
@@ -1031,6 +2369,62 @@
       "sources": [
         "serebii-champions-items",
         "pokeapi"
+      ]
+    },
+    {
+      "id": "tyranitarite",
+      "nameKo": "마기라스나이트",
+      "nameEn": "Tyranitarite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "tyranitar"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/tyranitarite.shtml",
+      "pokeapiId": 708,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "venusaurite",
+      "nameKo": "이상해꽃나이트",
+      "nameEn": "Venusaurite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "venusaur"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/venusaurite.shtml",
+      "pokeapiId": 698,
+      "pokeapiStatus": "matched",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation",
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "victreebelite",
+      "nameKo": "우츠보트나이트",
+      "nameEn": "Victreebelite",
+      "category": "mega-stone",
+      "allowedPokemonIds": [
+        "victreebel"
+      ],
+      "itemDexUrl": "https://www.serebii.net/itemdex/victreebelite.shtml",
+      "pokeapiId": null,
+      "pokeapiStatus": "missing",
+      "localizationStatus": "complete",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "serebii-champions-items",
+        "manual-mega-stone-curation"
       ]
     },
     {
