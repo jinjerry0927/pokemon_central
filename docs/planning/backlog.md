@@ -34,6 +34,7 @@
 | --- | --- | --- | ---: | --- | --- | --- |
 | FB-TEST-001 | UI | `[TEST]` 모바일 팀빌더 버튼 터치 영역 개선 | 1 | P2 | Selected | 2026-06-20 / Test |
 | FB-DATA-001 | Data | 메가스톤 수집 및 포켓몬별 전용 도구 필터링 | 1 | P2 | Done | 2026-06-30 / Planning; `npm.cmd run data:validate`, `npm run lint`, `npm run build` |
+| FB-FEATURE-001 | Feature | 사용률 기반 기술/특성/도구/능력보정/HABCDS 인사이트를 팀빌더에 연결 | 1 | P1 | Done | 2026-06-30 / Planning; `npm.cmd run data:usage`, `npm.cmd run data:validate`, `npm run lint`, `npm run build` |
 
 Priority는 `mvp-feedback.md`의 `P0`~`P3` 기준을 사용한다. Source에는 피드백 로그의
 날짜와 채널을 적어 원문을 다시 찾을 수 있게 한다.
@@ -47,6 +48,14 @@ Priority는 `mvp-feedback.md`의 `P0`~`P3` 기준을 사용한다. Source에는 
 | Rank | Backlog ID | Decision Basis | Status |
 | ---: | --- | --- | --- |
 | 1 | FB-TEST-001 | P2, 테스트 1회, 모바일 팀빌더 조작 흐름에 영향 | Selected |
+
+### 2026-06-30 ~ 2026-07-06
+
+사용자가 고정 샘플 빌드보다 사용률 기반 팀빌드 보조가 제품 차별점에 맞는다고 판단했다.
+
+| Rank | Backlog ID | Decision Basis | Status |
+| ---: | --- | --- | --- |
+| 1 | FB-FEATURE-001 | P1, 팀빌더 핵심 흐름에 직접 영향, 기존 메가스톤/기술/특성/도구 연결을 활용 가능 | Done |
 
 ## Weekly Selection Order
 

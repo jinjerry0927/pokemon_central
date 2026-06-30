@@ -18,6 +18,7 @@ import {
 } from "./lib/serebii-learnset-data.mjs";
 import { validateChampionsItemSnapshot } from "./lib/champions-item-data.mjs";
 import { validateChampionsAbilitySnapshot } from "./lib/champions-ability-data.mjs";
+import { validateUsageInsightSnapshot } from "./lib/usage-insight-data.mjs";
 
 const rootDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rosterPath = path.join(rootDirectory, "data", "champions-roster.json");
@@ -83,6 +84,12 @@ const championsAbilitiesPath = path.join(
   "generated",
   "champions-abilities-m-b.json"
 );
+const usageInsightsPath = path.join(
+  rootDirectory,
+  "data",
+  "generated",
+  "usage-insights-m-b.json"
+);
 
 async function main() {
   const roster = validateRoster(await readJson(rosterPath));
@@ -128,6 +135,13 @@ async function main() {
     await readJson(championsAbilitiesPath),
     currentPokemon
   );
+  const usageInsights = validateUsageInsightSnapshot(
+    await readJson(usageInsightsPath),
+    currentPokemon,
+    moveCandidates,
+    championsItems,
+    championsAbilities
+  );
   validatePublishedRegulationPokemon(currentPokemon, regulationRoster);
   const rosterBySlug = new Map(roster.map((entry) => [entry.slug, entry]));
 
@@ -149,7 +163,7 @@ async function main() {
   }
 
   console.log(
-    `Data validation passed. Temporary roster: ${roster.length}; Preview: ${preview.length}; Current Pokemon: ${currentPokemon.length}; ${regulationRoster.regulationId} roster: ${regulationRoster.entries.length}; Synced: ${regulationPokemon.length}; Move candidates: ${moveCandidates.entries.length}; Move mappings: ${pokemonMoveCandidates.entries.length}; Champions learnset pilot: ${championsLearnsetPilot.summary.mappedPokemonCount}/${championsLearnsetPilot.summary.pilotPokemonCount}; Serebii pilot: ${serebiiLearnsetPilot.summary.exactMatchCount} exact, ${serebiiLearnsetPilot.summary.changedCount} changed, ${serebiiLearnsetPilot.summary.newlyCoveredCount} new; Full Serebii: ${serebiiLearnsets.summary.exactMatchCount} exact, ${serebiiLearnsetReview.summary.reviewCount} review; Items: ${championsItems.summary.itemCount}; Abilities: ${championsAbilities.summary.abilityCount}`
+    `Data validation passed. Temporary roster: ${roster.length}; Preview: ${preview.length}; Current Pokemon: ${currentPokemon.length}; ${regulationRoster.regulationId} roster: ${regulationRoster.entries.length}; Synced: ${regulationPokemon.length}; Move candidates: ${moveCandidates.entries.length}; Move mappings: ${pokemonMoveCandidates.entries.length}; Champions learnset pilot: ${championsLearnsetPilot.summary.mappedPokemonCount}/${championsLearnsetPilot.summary.pilotPokemonCount}; Serebii pilot: ${serebiiLearnsetPilot.summary.exactMatchCount} exact, ${serebiiLearnsetPilot.summary.changedCount} changed, ${serebiiLearnsetPilot.summary.newlyCoveredCount} new; Full Serebii: ${serebiiLearnsets.summary.exactMatchCount} exact, ${serebiiLearnsetReview.summary.reviewCount} review; Items: ${championsItems.summary.itemCount}; Abilities: ${championsAbilities.summary.abilityCount}; Usage insights: ${usageInsights.entries.length}`
   );
 }
 

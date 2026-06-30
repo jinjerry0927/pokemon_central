@@ -17,6 +17,7 @@
     "data:moves:serebii": "node scripts/sync-serebii-learnsets.mjs",
     "data:items": "node scripts/sync-champions-items.mjs",
     "data:abilities": "node scripts/sync-champions-abilities.mjs",
+    "data:usage": "node scripts/sync-usage-insights.mjs",
     "data:validate": "node scripts/validate-data.mjs"
   },
   "dependencies": {

@@ -8,7 +8,7 @@ Pokemon Champions를 처음 접하거나 랭크/팀빌딩을 준비하는 한국
 
 - Primary: desktop-first strategy and guide hub.
 - Secondary: mobile-friendly reading/searching.
-- Differentiator: Korean explanations, beginner-friendly build flow, and tight linking between Pokedex, build, team builder, speed tiers, and damage calculation.
+- Differentiator: Korean explanations, usage-based build insights, and tight linking between Pokedex, build, team builder, speed tiers, and damage calculation.
 
 ## MVP Scope Lock
 
@@ -30,8 +30,8 @@ Pokemon Champions를 처음 접하거나 랭크/팀빌딩을 준비하는 한국
    - Detail page with stats, type, ability, moves, recommended builds, counters
 
 3. Builds
-   - Curated sample builds
-   - Nature, EVs, moves, item, role, usage notes
+   - Usage-based move, ability, item, nature modifier, and stat point insights
+   - Curated notes that explain common choices without presenting them as fixed official builds
    - Tags for beginner, balanced, offensive, defensive, support
 
 4. Team Builder
@@ -65,9 +65,9 @@ Mobile should collapse these panels into tabs or stacked sections, but MVP decis
 
 ## Content Strategy
 
-- Start with 10 sample builds and 3 beginner team guides.
+- Start with Champions Battle Data usage insights and 3 beginner team guides.
 - Use simple Korean labels and avoid excessive competitive jargon.
-- Every curated recommendation should explain when to use it and what it loses to.
+- Every curated note should separate usage frequency from recommendation and explain when a choice can fail.
 
 ## Backlog
 
@@ -76,6 +76,7 @@ Mobile should collapse these panels into tabs or stacked sections, but MVP decis
 - Account sync, cloud save, or cross-device team storage.
 - Community submissions, voting, comments, or build sharing.
 - Automated metagame statistics ingestion.
+- Usage-based team builder insights: see `usage-insights-roadmap.md`.
 - Native mobile app or mobile-first team building workflows.
 - PvP simulator, battle replay tools, or matchmaking features.
 

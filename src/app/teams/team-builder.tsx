@@ -49,6 +49,19 @@ type AbilityEntry = {
   nameEn: string;
 };
 
+type UsageEntry = {
+  pokemonId: string;
+  moves: { moveId: string; usagePercent: number }[];
+  abilities: { abilityId: string; usagePercent: number }[];
+  items: { itemId: string; usagePercent: number }[];
+  statPointSpreads: {
+    label: string;
+    statPoints: StatPoints;
+    usagePercent: number;
+  }[];
+  natureModifiers: { labelKo: string; usagePercent: number }[];
+};
+
 type TeamBuilderProps = {
   abilities: AbilityEntry[];
   abilitiesByPokemonId: Record<string, string[]>;
@@ -60,6 +73,7 @@ type TeamBuilderProps = {
   learnsets: Record<string, string[]>;
   moves: MoveEntry[];
   pokemon: PokemonEntry[];
+  usageInsights: UsageEntry[];
 };
 
 type StatPoints = {
@@ -263,6 +277,29 @@ function itemIsAllowedForPokemon(item: ItemEntry, pokemonId: string) {
   return item.allowedPokemonIds === null || item.allowedPokemonIds.includes(pokemonId);
 }
 
+function getUsagePercent(usageById: Map<string, number> | undefined, id: string) {
+  return usageById?.get(id) ?? null;
+}
+
+function formatUsageLabel(usagePercent: number | null) {
+  return usagePercent === null ? "" : ` · 사용률 ${usagePercent.toFixed(1)}%`;
+}
+
+function compareByUsageThenName(
+  left: { id: string; nameKo: string | null; nameEn: string },
+  right: { id: string; nameKo: string | null; nameEn: string },
+  usageById: Map<string, number> | undefined
+) {
+  const leftUsage = getUsagePercent(usageById, left.id);
+  const rightUsage = getUsagePercent(usageById, right.id);
+
+  if (leftUsage !== null || rightUsage !== null) {
+    return (rightUsage ?? -1) - (leftUsage ?? -1);
+  }
+
+  return (left.nameKo ?? left.nameEn).localeCompare(right.nameKo ?? right.nameEn, "ko");
+}
+
 function readStoredTeam(
   validIds: Set<string>,
   validMoveIdsByPokemon: Map<string, Set<string>>,
@@ -394,7 +431,8 @@ export function TeamBuilder({
   items,
   learnsets,
   moves,
-  pokemon
+  pokemon,
+  usageInsights
 }: TeamBuilderProps) {
   const [query, setQuery] = useState("");
   const [selectedType, setSelectedType] = useState("전체");
@@ -410,6 +448,23 @@ export function TeamBuilder({
   );
   const validIds = useMemo(() => new Set(pokemon.map((entry) => entry.id)), [pokemon]);
   const itemById = useMemo(() => new Map(items.map((entry) => [entry.id, entry])), [items]);
+  const usageByPokemonId = useMemo(
+    () =>
+      new Map(
+        usageInsights.map((entry) => [
+          entry.pokemonId,
+          {
+            entry,
+            moves: new Map(entry.moves.map((move) => [move.moveId, move.usagePercent])),
+            abilities: new Map(
+              entry.abilities.map((ability) => [ability.abilityId, ability.usagePercent])
+            ),
+            items: new Map(entry.items.map((item) => [item.itemId, item.usagePercent]))
+          }
+        ])
+      ),
+    [usageInsights]
+  );
   const sortedItems = useMemo(
     () =>
       [...items].sort((left, right) =>
@@ -629,6 +684,18 @@ export function TeamBuilder({
     );
   }
 
+  function applySlotStatPoints(slotIndex: number, statPoints: StatPoints) {
+    setShareStatus("");
+    clearSharedTeamFromAddress();
+    setTeam((currentTeam) =>
+      currentTeam.map((slot, index) =>
+        index === slotIndex && slot
+          ? { ...slot, statPoints: normalizeStatPoints(statPoints) }
+          : slot
+      )
+    );
+  }
+
   function removeSlot(slotIndex: number) {
     setShareStatus("");
     clearSharedTeamFromAddress();
@@ -719,32 +786,40 @@ export function TeamBuilder({
           <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {team.map((slot, index) => {
               const entry = slot ? pokemonById.get(slot.pokemonId) : null;
+              const usage = entry ? usageByPokemonId.get(entry.id) : undefined;
               const learnableMoves = entry
                 ? (learnsets[entry.id] ?? [])
                     .map((moveId) => moveById.get(moveId))
                     .filter((move): move is MoveEntry => Boolean(move))
-                    .sort((left, right) =>
-                      (left.nameKo ?? left.nameEn).localeCompare(
-                        right.nameKo ?? right.nameEn,
-                        "ko"
-                      )
-                    )
+                    .sort((left, right) => compareByUsageThenName(left, right, usage?.moves))
                 : [];
               const availableAbilities = entry
                 ? (abilitiesByPokemonId[entry.id] ?? [])
                     .map((abilityId) => abilityById.get(abilityId))
                     .filter((ability): ability is AbilityEntry => Boolean(ability))
                     .sort((left, right) =>
-                      (left.nameKo ?? left.nameEn).localeCompare(
-                        right.nameKo ?? right.nameEn,
-                        "ko"
-                      )
+                      compareByUsageThenName(left, right, usage?.abilities)
                     )
                 : [];
               const availableItems = entry
                 ? sortedItems.filter((item) => itemIsAllowedForPokemon(item, entry.id))
+                    .sort((left, right) => compareByUsageThenName(left, right, usage?.items))
                 : [];
+              const canMegaEvolve = availableItems.some((item) => item.category === "mega-stone");
               const statPointTotal = slot ? getStatPointTotal(slot.statPoints) : 0;
+              const topMoveIds = usage?.entry.moves.slice(0, 4).map((move) => move.moveId) ?? [];
+              const topMoveNames = topMoveIds
+                .map((moveId) => moveById.get(moveId))
+                .filter((move): move is MoveEntry => Boolean(move))
+                .map((move) => move.nameKo ?? move.nameEn);
+              const topAbility = usage?.entry.abilities[0]
+                ? abilityById.get(usage.entry.abilities[0].abilityId)
+                : null;
+              const topItem = usage?.entry.items[0]
+                ? itemById.get(usage.entry.items[0].itemId)
+                : null;
+              const topSpread = usage?.entry.statPointSpreads[0] ?? null;
+              const topNature = usage?.entry.natureModifiers[0] ?? null;
 
               return (
                 <div
@@ -792,6 +867,7 @@ export function TeamBuilder({
                             {type}
                           </Badge>
                         ))}
+                        {canMegaEvolve ? <Badge tone="success">메가진화 가능</Badge> : null}
                       </div>
                       <div className="flex flex-wrap gap-1">
                         {getRoleTags(entry).map((role) => (
@@ -800,6 +876,39 @@ export function TeamBuilder({
                           </Badge>
                         ))}
                       </div>
+                      {usage ? (
+                        <div className="grid gap-2 rounded-md border border-[var(--panel-border)] bg-white p-3 text-xs font-semibold text-[var(--muted)]">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="font-bold text-[var(--foreground)]">사용률 힌트</span>
+                            {topSpread ? (
+                              <button
+                                className="rounded-md border border-[var(--panel-border)] px-2 py-1 font-bold text-[var(--foreground)] hover:bg-[var(--chip)]"
+                                onClick={() => applySlotStatPoints(index, topSpread.statPoints)}
+                                type="button"
+                              >
+                                상위 스탯 적용
+                              </button>
+                            ) : null}
+                          </div>
+                          {topMoveNames.length > 0 ? (
+                            <p>기술: {topMoveNames.join(" / ")}</p>
+                          ) : null}
+                          {topAbility ? (
+                            <p>
+                              특성: {topAbility.nameKo ?? topAbility.nameEn}
+                              {formatUsageLabel(usage.entry.abilities[0]?.usagePercent ?? null)}
+                            </p>
+                          ) : null}
+                          {topItem ? (
+                            <p>
+                              도구: {topItem.nameKo ?? topItem.nameEn}
+                              {formatUsageLabel(usage.entry.items[0]?.usagePercent ?? null)}
+                            </p>
+                          ) : null}
+                          {topNature ? <p>능력보정: {topNature.labelKo}{formatUsageLabel(topNature.usagePercent)}</p> : null}
+                          {topSpread ? <p>스탯: {topSpread.label}{formatUsageLabel(topSpread.usagePercent)}</p> : null}
+                        </div>
+                      ) : null}
                       <div className="grid gap-2 border-t border-[var(--panel-border)] pt-3">
                         <div className="flex items-center justify-between gap-2">
                           <p className="text-xs font-bold text-[var(--muted)]">스탯 포인트</p>
@@ -846,6 +955,7 @@ export function TeamBuilder({
                           {availableAbilities.map((ability) => (
                             <option key={ability.id} value={ability.id}>
                               {ability.nameKo ?? ability.nameEn} · {ability.nameEn}
+                              {formatUsageLabel(getUsagePercent(usage?.abilities, ability.id))}
                             </option>
                           ))}
                         </select>
@@ -880,6 +990,7 @@ export function TeamBuilder({
                                 : item.category === "mega-stone"
                                   ? "메가스톤"
                                   : "도구"}
+                              {formatUsageLabel(getUsagePercent(usage?.items, item.id))}
                             </option>
                           ))}
                         </select>
@@ -919,6 +1030,7 @@ export function TeamBuilder({
                                 >
                                   {move.nameKo ?? move.nameEn} · {typeNameKo[move.type] ?? move.type} ·{" "}
                                   {moveCategoryKo[move.category] ?? move.category}
+                                  {formatUsageLabel(getUsagePercent(usage?.moves, move.id))}
                                 </option>
                               ))}
                             </select>

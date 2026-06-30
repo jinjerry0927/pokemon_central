@@ -2,6 +2,7 @@ import championsAbilities from "../../../data/generated/champions-abilities-m-b.
 import championsItems from "../../../data/generated/champions-items-m-b.json";
 import moveCandidates from "../../../data/generated/moves-m-b-candidates.json";
 import learnsets from "../../../data/generated/serebii-learnsets-m-b.json";
+import usageInsights from "../../../data/generated/usage-insights-m-b.json";
 import pokemon from "../../../data/pokemon.json";
 import { AppShell, InfoCard, PageHeader } from "../_components/design-system";
 import { createPageMetadata } from "../_lib/seo";
@@ -74,6 +75,7 @@ export default function TeamsPage() {
         learnsets={learnsetsByPokemonId}
         moves={learnableMoves}
         pokemon={pokemon}
+        usageInsights={usageInsights.entries}
       />
     </AppShell>
   );
