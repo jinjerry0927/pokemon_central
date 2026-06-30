@@ -21,6 +21,23 @@ Pokemon Central 운영 데이터의 변경 이유와 출처를 보존한다. 새
 - 검증: 실행한 명령과 결과
 ```
 
+## 2026-06-23 - Champions 사용 가능 특성 수집 및 UI 연결
+
+- 상태: 검증 완료
+- 적용 범위: ability, UI
+- 대상 ID: Regulation M-B 포켓몬 235개 폼과 특성 186개
+- 변경 전: PokeAPI 특성 ID만 포켓몬 데이터에 존재하고 Champions 출처 검증, 한국어 이름, 팀빌더 선택 기능이 없음
+- 변경 후: 폼별 특성 ID를 Serebii Champions 종 페이지에서 전수 확인하고 PokeAPI 한국어 이름을 결합해 포켓몬 상세와 팀빌더에 연결함. 팀 저장과 공유 링크에 선택 특성을 포함함
+- 변경 이유: 각 포켓몬이 실제 선택할 수 있는 특성만 팀 구성 흐름에서 제공하기 위함
+- 출처:
+  - Serebii Champions Pokédex - https://www.serebii.net/pokedex-champions/ (확인일: 2026-06-23)
+  - PokeAPI Ability 리소스 - https://pokeapi.co/api/v2/ability/ (확인일: 2026-06-23)
+- 변경 파일: `data/generated/champions-abilities-m-b.json`, `scripts/sync-champions-abilities.mjs`, `scripts/lib/champions-ability-data.mjs`, `scripts/validate-data.mjs`, `src/app/pokemon/[slug]/page.tsx`, `src/app/teams/page.tsx`, `src/app/teams/team-builder.tsx`
+- 관련 공략:
+  - 생성 데이터는 `review-candidate`이며 특성 설명과 추천 빌드에는 자동 반영하지 않음
+  - 기존 팀 저장 데이터는 `abilityId: null`을 보완해 자동 변환함
+- 검증: `npm.cmd run data:abilities` 성공; 235개 폼, 특성 186개, 한국어 이름 누락 0개, 출처 불일치 0개
+
 ## 2026-06-22 - Champions 사용 가능 도구 수집 및 팀빌더 연결
 
 - 상태: 검증 완료

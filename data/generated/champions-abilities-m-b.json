@@ -1,0 +1,6123 @@
+{
+  "schemaVersion": 1,
+  "regulationId": "M-B",
+  "checkedAt": "2026-06-23",
+  "scope": "serebii-champions-form-abilities",
+  "source": {
+    "serebiiId": "serebii-champions-pokedex",
+    "pokeapiId": "pokeapi",
+    "contentUsage": "factual-ability-identifiers-and-localized-names-only"
+  },
+  "limitations": [
+    "PokeAPI provides the form-specific mapping and localized names; Serebii confirms each ability on the species Champions page.",
+    "Serebii and PokeAPI ability descriptions are not copied.",
+    "Mappings remain review candidates until promoted for public strategy guidance."
+  ],
+  "summary": {
+    "pokemonCount": 235,
+    "abilityCount": 186,
+    "missingKoreanNameCount": 0,
+    "reviewRequiredCount": 0
+  },
+  "abilities": [
+    {
+      "id": "adaptability",
+      "pokeapiId": 91,
+      "nameKo": "적응력",
+      "nameEn": "Adaptability",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "aftermath",
+      "pokeapiId": 106,
+      "nameKo": "유폭",
+      "nameEn": "Aftermath",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "analytic",
+      "pokeapiId": 148,
+      "nameKo": "애널라이즈",
+      "nameEn": "Analytic",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "anger-point",
+      "pokeapiId": 83,
+      "nameKo": "분노의경혈",
+      "nameEn": "Anger Point",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "anticipation",
+      "pokeapiId": 107,
+      "nameKo": "위험예지",
+      "nameEn": "Anticipation",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "armor-tail",
+      "pokeapiId": 296,
+      "nameKo": "테일아머",
+      "nameEn": "Armor Tail",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "aroma-veil",
+      "pokeapiId": 165,
+      "nameKo": "아로마베일",
+      "nameEn": "Aroma Veil",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "battle-armor",
+      "pokeapiId": 4,
+      "nameKo": "전투무장",
+      "nameEn": "Battle Armor",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "berserk",
+      "pokeapiId": 201,
+      "nameKo": "발끈",
+      "nameEn": "Berserk",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "big-pecks",
+      "pokeapiId": 145,
+      "nameKo": "부풀린가슴",
+      "nameEn": "Big Pecks",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "blaze",
+      "pokeapiId": 66,
+      "nameKo": "맹화",
+      "nameEn": "Blaze",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "bulletproof",
+      "pokeapiId": 171,
+      "nameKo": "방탄",
+      "nameEn": "Bulletproof",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "cheek-pouch",
+      "pokeapiId": 167,
+      "nameKo": "볼주머니",
+      "nameEn": "Cheek Pouch",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "chlorophyll",
+      "pokeapiId": 34,
+      "nameKo": "엽록소",
+      "nameEn": "Chlorophyll",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "clear-body",
+      "pokeapiId": 29,
+      "nameKo": "클리어바디",
+      "nameEn": "Clear Body",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "cloud-nine",
+      "pokeapiId": 13,
+      "nameKo": "날씨부정",
+      "nameEn": "Cloud Nine",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "competitive",
+      "pokeapiId": 172,
+      "nameKo": "승기",
+      "nameEn": "Competitive",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "compound-eyes",
+      "pokeapiId": 14,
+      "nameKo": "복안",
+      "nameEn": "Compound Eyes",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "contrary",
+      "pokeapiId": 126,
+      "nameKo": "심술꾸러기",
+      "nameEn": "Contrary",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "corrosion",
+      "pokeapiId": 212,
+      "nameKo": "부식",
+      "nameEn": "Corrosion",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "cud-chew",
+      "pokeapiId": 291,
+      "nameKo": "되새김질",
+      "nameEn": "Cud Chew",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "curious-medicine",
+      "pokeapiId": 261,
+      "nameKo": "기묘한약",
+      "nameEn": "Curious Medicine",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "cursed-body",
+      "pokeapiId": 130,
+      "nameKo": "저주받은바디",
+      "nameEn": "Cursed Body",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "cute-charm",
+      "pokeapiId": 56,
+      "nameKo": "헤롱헤롱바디",
+      "nameEn": "Cute Charm",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "damp",
+      "pokeapiId": 6,
+      "nameKo": "습기",
+      "nameEn": "Damp",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "defiant",
+      "pokeapiId": 128,
+      "nameKo": "오기",
+      "nameEn": "Defiant",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "disguise",
+      "pokeapiId": 209,
+      "nameKo": "탈",
+      "nameEn": "Disguise",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "drizzle",
+      "pokeapiId": 2,
+      "nameKo": "잔비",
+      "nameEn": "Drizzle",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "drought",
+      "pokeapiId": 70,
+      "nameKo": "가뭄",
+      "nameEn": "Drought",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "dry-skin",
+      "pokeapiId": 87,
+      "nameKo": "건조피부",
+      "nameEn": "Dry Skin",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "early-bird",
+      "pokeapiId": 48,
+      "nameKo": "일찍기상",
+      "nameEn": "Early Bird",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "earth-eater",
+      "pokeapiId": 297,
+      "nameKo": "흙먹기",
+      "nameEn": "Earth Eater",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "effect-spore",
+      "pokeapiId": 27,
+      "nameKo": "포자",
+      "nameEn": "Effect Spore",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "electromorphosis",
+      "pokeapiId": 280,
+      "nameKo": "전기로바꾸기",
+      "nameEn": "Electromorphosis",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "flame-body",
+      "pokeapiId": 49,
+      "nameKo": "불꽃몸",
+      "nameEn": "Flame Body",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "flash-fire",
+      "pokeapiId": 18,
+      "nameKo": "타오르는불꽃",
+      "nameEn": "Flash Fire",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "flower-veil",
+      "pokeapiId": 166,
+      "nameKo": "플라워베일",
+      "nameEn": "Flower Veil",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "fluffy",
+      "pokeapiId": 218,
+      "nameKo": "복슬복슬",
+      "nameEn": "Fluffy",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "forecast",
+      "pokeapiId": 59,
+      "nameKo": "기분파",
+      "nameEn": "Forecast",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "forewarn",
+      "pokeapiId": 108,
+      "nameKo": "예지몽",
+      "nameEn": "Forewarn",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "friend-guard",
+      "pokeapiId": 132,
+      "nameKo": "프렌드가드",
+      "nameEn": "Friend Guard",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "frisk",
+      "pokeapiId": 119,
+      "nameKo": "통찰",
+      "nameEn": "Frisk",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "fur-coat",
+      "pokeapiId": 169,
+      "nameKo": "퍼코트",
+      "nameEn": "Fur Coat",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "gale-wings",
+      "pokeapiId": 177,
+      "nameKo": "질풍날개",
+      "nameEn": "Gale Wings",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "gluttony",
+      "pokeapiId": 82,
+      "nameKo": "먹보",
+      "nameEn": "Gluttony",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "good-as-gold",
+      "pokeapiId": 283,
+      "nameKo": "황금몸",
+      "nameEn": "Good as Gold",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "gooey",
+      "pokeapiId": 183,
+      "nameKo": "미끈미끈",
+      "nameEn": "Gooey",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "guts",
+      "pokeapiId": 62,
+      "nameKo": "근성",
+      "nameEn": "Guts",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "harvest",
+      "pokeapiId": 139,
+      "nameKo": "수확",
+      "nameEn": "Harvest",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "healer",
+      "pokeapiId": 131,
+      "nameKo": "치유의마음",
+      "nameEn": "Healer",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "heatproof",
+      "pokeapiId": 85,
+      "nameKo": "내열",
+      "nameEn": "Heatproof",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "heavy-metal",
+      "pokeapiId": 134,
+      "nameKo": "헤비메탈",
+      "nameEn": "Heavy Metal",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "hospitality",
+      "pokeapiId": 301,
+      "nameKo": "대접",
+      "nameEn": "Hospitality",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "huge-power",
+      "pokeapiId": 37,
+      "nameKo": "천하장사",
+      "nameEn": "Huge Power",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "hunger-switch",
+      "pokeapiId": 258,
+      "nameKo": "꼬르륵스위치",
+      "nameEn": "Hunger Switch",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "hustle",
+      "pokeapiId": 55,
+      "nameKo": "의욕",
+      "nameEn": "Hustle",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "hydration",
+      "pokeapiId": 93,
+      "nameKo": "촉촉바디",
+      "nameEn": "Hydration",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "hyper-cutter",
+      "pokeapiId": 52,
+      "nameKo": "괴력집게",
+      "nameEn": "Hyper Cutter",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "ice-body",
+      "pokeapiId": 115,
+      "nameKo": "아이스바디",
+      "nameEn": "Ice Body",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "illuminate",
+      "pokeapiId": 35,
+      "nameKo": "발광",
+      "nameEn": "Illuminate",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "illusion",
+      "pokeapiId": 149,
+      "nameKo": "일루전",
+      "nameEn": "Illusion",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "immunity",
+      "pokeapiId": 17,
+      "nameKo": "면역",
+      "nameEn": "Immunity",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "imposter",
+      "pokeapiId": 150,
+      "nameKo": "괴짜",
+      "nameEn": "Imposter",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "infiltrator",
+      "pokeapiId": 151,
+      "nameKo": "틈새포착",
+      "nameEn": "Infiltrator",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "inner-focus",
+      "pokeapiId": 39,
+      "nameKo": "정신력",
+      "nameEn": "Inner Focus",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "insomnia",
+      "pokeapiId": 15,
+      "nameKo": "불면",
+      "nameEn": "Insomnia",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "intimidate",
+      "pokeapiId": 22,
+      "nameKo": "위협",
+      "nameEn": "Intimidate",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "iron-fist",
+      "pokeapiId": 89,
+      "nameKo": "철주먹",
+      "nameEn": "Iron Fist",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "justified",
+      "pokeapiId": 154,
+      "nameKo": "정의의마음",
+      "nameEn": "Justified",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "keen-eye",
+      "pokeapiId": 51,
+      "nameKo": "날카로운눈",
+      "nameEn": "Keen Eye",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "klutz",
+      "pokeapiId": 103,
+      "nameKo": "서투름",
+      "nameEn": "Klutz",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "leaf-guard",
+      "pokeapiId": 102,
+      "nameKo": "리프가드",
+      "nameEn": "Leaf Guard",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "levitate",
+      "pokeapiId": 26,
+      "nameKo": "부유",
+      "nameEn": "Levitate",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "light-metal",
+      "pokeapiId": 135,
+      "nameKo": "라이트메탈",
+      "nameEn": "Light Metal",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "lightning-rod",
+      "pokeapiId": 31,
+      "nameKo": "피뢰침",
+      "nameEn": "Lightning Rod",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "limber",
+      "pokeapiId": 7,
+      "nameKo": "유연",
+      "nameEn": "Limber",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "liquid-voice",
+      "pokeapiId": 204,
+      "nameKo": "촉촉보이스",
+      "nameEn": "Liquid Voice",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "long-reach",
+      "pokeapiId": 203,
+      "nameKo": "원격",
+      "nameEn": "Long Reach",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "magic-bounce",
+      "pokeapiId": 156,
+      "nameKo": "매직미러",
+      "nameEn": "Magic Bounce",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "magic-guard",
+      "pokeapiId": 98,
+      "nameKo": "매직가드",
+      "nameEn": "Magic Guard",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "magician",
+      "pokeapiId": 170,
+      "nameKo": "매지션",
+      "nameEn": "Magician",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "magma-armor",
+      "pokeapiId": 40,
+      "nameKo": "마그마의무장",
+      "nameEn": "Magma Armor",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "marvel-scale",
+      "pokeapiId": 63,
+      "nameKo": "이상한비늘",
+      "nameEn": "Marvel Scale",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "mega-launcher",
+      "pokeapiId": 178,
+      "nameKo": "메가런처",
+      "nameEn": "Mega Launcher",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "merciless",
+      "pokeapiId": 196,
+      "nameKo": "무도한행동",
+      "nameEn": "Merciless",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "mimicry",
+      "pokeapiId": 250,
+      "nameKo": "의태",
+      "nameEn": "Mimicry",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "minus",
+      "pokeapiId": 58,
+      "nameKo": "마이너스",
+      "nameEn": "Minus",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "mirror-armor",
+      "pokeapiId": 240,
+      "nameKo": "미러아머",
+      "nameEn": "Mirror Armor",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "mold-breaker",
+      "pokeapiId": 104,
+      "nameKo": "틀깨기",
+      "nameEn": "Mold Breaker",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "moody",
+      "pokeapiId": 141,
+      "nameKo": "변덕쟁이",
+      "nameEn": "Moody",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "motor-drive",
+      "pokeapiId": 78,
+      "nameKo": "전기엔진",
+      "nameEn": "Motor Drive",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "moxie",
+      "pokeapiId": 153,
+      "nameKo": "자기과신",
+      "nameEn": "Moxie",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "multiscale",
+      "pokeapiId": 136,
+      "nameKo": "멀티스케일",
+      "nameEn": "Multiscale",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "mummy",
+      "pokeapiId": 152,
+      "nameKo": "미라",
+      "nameEn": "Mummy",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "natural-cure",
+      "pokeapiId": 30,
+      "nameKo": "자연회복",
+      "nameEn": "Natural Cure",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "no-guard",
+      "pokeapiId": 99,
+      "nameKo": "노가드",
+      "nameEn": "No Guard",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "oblivious",
+      "pokeapiId": 12,
+      "nameKo": "둔감",
+      "nameEn": "Oblivious",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "opportunist",
+      "pokeapiId": 290,
+      "nameKo": "편승",
+      "nameEn": "Opportunist",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "overcoat",
+      "pokeapiId": 142,
+      "nameKo": "방진",
+      "nameEn": "Overcoat",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "overgrow",
+      "pokeapiId": 65,
+      "nameKo": "심록",
+      "nameEn": "Overgrow",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "own-tempo",
+      "pokeapiId": 20,
+      "nameKo": "마이페이스",
+      "nameEn": "Own Tempo",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "pickpocket",
+      "pokeapiId": 124,
+      "nameKo": "나쁜손버릇",
+      "nameEn": "Pickpocket",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "pickup",
+      "pokeapiId": 53,
+      "nameKo": "픽업",
+      "nameEn": "Pickup",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "pixilate",
+      "pokeapiId": 182,
+      "nameKo": "페어리스킨",
+      "nameEn": "Pixilate",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "plus",
+      "pokeapiId": 57,
+      "nameKo": "플러스",
+      "nameEn": "Plus",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "poison-heal",
+      "pokeapiId": 90,
+      "nameKo": "포이즌힐",
+      "nameEn": "Poison Heal",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "poison-point",
+      "pokeapiId": 38,
+      "nameKo": "독가시",
+      "nameEn": "Poison Point",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "poison-touch",
+      "pokeapiId": 143,
+      "nameKo": "독수",
+      "nameEn": "Poison Touch",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "prankster",
+      "pokeapiId": 158,
+      "nameKo": "짓궂은마음",
+      "nameEn": "Prankster",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "pressure",
+      "pokeapiId": 46,
+      "nameKo": "프레셔",
+      "nameEn": "Pressure",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "protean",
+      "pokeapiId": 168,
+      "nameKo": "변환자재",
+      "nameEn": "Protean",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "pure-power",
+      "pokeapiId": 74,
+      "nameKo": "순수한힘",
+      "nameEn": "Pure Power",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "purifying-salt",
+      "pokeapiId": 272,
+      "nameKo": "정화의소금",
+      "nameEn": "Purifying Salt",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "queenly-majesty",
+      "pokeapiId": 214,
+      "nameKo": "여왕의위엄",
+      "nameEn": "Queenly Majesty",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "quick-draw",
+      "pokeapiId": 259,
+      "nameKo": "퀵드로",
+      "nameEn": "Quick Draw",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "quick-feet",
+      "pokeapiId": 95,
+      "nameKo": "속보",
+      "nameEn": "Quick Feet",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "rain-dish",
+      "pokeapiId": 44,
+      "nameKo": "젖은접시",
+      "nameEn": "Rain Dish",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "receiver",
+      "pokeapiId": 222,
+      "nameKo": "리시버",
+      "nameEn": "Receiver",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "reckless",
+      "pokeapiId": 120,
+      "nameKo": "이판사판",
+      "nameEn": "Reckless",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "refrigerate",
+      "pokeapiId": 174,
+      "nameKo": "프리즈스킨",
+      "nameEn": "Refrigerate",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "regenerator",
+      "pokeapiId": 144,
+      "nameKo": "재생력",
+      "nameEn": "Regenerator",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "ripen",
+      "pokeapiId": 247,
+      "nameKo": "숙성",
+      "nameEn": "Ripen",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "rivalry",
+      "pokeapiId": 79,
+      "nameKo": "투쟁심",
+      "nameEn": "Rivalry",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "rock-head",
+      "pokeapiId": 69,
+      "nameKo": "돌머리",
+      "nameEn": "Rock Head",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "rough-skin",
+      "pokeapiId": 24,
+      "nameKo": "까칠한피부",
+      "nameEn": "Rough Skin",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sand-force",
+      "pokeapiId": 159,
+      "nameKo": "모래의힘",
+      "nameEn": "Sand Force",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sand-rush",
+      "pokeapiId": 146,
+      "nameKo": "모래헤치기",
+      "nameEn": "Sand Rush",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sand-spit",
+      "pokeapiId": 245,
+      "nameKo": "모래뿜기",
+      "nameEn": "Sand Spit",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sand-stream",
+      "pokeapiId": 45,
+      "nameKo": "모래날림",
+      "nameEn": "Sand Stream",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sand-veil",
+      "pokeapiId": 8,
+      "nameKo": "모래숨기",
+      "nameEn": "Sand Veil",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sap-sipper",
+      "pokeapiId": 157,
+      "nameKo": "초식",
+      "nameEn": "Sap Sipper",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "scrappy",
+      "pokeapiId": 113,
+      "nameKo": "배짱",
+      "nameEn": "Scrappy",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "screen-cleaner",
+      "pokeapiId": 251,
+      "nameKo": "배리어프리",
+      "nameEn": "Screen Cleaner",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sharpness",
+      "pokeapiId": 292,
+      "nameKo": "예리함",
+      "nameEn": "Sharpness",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "shed-skin",
+      "pokeapiId": 61,
+      "nameKo": "탈피",
+      "nameEn": "Shed Skin",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sheer-force",
+      "pokeapiId": 125,
+      "nameKo": "우격다짐",
+      "nameEn": "Sheer Force",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "shell-armor",
+      "pokeapiId": 75,
+      "nameKo": "조가비갑옷",
+      "nameEn": "Shell Armor",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "shield-dust",
+      "pokeapiId": 19,
+      "nameKo": "인분",
+      "nameEn": "Shield Dust",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "skill-link",
+      "pokeapiId": 92,
+      "nameKo": "스킬링크",
+      "nameEn": "Skill Link",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "slush-rush",
+      "pokeapiId": 202,
+      "nameKo": "눈치우기",
+      "nameEn": "Slush Rush",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sniper",
+      "pokeapiId": 97,
+      "nameKo": "스나이퍼",
+      "nameEn": "Sniper",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "snow-cloak",
+      "pokeapiId": 81,
+      "nameKo": "눈숨기",
+      "nameEn": "Snow Cloak",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "snow-warning",
+      "pokeapiId": 117,
+      "nameKo": "눈퍼뜨리기",
+      "nameEn": "Snow Warning",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "solar-power",
+      "pokeapiId": 94,
+      "nameKo": "선파워",
+      "nameEn": "Solar Power",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "solid-rock",
+      "pokeapiId": 116,
+      "nameKo": "하드록",
+      "nameEn": "Solid Rock",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "soundproof",
+      "pokeapiId": 43,
+      "nameKo": "방음",
+      "nameEn": "Soundproof",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "speed-boost",
+      "pokeapiId": 3,
+      "nameKo": "가속",
+      "nameEn": "Speed Boost",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "stall",
+      "pokeapiId": 100,
+      "nameKo": "시간벌기",
+      "nameEn": "Stall",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "stalwart",
+      "pokeapiId": 242,
+      "nameKo": "굳건한신념",
+      "nameEn": "Stalwart",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "stamina",
+      "pokeapiId": 192,
+      "nameKo": "지구력",
+      "nameEn": "Stamina",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "stance-change",
+      "pokeapiId": 176,
+      "nameKo": "배틀스위치",
+      "nameEn": "Stance Change",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "static",
+      "pokeapiId": 9,
+      "nameKo": "정전기",
+      "nameEn": "Static",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "steadfast",
+      "pokeapiId": 80,
+      "nameKo": "불굴의마음",
+      "nameEn": "Steadfast",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "stench",
+      "pokeapiId": 1,
+      "nameKo": "악취",
+      "nameEn": "Stench",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sticky-hold",
+      "pokeapiId": 60,
+      "nameKo": "점착",
+      "nameEn": "Sticky Hold",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "strong-jaw",
+      "pokeapiId": 173,
+      "nameKo": "옹골찬턱",
+      "nameEn": "Strong Jaw",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sturdy",
+      "pokeapiId": 5,
+      "nameKo": "옹골참",
+      "nameEn": "Sturdy",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "suction-cups",
+      "pokeapiId": 21,
+      "nameKo": "흡반",
+      "nameEn": "Suction Cups",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "super-luck",
+      "pokeapiId": 105,
+      "nameKo": "대운",
+      "nameEn": "Super Luck",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "supersweet-syrup",
+      "pokeapiId": 300,
+      "nameKo": "감미로운꿀",
+      "nameEn": "Supersweet Syrup",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "supreme-overlord",
+      "pokeapiId": 293,
+      "nameKo": "총대장",
+      "nameEn": "Supreme Overlord",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "surge-surfer",
+      "pokeapiId": 207,
+      "nameKo": "서핑테일",
+      "nameEn": "Surge Surfer",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "swarm",
+      "pokeapiId": 68,
+      "nameKo": "벌레의알림",
+      "nameEn": "Swarm",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "sweet-veil",
+      "pokeapiId": 175,
+      "nameKo": "스위트베일",
+      "nameEn": "Sweet Veil",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "swift-swim",
+      "pokeapiId": 33,
+      "nameKo": "쓱쓱",
+      "nameEn": "Swift Swim",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "symbiosis",
+      "pokeapiId": 180,
+      "nameKo": "공생",
+      "nameEn": "Symbiosis",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "synchronize",
+      "pokeapiId": 28,
+      "nameKo": "싱크로",
+      "nameEn": "Synchronize",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "tangled-feet",
+      "pokeapiId": 77,
+      "nameKo": "갈지자걸음",
+      "nameEn": "Tangled Feet",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "technician",
+      "pokeapiId": 101,
+      "nameKo": "테크니션",
+      "nameEn": "Technician",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "telepathy",
+      "pokeapiId": 140,
+      "nameKo": "텔레파시",
+      "nameEn": "Telepathy",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "thick-fat",
+      "pokeapiId": 47,
+      "nameKo": "두꺼운지방",
+      "nameEn": "Thick Fat",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "torrent",
+      "pokeapiId": 67,
+      "nameKo": "급류",
+      "nameEn": "Torrent",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "tough-claws",
+      "pokeapiId": 181,
+      "nameKo": "단단한발톱",
+      "nameEn": "Tough Claws",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "toxic-debris",
+      "pokeapiId": 295,
+      "nameKo": "독치장",
+      "nameEn": "Toxic Debris",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "trace",
+      "pokeapiId": 36,
+      "nameKo": "트레이스",
+      "nameEn": "Trace",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "unaware",
+      "pokeapiId": 109,
+      "nameKo": "천진",
+      "nameEn": "Unaware",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "unburden",
+      "pokeapiId": 84,
+      "nameKo": "곡예",
+      "nameEn": "Unburden",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "unnerve",
+      "pokeapiId": 127,
+      "nameKo": "긴장감",
+      "nameEn": "Unnerve",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "vital-spirit",
+      "pokeapiId": 72,
+      "nameKo": "의기양양",
+      "nameEn": "Vital Spirit",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "volt-absorb",
+      "pokeapiId": 10,
+      "nameKo": "축전",
+      "nameEn": "Volt Absorb",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "wandering-spirit",
+      "pokeapiId": 254,
+      "nameKo": "떠도는영혼",
+      "nameEn": "Wandering Spirit",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "water-absorb",
+      "pokeapiId": 11,
+      "nameKo": "저수",
+      "nameEn": "Water Absorb",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "water-bubble",
+      "pokeapiId": 199,
+      "nameKo": "수포",
+      "nameEn": "Water Bubble",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "weak-armor",
+      "pokeapiId": 133,
+      "nameKo": "깨어진갑옷",
+      "nameEn": "Weak Armor",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "white-smoke",
+      "pokeapiId": 73,
+      "nameKo": "하얀연기",
+      "nameEn": "White Smoke",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    },
+    {
+      "id": "zero-to-hero",
+      "pokeapiId": 278,
+      "nameKo": "마이티체인지",
+      "nameEn": "Zero to Hero",
+      "publishStatus": "review-candidate",
+      "sources": [
+        "pokeapi"
+      ]
+    }
+  ],
+  "pokemonAbilities": [
+    {
+      "pokemonId": "venusaur",
+      "championsId": "0003-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/venusaur/",
+      "abilityIds": [
+        "chlorophyll",
+        "overgrow"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "chlorophyll",
+        "overgrow"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "charizard",
+      "championsId": "0006-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/charizard/",
+      "abilityIds": [
+        "blaze",
+        "solar-power"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "solar-power"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "blastoise",
+      "championsId": "0009-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/blastoise/",
+      "abilityIds": [
+        "rain-dish",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "rain-dish",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "beedrill",
+      "championsId": "0015-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/beedrill/",
+      "abilityIds": [
+        "sniper",
+        "swarm"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "sniper",
+        "swarm"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "pidgeot",
+      "championsId": "0018-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/pidgeot/",
+      "abilityIds": [
+        "big-pecks",
+        "keen-eye",
+        "tangled-feet"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "big-pecks",
+        "keen-eye",
+        "tangled-feet"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "arbok",
+      "championsId": "0024-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/arbok/",
+      "abilityIds": [
+        "intimidate",
+        "shed-skin",
+        "unnerve"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "intimidate",
+        "shed-skin",
+        "unnerve"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "pikachu",
+      "championsId": "0025-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/pikachu/",
+      "abilityIds": [
+        "lightning-rod",
+        "static"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "lightning-rod",
+        "static"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "raichu",
+      "championsId": "0026-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/raichu/",
+      "abilityIds": [
+        "lightning-rod",
+        "static"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "lightning-rod",
+        "static",
+        "surge-surfer"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "raichu-alola",
+      "championsId": "0026-001",
+      "form": "alolan",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/raichu/",
+      "abilityIds": [
+        "surge-surfer"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "lightning-rod",
+        "static",
+        "surge-surfer"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "clefable",
+      "championsId": "0036-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/clefable/",
+      "abilityIds": [
+        "cute-charm",
+        "magic-guard",
+        "unaware"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cute-charm",
+        "magic-guard",
+        "unaware"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "ninetales",
+      "championsId": "0038-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/ninetales/",
+      "abilityIds": [
+        "drought",
+        "flash-fire"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "drought",
+        "flash-fire",
+        "snow-cloak",
+        "snow-warning"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "ninetales-alola",
+      "championsId": "0038-001",
+      "form": "alolan",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/ninetales/",
+      "abilityIds": [
+        "snow-cloak",
+        "snow-warning"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "drought",
+        "flash-fire",
+        "snow-cloak",
+        "snow-warning"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "vileplume",
+      "championsId": "0045-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/vileplume/",
+      "abilityIds": [
+        "chlorophyll",
+        "effect-spore"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "chlorophyll",
+        "effect-spore"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "arcanine",
+      "championsId": "0059-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/arcanine/",
+      "abilityIds": [
+        "flash-fire",
+        "intimidate",
+        "justified"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flash-fire",
+        "intimidate",
+        "justified",
+        "rock-head"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "arcanine-hisui",
+      "championsId": "0059-001",
+      "form": "hisuian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/arcanine/",
+      "abilityIds": [
+        "flash-fire",
+        "intimidate",
+        "rock-head"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flash-fire",
+        "intimidate",
+        "justified",
+        "rock-head"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "alakazam",
+      "championsId": "0065-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/alakazam/",
+      "abilityIds": [
+        "inner-focus",
+        "magic-guard",
+        "synchronize"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "inner-focus",
+        "magic-guard",
+        "synchronize"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "machamp",
+      "championsId": "0068-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/machamp/",
+      "abilityIds": [
+        "guts",
+        "no-guard",
+        "steadfast"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "guts",
+        "no-guard",
+        "steadfast"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "victreebel",
+      "championsId": "0071-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/victreebel/",
+      "abilityIds": [
+        "chlorophyll",
+        "gluttony"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "chlorophyll",
+        "gluttony"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "slowbro",
+      "championsId": "0080-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/slowbro/",
+      "abilityIds": [
+        "oblivious",
+        "own-tempo",
+        "regenerator"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "oblivious",
+        "own-tempo",
+        "quick-draw",
+        "regenerator"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "slowbro-galar",
+      "championsId": "0080-002",
+      "form": "galarian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/slowbro/",
+      "abilityIds": [
+        "own-tempo",
+        "quick-draw",
+        "regenerator"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "oblivious",
+        "own-tempo",
+        "quick-draw",
+        "regenerator"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gengar",
+      "championsId": "0094-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gengar/",
+      "abilityIds": [
+        "cursed-body"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cursed-body"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "kangaskhan",
+      "championsId": "0115-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/kangaskhan/",
+      "abilityIds": [
+        "early-bird",
+        "inner-focus",
+        "scrappy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "early-bird",
+        "inner-focus",
+        "scrappy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "starmie",
+      "championsId": "0121-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/starmie/",
+      "abilityIds": [
+        "analytic",
+        "illuminate",
+        "natural-cure"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "analytic",
+        "illuminate",
+        "natural-cure"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "pinsir",
+      "championsId": "0127-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/pinsir/",
+      "abilityIds": [
+        "hyper-cutter",
+        "mold-breaker",
+        "moxie"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "hyper-cutter",
+        "mold-breaker",
+        "moxie"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "tauros",
+      "championsId": "0128-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/tauros/",
+      "abilityIds": [
+        "anger-point",
+        "intimidate",
+        "sheer-force"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "anger-point",
+        "cud-chew",
+        "intimidate",
+        "sheer-force"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "tauros-paldea-combat-breed",
+      "championsId": "0128-001",
+      "form": "paldean-combat",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/tauros/",
+      "abilityIds": [
+        "anger-point",
+        "cud-chew",
+        "intimidate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "anger-point",
+        "cud-chew",
+        "intimidate",
+        "sheer-force"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "tauros-paldea-blaze-breed",
+      "championsId": "0128-002",
+      "form": "paldean-blaze",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/tauros/",
+      "abilityIds": [
+        "anger-point",
+        "cud-chew",
+        "intimidate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "anger-point",
+        "cud-chew",
+        "intimidate",
+        "sheer-force"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "tauros-paldea-aqua-breed",
+      "championsId": "0128-003",
+      "form": "paldean-aqua",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/tauros/",
+      "abilityIds": [
+        "anger-point",
+        "cud-chew",
+        "intimidate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "anger-point",
+        "cud-chew",
+        "intimidate",
+        "sheer-force"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gyarados",
+      "championsId": "0130-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gyarados/",
+      "abilityIds": [
+        "intimidate",
+        "moxie"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "intimidate",
+        "moxie"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "ditto",
+      "championsId": "0132-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/ditto/",
+      "abilityIds": [
+        "imposter",
+        "limber"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "imposter",
+        "limber"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "vaporeon",
+      "championsId": "0134-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/vaporeon/",
+      "abilityIds": [
+        "hydration",
+        "water-absorb"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "hydration",
+        "water-absorb"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "jolteon",
+      "championsId": "0135-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/jolteon/",
+      "abilityIds": [
+        "quick-feet",
+        "volt-absorb"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "quick-feet",
+        "volt-absorb"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "flareon",
+      "championsId": "0136-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/flareon/",
+      "abilityIds": [
+        "flash-fire",
+        "guts"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flash-fire",
+        "guts"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "aerodactyl",
+      "championsId": "0142-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/aerodactyl/",
+      "abilityIds": [
+        "pressure",
+        "rock-head",
+        "unnerve"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "pressure",
+        "rock-head",
+        "unnerve"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "snorlax",
+      "championsId": "0143-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/snorlax/",
+      "abilityIds": [
+        "gluttony",
+        "immunity",
+        "thick-fat"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "gluttony",
+        "immunity",
+        "thick-fat"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "dragonite",
+      "championsId": "0149-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/dragonite/",
+      "abilityIds": [
+        "inner-focus",
+        "multiscale"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "inner-focus",
+        "multiscale"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "meganium",
+      "championsId": "0154-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/meganium/",
+      "abilityIds": [
+        "leaf-guard",
+        "overgrow"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "leaf-guard",
+        "overgrow"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "typhlosion",
+      "championsId": "0157-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/typhlosion/",
+      "abilityIds": [
+        "blaze",
+        "flash-fire"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "flash-fire",
+        "frisk"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "typhlosion-hisui",
+      "championsId": "0157-001",
+      "form": "hisuian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/typhlosion/",
+      "abilityIds": [
+        "blaze",
+        "frisk"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "flash-fire",
+        "frisk"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "feraligatr",
+      "championsId": "0160-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/feraligatr/",
+      "abilityIds": [
+        "sheer-force",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "sheer-force",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "ariados",
+      "championsId": "0168-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/ariados/",
+      "abilityIds": [
+        "insomnia",
+        "sniper",
+        "swarm"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "insomnia",
+        "sniper",
+        "swarm"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "ampharos",
+      "championsId": "0181-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/ampharos/",
+      "abilityIds": [
+        "plus",
+        "static"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "plus",
+        "static"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "azumarill",
+      "championsId": "0184-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/azumarill/",
+      "abilityIds": [
+        "huge-power",
+        "sap-sipper",
+        "thick-fat"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "huge-power",
+        "sap-sipper",
+        "thick-fat"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "politoed",
+      "championsId": "0186-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/politoed/",
+      "abilityIds": [
+        "damp",
+        "drizzle",
+        "water-absorb"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "damp",
+        "drizzle",
+        "water-absorb"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "espeon",
+      "championsId": "0196-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/espeon/",
+      "abilityIds": [
+        "magic-bounce",
+        "synchronize"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "magic-bounce",
+        "synchronize"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "umbreon",
+      "championsId": "0197-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/umbreon/",
+      "abilityIds": [
+        "inner-focus",
+        "synchronize"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "inner-focus",
+        "synchronize"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "slowking",
+      "championsId": "0199-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/slowking/",
+      "abilityIds": [
+        "oblivious",
+        "own-tempo",
+        "regenerator"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "curious-medicine",
+        "oblivious",
+        "own-tempo",
+        "regenerator"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "slowking-galar",
+      "championsId": "0199-001",
+      "form": "galarian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/slowking/",
+      "abilityIds": [
+        "curious-medicine",
+        "own-tempo",
+        "regenerator"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "curious-medicine",
+        "oblivious",
+        "own-tempo",
+        "regenerator"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "forretress",
+      "championsId": "0205-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/forretress/",
+      "abilityIds": [
+        "overcoat",
+        "sturdy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "overcoat",
+        "sturdy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "steelix",
+      "championsId": "0208-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/steelix/",
+      "abilityIds": [
+        "rock-head",
+        "sheer-force",
+        "sturdy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "rock-head",
+        "sheer-force",
+        "sturdy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "qwilfish",
+      "championsId": "0211-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/qwilfish/",
+      "abilityIds": [
+        "intimidate",
+        "poison-point",
+        "swift-swim"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "intimidate",
+        "poison-point",
+        "swift-swim"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "scizor",
+      "championsId": "0212-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/scizor/",
+      "abilityIds": [
+        "light-metal",
+        "swarm",
+        "technician"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "light-metal",
+        "swarm",
+        "technician"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "heracross",
+      "championsId": "0214-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/heracross/",
+      "abilityIds": [
+        "guts",
+        "moxie",
+        "swarm"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "guts",
+        "moxie",
+        "swarm"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "skarmory",
+      "championsId": "0227-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/skarmory/",
+      "abilityIds": [
+        "keen-eye",
+        "sturdy",
+        "weak-armor"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "keen-eye",
+        "sturdy",
+        "weak-armor"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "houndoom",
+      "championsId": "0229-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/houndoom/",
+      "abilityIds": [
+        "early-bird",
+        "flash-fire",
+        "unnerve"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "early-bird",
+        "flash-fire",
+        "unnerve"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "tyranitar",
+      "championsId": "0248-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/tyranitar/",
+      "abilityIds": [
+        "sand-stream",
+        "unnerve"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "sand-stream",
+        "unnerve"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "sceptile",
+      "championsId": "0254-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/sceptile/",
+      "abilityIds": [
+        "overgrow",
+        "unburden"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "overgrow",
+        "unburden"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "blaziken",
+      "championsId": "0257-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/blaziken/",
+      "abilityIds": [
+        "blaze",
+        "speed-boost"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "speed-boost"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "swampert",
+      "championsId": "0260-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/swampert/",
+      "abilityIds": [
+        "damp",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "damp",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "pelipper",
+      "championsId": "0279-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/pelipper/",
+      "abilityIds": [
+        "drizzle",
+        "keen-eye",
+        "rain-dish"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "drizzle",
+        "keen-eye",
+        "rain-dish"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gardevoir",
+      "championsId": "0282-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gardevoir/",
+      "abilityIds": [
+        "synchronize",
+        "telepathy",
+        "trace"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "synchronize",
+        "telepathy",
+        "trace"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "sableye",
+      "championsId": "0302-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/sableye/",
+      "abilityIds": [
+        "keen-eye",
+        "prankster",
+        "stall"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "keen-eye",
+        "prankster",
+        "stall"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "mawile",
+      "championsId": "0303-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/mawile/",
+      "abilityIds": [
+        "hyper-cutter",
+        "intimidate",
+        "sheer-force"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "hyper-cutter",
+        "intimidate",
+        "sheer-force"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "aggron",
+      "championsId": "0306-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/aggron/",
+      "abilityIds": [
+        "heavy-metal",
+        "rock-head",
+        "sturdy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "heavy-metal",
+        "rock-head",
+        "sturdy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "medicham",
+      "championsId": "0308-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/medicham/",
+      "abilityIds": [
+        "pure-power",
+        "telepathy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "pure-power",
+        "telepathy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "manectric",
+      "championsId": "0310-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/manectric/",
+      "abilityIds": [
+        "lightning-rod",
+        "minus",
+        "static"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "lightning-rod",
+        "minus",
+        "static"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "sharpedo",
+      "championsId": "0319-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/sharpedo/",
+      "abilityIds": [
+        "rough-skin",
+        "speed-boost"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "rough-skin",
+        "speed-boost"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "camerupt",
+      "championsId": "0323-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/camerupt/",
+      "abilityIds": [
+        "anger-point",
+        "magma-armor",
+        "solid-rock"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "anger-point",
+        "magma-armor",
+        "solid-rock"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "torkoal",
+      "championsId": "0324-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/torkoal/",
+      "abilityIds": [
+        "drought",
+        "shell-armor",
+        "white-smoke"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "drought",
+        "shell-armor",
+        "white-smoke"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "altaria",
+      "championsId": "0334-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/altaria/",
+      "abilityIds": [
+        "cloud-nine",
+        "natural-cure"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cloud-nine",
+        "natural-cure"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "milotic",
+      "championsId": "0350-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/milotic/",
+      "abilityIds": [
+        "competitive",
+        "cute-charm",
+        "marvel-scale"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "competitive",
+        "cute-charm",
+        "marvel-scale"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "castform",
+      "championsId": "0351-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/castform/",
+      "abilityIds": [
+        "forecast"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "forecast"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "banette",
+      "championsId": "0354-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/banette/",
+      "abilityIds": [
+        "cursed-body",
+        "frisk",
+        "insomnia"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cursed-body",
+        "frisk",
+        "insomnia"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "chimecho",
+      "championsId": "0358-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/chimecho/",
+      "abilityIds": [
+        "levitate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "levitate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "absol",
+      "championsId": "0359-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/absol/",
+      "abilityIds": [
+        "justified",
+        "pressure",
+        "super-luck"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "justified",
+        "pressure",
+        "super-luck"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "glalie",
+      "championsId": "0362-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/glalie/",
+      "abilityIds": [
+        "ice-body",
+        "inner-focus",
+        "moody"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "ice-body",
+        "inner-focus",
+        "moody"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "metagross",
+      "championsId": "0376-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/metagross/",
+      "abilityIds": [
+        "clear-body",
+        "light-metal"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "clear-body",
+        "light-metal"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "torterra",
+      "championsId": "0389-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/torterra/",
+      "abilityIds": [
+        "overgrow",
+        "shell-armor"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "overgrow",
+        "shell-armor"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "infernape",
+      "championsId": "0392-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/infernape/",
+      "abilityIds": [
+        "blaze",
+        "iron-fist"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "iron-fist"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "empoleon",
+      "championsId": "0395-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/empoleon/",
+      "abilityIds": [
+        "competitive",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "competitive",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "staraptor",
+      "championsId": "0398-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/staraptor/",
+      "abilityIds": [
+        "intimidate",
+        "reckless"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "intimidate",
+        "reckless"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "luxray",
+      "championsId": "0405-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/luxray/",
+      "abilityIds": [
+        "guts",
+        "intimidate",
+        "rivalry"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "guts",
+        "intimidate",
+        "rivalry"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "roserade",
+      "championsId": "0407-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/roserade/",
+      "abilityIds": [
+        "natural-cure",
+        "poison-point",
+        "technician"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "natural-cure",
+        "poison-point",
+        "technician"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "rampardos",
+      "championsId": "0409-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/rampardos/",
+      "abilityIds": [
+        "mold-breaker",
+        "sheer-force"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "mold-breaker",
+        "sheer-force"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "bastiodon",
+      "championsId": "0411-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/bastiodon/",
+      "abilityIds": [
+        "soundproof",
+        "sturdy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "soundproof",
+        "sturdy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "lopunny",
+      "championsId": "0428-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/lopunny/",
+      "abilityIds": [
+        "cute-charm",
+        "klutz",
+        "limber"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cute-charm",
+        "klutz",
+        "limber"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "spiritomb",
+      "championsId": "0442-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/spiritomb/",
+      "abilityIds": [
+        "infiltrator",
+        "pressure"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "infiltrator",
+        "pressure"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "garchomp",
+      "championsId": "0445-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/garchomp/",
+      "abilityIds": [
+        "rough-skin",
+        "sand-veil"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "rough-skin",
+        "sand-veil"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "lucario",
+      "championsId": "0448-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/lucario/",
+      "abilityIds": [
+        "inner-focus",
+        "justified",
+        "steadfast"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "inner-focus",
+        "justified",
+        "steadfast"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "hippowdon",
+      "championsId": "0450-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/hippowdon/",
+      "abilityIds": [
+        "sand-force",
+        "sand-stream"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "sand-force",
+        "sand-stream"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "toxicroak",
+      "championsId": "0454-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/toxicroak/",
+      "abilityIds": [
+        "anticipation",
+        "dry-skin",
+        "poison-touch"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "anticipation",
+        "dry-skin",
+        "poison-touch"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "abomasnow",
+      "championsId": "0460-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/abomasnow/",
+      "abilityIds": [
+        "snow-warning",
+        "soundproof"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "snow-warning",
+        "soundproof"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "weavile",
+      "championsId": "0461-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/weavile/",
+      "abilityIds": [
+        "pickpocket",
+        "pressure"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "pickpocket",
+        "pressure"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "rhyperior",
+      "championsId": "0464-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/rhyperior/",
+      "abilityIds": [
+        "lightning-rod",
+        "reckless",
+        "solid-rock"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "lightning-rod",
+        "reckless",
+        "solid-rock"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "leafeon",
+      "championsId": "0470-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/leafeon/",
+      "abilityIds": [
+        "chlorophyll",
+        "leaf-guard"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "chlorophyll",
+        "leaf-guard"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "glaceon",
+      "championsId": "0471-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/glaceon/",
+      "abilityIds": [
+        "ice-body",
+        "snow-cloak"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "ice-body",
+        "snow-cloak"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gliscor",
+      "championsId": "0472-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gliscor/",
+      "abilityIds": [
+        "hyper-cutter",
+        "poison-heal",
+        "sand-veil"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "hyper-cutter",
+        "poison-heal",
+        "sand-veil"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "mamoswine",
+      "championsId": "0473-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/mamoswine/",
+      "abilityIds": [
+        "oblivious",
+        "snow-cloak",
+        "thick-fat"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "oblivious",
+        "snow-cloak",
+        "thick-fat"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gallade",
+      "championsId": "0475-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gallade/",
+      "abilityIds": [
+        "justified",
+        "sharpness",
+        "steadfast"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "justified",
+        "sharpness",
+        "steadfast"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "froslass",
+      "championsId": "0478-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/froslass/",
+      "abilityIds": [
+        "cursed-body",
+        "snow-cloak"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cursed-body",
+        "snow-cloak"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "rotom",
+      "championsId": "0479-000",
+      "form": "normal",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/rotom/",
+      "abilityIds": [
+        "levitate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "levitate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "rotom-heat",
+      "championsId": "0479-001",
+      "form": "heat",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/rotom/",
+      "abilityIds": [
+        "levitate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "levitate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "rotom-wash",
+      "championsId": "0479-002",
+      "form": "wash",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/rotom/",
+      "abilityIds": [
+        "levitate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "levitate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "rotom-frost",
+      "championsId": "0479-003",
+      "form": "frost",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/rotom/",
+      "abilityIds": [
+        "levitate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "levitate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "rotom-fan",
+      "championsId": "0479-004",
+      "form": "fan",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/rotom/",
+      "abilityIds": [
+        "levitate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "levitate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "rotom-mow",
+      "championsId": "0479-005",
+      "form": "mow",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/rotom/",
+      "abilityIds": [
+        "levitate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "levitate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "serperior",
+      "championsId": "0497-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/serperior/",
+      "abilityIds": [
+        "contrary",
+        "overgrow"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "contrary",
+        "overgrow"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "emboar",
+      "championsId": "0500-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/emboar/",
+      "abilityIds": [
+        "blaze",
+        "reckless"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "reckless"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "samurott",
+      "championsId": "0503-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/samurott/",
+      "abilityIds": [
+        "shell-armor",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "sharpness",
+        "shell-armor",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "samurott-hisui",
+      "championsId": "0503-001",
+      "form": "hisuian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/samurott/",
+      "abilityIds": [
+        "sharpness",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "sharpness",
+        "shell-armor",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "watchog",
+      "championsId": "0505-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/watchog/",
+      "abilityIds": [
+        "analytic",
+        "illuminate",
+        "keen-eye"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "analytic",
+        "illuminate",
+        "keen-eye"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "liepard",
+      "championsId": "0510-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/liepard/",
+      "abilityIds": [
+        "limber",
+        "prankster",
+        "unburden"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "limber",
+        "prankster",
+        "unburden"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "simisage",
+      "championsId": "0512-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/simisage/",
+      "abilityIds": [
+        "gluttony",
+        "overgrow"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "gluttony",
+        "overgrow"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "simisear",
+      "championsId": "0514-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/simisear/",
+      "abilityIds": [
+        "blaze",
+        "gluttony"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "gluttony"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "simipour",
+      "championsId": "0516-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/simipour/",
+      "abilityIds": [
+        "gluttony",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "gluttony",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "musharna",
+      "championsId": "0518-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/musharna/",
+      "abilityIds": [
+        "forewarn",
+        "synchronize",
+        "telepathy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "forewarn",
+        "synchronize",
+        "telepathy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "excadrill",
+      "championsId": "0530-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/excadrill/",
+      "abilityIds": [
+        "mold-breaker",
+        "sand-force",
+        "sand-rush"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "mold-breaker",
+        "sand-force",
+        "sand-rush"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "audino",
+      "championsId": "0531-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/audino/",
+      "abilityIds": [
+        "healer",
+        "klutz",
+        "regenerator"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "healer",
+        "klutz",
+        "regenerator"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "conkeldurr",
+      "championsId": "0534-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/conkeldurr/",
+      "abilityIds": [
+        "guts",
+        "iron-fist",
+        "sheer-force"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "guts",
+        "iron-fist",
+        "sheer-force"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "scolipede",
+      "championsId": "0545-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/scolipede/",
+      "abilityIds": [
+        "poison-point",
+        "speed-boost",
+        "swarm"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "poison-point",
+        "speed-boost",
+        "swarm"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "whimsicott",
+      "championsId": "0547-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/whimsicott/",
+      "abilityIds": [
+        "chlorophyll",
+        "infiltrator",
+        "prankster"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "chlorophyll",
+        "infiltrator",
+        "prankster"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "krookodile",
+      "championsId": "0553-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/krookodile/",
+      "abilityIds": [
+        "anger-point",
+        "intimidate",
+        "moxie"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "anger-point",
+        "intimidate",
+        "moxie"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "scrafty",
+      "championsId": "0560-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/scrafty/",
+      "abilityIds": [
+        "intimidate",
+        "moxie",
+        "shed-skin"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "intimidate",
+        "moxie",
+        "shed-skin"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "cofagrigus",
+      "championsId": "0563-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/cofagrigus/",
+      "abilityIds": [
+        "mummy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "mummy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "garbodor",
+      "championsId": "0569-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/garbodor/",
+      "abilityIds": [
+        "aftermath",
+        "stench",
+        "weak-armor"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "aftermath",
+        "stench",
+        "weak-armor"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "zoroark",
+      "championsId": "0571-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/zoroark/",
+      "abilityIds": [
+        "illusion"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "illusion"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "zoroark-hisui",
+      "championsId": "0571-001",
+      "form": "hisuian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/zoroark/",
+      "abilityIds": [
+        "illusion"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "illusion"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "reuniclus",
+      "championsId": "0579-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/reuniclus/",
+      "abilityIds": [
+        "magic-guard",
+        "overcoat",
+        "regenerator"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "magic-guard",
+        "overcoat",
+        "regenerator"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "vanilluxe",
+      "championsId": "0584-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/vanilluxe/",
+      "abilityIds": [
+        "ice-body",
+        "snow-warning",
+        "weak-armor"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "ice-body",
+        "snow-warning",
+        "weak-armor"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "emolga",
+      "championsId": "0587-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/emolga/",
+      "abilityIds": [
+        "motor-drive",
+        "static"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "motor-drive",
+        "static"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "eelektross",
+      "championsId": "0604-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/eelektross/",
+      "abilityIds": [
+        "levitate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "levitate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "chandelure",
+      "championsId": "0609-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/chandelure/",
+      "abilityIds": [
+        "flame-body",
+        "flash-fire",
+        "infiltrator"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flame-body",
+        "flash-fire",
+        "infiltrator"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "beartic",
+      "championsId": "0614-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/beartic/",
+      "abilityIds": [
+        "slush-rush",
+        "snow-cloak",
+        "swift-swim"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "slush-rush",
+        "snow-cloak",
+        "swift-swim"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "stunfisk",
+      "championsId": "0618-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/stunfisk/",
+      "abilityIds": [
+        "limber",
+        "sand-veil",
+        "static"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "limber",
+        "mimicry",
+        "sand-veil",
+        "static"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "stunfisk-galar",
+      "championsId": "0618-001",
+      "form": "galarian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/stunfisk/",
+      "abilityIds": [
+        "mimicry"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "limber",
+        "mimicry",
+        "sand-veil",
+        "static"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "golurk",
+      "championsId": "0623-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/golurk/",
+      "abilityIds": [
+        "iron-fist",
+        "klutz",
+        "no-guard"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "iron-fist",
+        "klutz",
+        "no-guard"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "hydreigon",
+      "championsId": "0635-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/hydreigon/",
+      "abilityIds": [
+        "levitate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "levitate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "volcarona",
+      "championsId": "0637-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/volcarona/",
+      "abilityIds": [
+        "flame-body",
+        "swarm"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flame-body",
+        "swarm"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "chesnaught",
+      "championsId": "0652-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/chesnaught/",
+      "abilityIds": [
+        "bulletproof",
+        "overgrow"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "bulletproof",
+        "overgrow"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "delphox",
+      "championsId": "0655-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/delphox/",
+      "abilityIds": [
+        "blaze",
+        "magician"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "magician"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "greninja",
+      "championsId": "0658-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/greninja/",
+      "abilityIds": [
+        "protean",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "protean",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "diggersby",
+      "championsId": "0660-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/diggersby/",
+      "abilityIds": [
+        "cheek-pouch",
+        "huge-power",
+        "pickup"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cheek-pouch",
+        "huge-power",
+        "pickup"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "talonflame",
+      "championsId": "0663-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/talonflame/",
+      "abilityIds": [
+        "flame-body",
+        "gale-wings"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flame-body",
+        "gale-wings"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "vivillon",
+      "championsId": "0666-018",
+      "form": "champions-default",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/vivillon/",
+      "abilityIds": [
+        "compound-eyes",
+        "friend-guard",
+        "shield-dust"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "compound-eyes",
+        "friend-guard",
+        "shield-dust"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "pyroar-male",
+      "championsId": "0668-000",
+      "form": "male",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/pyroar/",
+      "abilityIds": [
+        "moxie",
+        "rivalry",
+        "unnerve"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "moxie",
+        "rivalry",
+        "unnerve"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "floette-eternal",
+      "championsId": "0670-005",
+      "form": "eternal-flower",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/floette/",
+      "abilityIds": [
+        "flower-veil",
+        "symbiosis"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flower-veil",
+        "symbiosis"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "florges",
+      "championsId": "0671-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/florges/",
+      "abilityIds": [
+        "flower-veil",
+        "symbiosis"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flower-veil",
+        "symbiosis"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "pangoro",
+      "championsId": "0675-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/pangoro/",
+      "abilityIds": [
+        "iron-fist",
+        "mold-breaker",
+        "scrappy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "iron-fist",
+        "mold-breaker",
+        "scrappy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "furfrou",
+      "championsId": "0676-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/furfrou/",
+      "abilityIds": [
+        "fur-coat"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "fur-coat"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "meowstic-male",
+      "championsId": "0678-000",
+      "form": "male",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/meowstic/",
+      "abilityIds": [
+        "infiltrator",
+        "keen-eye",
+        "prankster"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "competitive",
+        "infiltrator",
+        "keen-eye",
+        "prankster"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "meowstic-female",
+      "championsId": "0678-001",
+      "form": "female",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/meowstic/",
+      "abilityIds": [
+        "competitive",
+        "infiltrator",
+        "keen-eye"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "competitive",
+        "infiltrator",
+        "keen-eye",
+        "prankster"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "aegislash-shield",
+      "championsId": "0681-000",
+      "form": "shield",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/aegislash/",
+      "abilityIds": [
+        "stance-change"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "stance-change"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "aromatisse",
+      "championsId": "0683-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/aromatisse/",
+      "abilityIds": [
+        "aroma-veil",
+        "healer"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "aroma-veil",
+        "healer"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "slurpuff",
+      "championsId": "0685-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/slurpuff/",
+      "abilityIds": [
+        "sweet-veil",
+        "unburden"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "sweet-veil",
+        "unburden"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "malamar",
+      "championsId": "0687-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/malamar/",
+      "abilityIds": [
+        "contrary",
+        "infiltrator",
+        "suction-cups"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "contrary",
+        "infiltrator",
+        "suction-cups"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "barbaracle",
+      "championsId": "0689-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/barbaracle/",
+      "abilityIds": [
+        "pickpocket",
+        "sniper",
+        "tough-claws"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "pickpocket",
+        "sniper",
+        "tough-claws"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "dragalge",
+      "championsId": "0691-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/dragalge/",
+      "abilityIds": [
+        "adaptability",
+        "poison-point",
+        "poison-touch"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "adaptability",
+        "poison-point",
+        "poison-touch"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "clawitzer",
+      "championsId": "0693-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/clawitzer/",
+      "abilityIds": [
+        "mega-launcher"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "mega-launcher"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "heliolisk",
+      "championsId": "0695-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/heliolisk/",
+      "abilityIds": [
+        "dry-skin",
+        "sand-veil",
+        "solar-power"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "dry-skin",
+        "sand-veil",
+        "solar-power"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "tyrantrum",
+      "championsId": "0697-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/tyrantrum/",
+      "abilityIds": [
+        "rock-head",
+        "strong-jaw"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "rock-head",
+        "strong-jaw"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "aurorus",
+      "championsId": "0699-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/aurorus/",
+      "abilityIds": [
+        "refrigerate",
+        "snow-warning"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "refrigerate",
+        "snow-warning"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "sylveon",
+      "championsId": "0700-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/sylveon/",
+      "abilityIds": [
+        "cute-charm",
+        "pixilate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cute-charm",
+        "pixilate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "hawlucha",
+      "championsId": "0701-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/hawlucha/",
+      "abilityIds": [
+        "limber",
+        "mold-breaker",
+        "unburden"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "limber",
+        "mold-breaker",
+        "unburden"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "dedenne",
+      "championsId": "0702-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/dedenne/",
+      "abilityIds": [
+        "cheek-pouch",
+        "pickup",
+        "plus"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cheek-pouch",
+        "pickup",
+        "plus"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "goodra",
+      "championsId": "0706-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/goodra/",
+      "abilityIds": [
+        "gooey",
+        "hydration",
+        "sap-sipper"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "gooey",
+        "hydration",
+        "sap-sipper",
+        "shell-armor"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "goodra-hisui",
+      "championsId": "0706-001",
+      "form": "hisuian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/goodra/",
+      "abilityIds": [
+        "gooey",
+        "sap-sipper",
+        "shell-armor"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "gooey",
+        "hydration",
+        "sap-sipper",
+        "shell-armor"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "klefki",
+      "championsId": "0707-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/klefki/",
+      "abilityIds": [
+        "magician",
+        "prankster"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "magician",
+        "prankster"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "trevenant",
+      "championsId": "0709-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/trevenant/",
+      "abilityIds": [
+        "frisk",
+        "harvest",
+        "natural-cure"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "frisk",
+        "harvest",
+        "natural-cure"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gourgeist-average",
+      "championsId": "0711-000",
+      "form": "medium",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gourgeist/",
+      "abilityIds": [
+        "frisk",
+        "insomnia",
+        "pickup"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "frisk",
+        "insomnia",
+        "pickup"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gourgeist-small",
+      "championsId": "0711-001",
+      "form": "small",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gourgeist/",
+      "abilityIds": [
+        "frisk",
+        "insomnia",
+        "pickup"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "frisk",
+        "insomnia",
+        "pickup"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gourgeist-large",
+      "championsId": "0711-002",
+      "form": "large",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gourgeist/",
+      "abilityIds": [
+        "frisk",
+        "insomnia",
+        "pickup"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "frisk",
+        "insomnia",
+        "pickup"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gourgeist-super",
+      "championsId": "0711-003",
+      "form": "jumbo",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gourgeist/",
+      "abilityIds": [
+        "frisk",
+        "insomnia",
+        "pickup"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "frisk",
+        "insomnia",
+        "pickup"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "avalugg",
+      "championsId": "0713-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/avalugg/",
+      "abilityIds": [
+        "ice-body",
+        "own-tempo",
+        "sturdy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "ice-body",
+        "own-tempo",
+        "strong-jaw",
+        "sturdy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "avalugg-hisui",
+      "championsId": "0713-001",
+      "form": "hisuian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/avalugg/",
+      "abilityIds": [
+        "ice-body",
+        "strong-jaw",
+        "sturdy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "ice-body",
+        "own-tempo",
+        "strong-jaw",
+        "sturdy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "noivern",
+      "championsId": "0715-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/noivern/",
+      "abilityIds": [
+        "frisk",
+        "infiltrator",
+        "telepathy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "frisk",
+        "infiltrator",
+        "telepathy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "decidueye",
+      "championsId": "0724-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/decidueye/",
+      "abilityIds": [
+        "long-reach",
+        "overgrow"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "long-reach",
+        "overgrow",
+        "scrappy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "decidueye-hisui",
+      "championsId": "0724-001",
+      "form": "hisuian",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/decidueye/",
+      "abilityIds": [
+        "overgrow",
+        "scrappy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "long-reach",
+        "overgrow",
+        "scrappy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "incineroar",
+      "championsId": "0727-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/incineroar/",
+      "abilityIds": [
+        "blaze",
+        "intimidate"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "intimidate"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "primarina",
+      "championsId": "0730-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/primarina/",
+      "abilityIds": [
+        "liquid-voice",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "liquid-voice",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "toucannon",
+      "championsId": "0733-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/toucannon/",
+      "abilityIds": [
+        "keen-eye",
+        "sheer-force",
+        "skill-link"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "keen-eye",
+        "sheer-force",
+        "skill-link"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "crabominable",
+      "championsId": "0740-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/crabominable/",
+      "abilityIds": [
+        "anger-point",
+        "hyper-cutter",
+        "iron-fist"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "anger-point",
+        "hyper-cutter",
+        "iron-fist"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "lycanroc-midday",
+      "championsId": "0745-000",
+      "form": "midday",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/lycanroc/",
+      "abilityIds": [
+        "keen-eye",
+        "sand-rush",
+        "steadfast"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "keen-eye",
+        "no-guard",
+        "sand-rush",
+        "steadfast",
+        "tough-claws",
+        "vital-spirit"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "lycanroc-midnight",
+      "championsId": "0745-001",
+      "form": "midnight",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/lycanroc/",
+      "abilityIds": [
+        "keen-eye",
+        "no-guard",
+        "vital-spirit"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "keen-eye",
+        "no-guard",
+        "sand-rush",
+        "steadfast",
+        "tough-claws",
+        "vital-spirit"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "lycanroc-dusk",
+      "championsId": "0745-002",
+      "form": "dusk",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/lycanroc/",
+      "abilityIds": [
+        "tough-claws"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "keen-eye",
+        "no-guard",
+        "sand-rush",
+        "steadfast",
+        "tough-claws",
+        "vital-spirit"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "toxapex",
+      "championsId": "0748-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/toxapex/",
+      "abilityIds": [
+        "limber",
+        "merciless",
+        "regenerator"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "limber",
+        "merciless",
+        "regenerator"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "mudsdale",
+      "championsId": "0750-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/mudsdale/",
+      "abilityIds": [
+        "inner-focus",
+        "own-tempo",
+        "stamina"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "inner-focus",
+        "own-tempo",
+        "stamina"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "araquanid",
+      "championsId": "0752-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/araquanid/",
+      "abilityIds": [
+        "water-absorb",
+        "water-bubble"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "water-absorb",
+        "water-bubble"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "salazzle",
+      "championsId": "0758-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/salazzle/",
+      "abilityIds": [
+        "corrosion",
+        "oblivious"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "corrosion",
+        "oblivious"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "tsareena",
+      "championsId": "0763-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/tsareena/",
+      "abilityIds": [
+        "leaf-guard",
+        "queenly-majesty",
+        "sweet-veil"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "leaf-guard",
+        "queenly-majesty",
+        "sweet-veil"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "oranguru",
+      "championsId": "0765-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/oranguru/",
+      "abilityIds": [
+        "inner-focus",
+        "symbiosis",
+        "telepathy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "inner-focus",
+        "symbiosis",
+        "telepathy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "passimian",
+      "championsId": "0766-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/passimian/",
+      "abilityIds": [
+        "defiant",
+        "receiver"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "defiant",
+        "receiver"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "mimikyu-disguised",
+      "championsId": "0778-000",
+      "form": "disguised",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/mimikyu/",
+      "abilityIds": [
+        "disguise"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "disguise"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "drampa",
+      "championsId": "0780-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/drampa/",
+      "abilityIds": [
+        "berserk",
+        "cloud-nine",
+        "sap-sipper"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "berserk",
+        "cloud-nine",
+        "sap-sipper"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "kommo-o",
+      "championsId": "0784-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/kommo-o/",
+      "abilityIds": [
+        "bulletproof",
+        "overcoat",
+        "soundproof"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "bulletproof",
+        "overcoat",
+        "soundproof"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "corviknight",
+      "championsId": "0823-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/corviknight/",
+      "abilityIds": [
+        "mirror-armor",
+        "pressure",
+        "unnerve"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "mirror-armor",
+        "pressure",
+        "unnerve"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "flapple",
+      "championsId": "0841-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/flapple/",
+      "abilityIds": [
+        "gluttony",
+        "hustle",
+        "ripen"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "gluttony",
+        "hustle",
+        "ripen"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "appletun",
+      "championsId": "0842-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/appletun/",
+      "abilityIds": [
+        "gluttony",
+        "ripen",
+        "thick-fat"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "gluttony",
+        "ripen",
+        "thick-fat"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "sandaconda",
+      "championsId": "0844-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/sandaconda/",
+      "abilityIds": [
+        "sand-spit",
+        "sand-veil",
+        "shed-skin"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "sand-spit",
+        "sand-veil",
+        "shed-skin"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "polteageist",
+      "championsId": "0855-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/polteageist/",
+      "abilityIds": [
+        "cursed-body",
+        "weak-armor"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cursed-body",
+        "weak-armor"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "hatterene",
+      "championsId": "0858-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/hatterene/",
+      "abilityIds": [
+        "anticipation",
+        "healer",
+        "magic-bounce"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "anticipation",
+        "healer",
+        "magic-bounce"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "grimmsnarl",
+      "championsId": "0861-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/grimmsnarl/",
+      "abilityIds": [
+        "frisk",
+        "pickpocket",
+        "prankster"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "frisk",
+        "pickpocket",
+        "prankster"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "mr-rime",
+      "championsId": "0866-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/mr.rime/",
+      "abilityIds": [
+        "ice-body",
+        "screen-cleaner",
+        "tangled-feet"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "ice-body",
+        "screen-cleaner",
+        "tangled-feet"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "runerigus",
+      "championsId": "0867-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/runerigus/",
+      "abilityIds": [
+        "wandering-spirit"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "wandering-spirit"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "alcremie",
+      "championsId": "0869-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/alcremie/",
+      "abilityIds": [
+        "aroma-veil",
+        "sweet-veil"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "aroma-veil",
+        "sweet-veil"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "falinks",
+      "championsId": "0870-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/falinks/",
+      "abilityIds": [
+        "battle-armor",
+        "defiant"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "battle-armor",
+        "defiant"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "morpeko-full-belly",
+      "championsId": "0877-000",
+      "form": "full-belly",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/morpeko/",
+      "abilityIds": [
+        "hunger-switch"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "hunger-switch"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "dragapult",
+      "championsId": "0887-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/dragapult/",
+      "abilityIds": [
+        "clear-body",
+        "cursed-body",
+        "infiltrator"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "clear-body",
+        "cursed-body",
+        "infiltrator"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "wyrdeer",
+      "championsId": "0899-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/wyrdeer/",
+      "abilityIds": [
+        "frisk",
+        "intimidate",
+        "sap-sipper"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "frisk",
+        "intimidate",
+        "sap-sipper"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "kleavor",
+      "championsId": "0900-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/kleavor/",
+      "abilityIds": [
+        "sharpness",
+        "sheer-force",
+        "swarm"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "sharpness",
+        "sheer-force",
+        "swarm"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "basculegion-male",
+      "championsId": "0902-000",
+      "form": "male",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/basculegion/",
+      "abilityIds": [
+        "adaptability",
+        "mold-breaker",
+        "swift-swim"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "adaptability",
+        "mold-breaker",
+        "swift-swim"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "basculegion-female",
+      "championsId": "0902-001",
+      "form": "female",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/basculegion/",
+      "abilityIds": [
+        "adaptability",
+        "mold-breaker",
+        "swift-swim"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "adaptability",
+        "mold-breaker",
+        "swift-swim"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "sneasler",
+      "championsId": "0903-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/sneasler/",
+      "abilityIds": [
+        "poison-touch",
+        "pressure",
+        "unburden"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "poison-touch",
+        "pressure",
+        "unburden"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "overqwil",
+      "championsId": "0904-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/overqwil/",
+      "abilityIds": [
+        "intimidate",
+        "poison-point",
+        "swift-swim"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "intimidate",
+        "poison-point",
+        "swift-swim"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "meowscarada",
+      "championsId": "0908-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/meowscarada/",
+      "abilityIds": [
+        "overgrow",
+        "protean"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "overgrow",
+        "protean"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "skeledirge",
+      "championsId": "0911-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/skeledirge/",
+      "abilityIds": [
+        "blaze",
+        "unaware"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "blaze",
+        "unaware"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "quaquaval",
+      "championsId": "0914-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/quaquaval/",
+      "abilityIds": [
+        "moxie",
+        "torrent"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "moxie",
+        "torrent"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "maushold-family-of-four",
+      "championsId": "0925-000",
+      "form": "family-of-four",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/maushold/",
+      "abilityIds": [
+        "cheek-pouch",
+        "friend-guard",
+        "technician"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "cheek-pouch",
+        "friend-guard",
+        "technician"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "garganacl",
+      "championsId": "0934-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/garganacl/",
+      "abilityIds": [
+        "clear-body",
+        "purifying-salt",
+        "sturdy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "clear-body",
+        "purifying-salt",
+        "sturdy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "armarouge",
+      "championsId": "0936-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/armarouge/",
+      "abilityIds": [
+        "flash-fire",
+        "weak-armor"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flash-fire",
+        "weak-armor"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "ceruledge",
+      "championsId": "0937-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/ceruledge/",
+      "abilityIds": [
+        "flash-fire",
+        "weak-armor"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "flash-fire",
+        "weak-armor"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "bellibolt",
+      "championsId": "0939-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/bellibolt/",
+      "abilityIds": [
+        "damp",
+        "electromorphosis",
+        "static"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "damp",
+        "electromorphosis",
+        "static"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "scovillain",
+      "championsId": "0952-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/scovillain/",
+      "abilityIds": [
+        "chlorophyll",
+        "insomnia",
+        "moody"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "chlorophyll",
+        "insomnia",
+        "moody"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "espathra",
+      "championsId": "0956-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/espathra/",
+      "abilityIds": [
+        "frisk",
+        "opportunist",
+        "speed-boost"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "frisk",
+        "opportunist",
+        "speed-boost"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "tinkaton",
+      "championsId": "0959-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/tinkaton/",
+      "abilityIds": [
+        "mold-breaker",
+        "own-tempo",
+        "pickpocket"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "mold-breaker",
+        "own-tempo",
+        "pickpocket"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "palafin-zero",
+      "championsId": "0964-000",
+      "form": "zero",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/palafin/",
+      "abilityIds": [
+        "zero-to-hero"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "zero-to-hero"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "orthworm",
+      "championsId": "0968-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/orthworm/",
+      "abilityIds": [
+        "earth-eater",
+        "sand-veil"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "earth-eater",
+        "sand-veil"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "glimmora",
+      "championsId": "0970-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/glimmora/",
+      "abilityIds": [
+        "corrosion",
+        "toxic-debris"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "corrosion",
+        "toxic-debris"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "houndstone",
+      "championsId": "0972-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/houndstone/",
+      "abilityIds": [
+        "fluffy",
+        "sand-rush"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "fluffy",
+        "sand-rush"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "annihilape",
+      "championsId": "0979-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/annihilape/",
+      "abilityIds": [
+        "defiant",
+        "inner-focus",
+        "vital-spirit"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "defiant",
+        "inner-focus",
+        "vital-spirit"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "farigiraf",
+      "championsId": "0981-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/farigiraf/",
+      "abilityIds": [
+        "armor-tail",
+        "cud-chew",
+        "sap-sipper"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "armor-tail",
+        "cud-chew",
+        "sap-sipper"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "kingambit",
+      "championsId": "0983-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/kingambit/",
+      "abilityIds": [
+        "defiant",
+        "pressure",
+        "supreme-overlord"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "defiant",
+        "pressure",
+        "supreme-overlord"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "gholdengo",
+      "championsId": "1000-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/gholdengo/",
+      "abilityIds": [
+        "good-as-gold"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "good-as-gold"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "sinistcha",
+      "championsId": "1013-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/sinistcha/",
+      "abilityIds": [
+        "heatproof",
+        "hospitality"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "heatproof",
+        "hospitality"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "archaludon",
+      "championsId": "1018-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/archaludon/",
+      "abilityIds": [
+        "stalwart",
+        "stamina",
+        "sturdy"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "stalwart",
+        "stamina",
+        "sturdy"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    },
+    {
+      "pokemonId": "hydrapple",
+      "championsId": "1019-000",
+      "form": "base",
+      "pageUrl": "https://www.serebii.net/pokedex-champions/hydrapple/",
+      "abilityIds": [
+        "regenerator",
+        "sticky-hold",
+        "supersweet-syrup"
+      ],
+      "sourceSpeciesAbilityIds": [
+        "regenerator",
+        "sticky-hold",
+        "supersweet-syrup"
+      ],
+      "unconfirmedAbilityIds": [],
+      "verificationStatus": "confirmed",
+      "publishStatus": "review-candidate"
+    }
+  ]
+}

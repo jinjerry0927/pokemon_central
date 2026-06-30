@@ -41,7 +41,16 @@ type ItemEntry = {
   category: string;
 };
 
+type AbilityEntry = {
+  id: string;
+  nameKo: string | null;
+  nameEn: string;
+};
+
 type TeamBuilderProps = {
+  abilities: AbilityEntry[];
+  abilitiesByPokemonId: Record<string, string[]>;
+  abilityCheckedAt: string;
   checkedAt: string;
   duplicateHeldItemsAllowed: boolean;
   itemCheckedAt: string;
@@ -55,12 +64,14 @@ type TeamSlot = {
   pokemonId: string;
   moveIds: string[];
   itemId: string | null;
+  abilityId: string | null;
 } | null;
 
 const storageKey = "pokemon-central-team-builder";
 const shareQueryKey = "team";
 const shareMovesQueryKey = "moves";
 const shareItemsQueryKey = "items";
+const shareAbilitiesQueryKey = "abilities";
 const emptyTeam: TeamSlot[] = [null, null, null, null, null, null];
 
 function getRoleTags(entry: PokemonEntry) {
@@ -125,7 +136,8 @@ function enforceHeldItemRule(team: TeamSlot[], duplicateHeldItemsAllowed: boolea
 function readStoredTeam(
   validIds: Set<string>,
   validMoveIdsByPokemon: Map<string, Set<string>>,
-  validItemIds: Set<string>
+  validItemIds: Set<string>,
+  validAbilityIdsByPokemon: Map<string, Set<string>>
 ) {
   try {
     const stored = window.localStorage.getItem(storageKey);
@@ -141,7 +153,7 @@ function readStoredTeam(
     return emptyTeam.map((_, index) => {
       const value = parsed[index];
       if (typeof value === "string" && validIds.has(value)) {
-        return { pokemonId: value, moveIds: [], itemId: null };
+        return { pokemonId: value, moveIds: [], itemId: null, abilityId: null };
       }
       if (
         typeof value === "object" &&
@@ -161,6 +173,12 @@ function readStoredTeam(
             typeof value.itemId === "string" &&
             validItemIds.has(value.itemId)
               ? value.itemId
+              : null,
+          abilityId:
+            "abilityId" in value &&
+            typeof value.abilityId === "string" &&
+            validAbilityIdsByPokemon.get(value.pokemonId)?.has(value.abilityId)
+              ? value.abilityId
               : null
         };
       }
@@ -174,7 +192,8 @@ function readStoredTeam(
 function readSharedTeam(
   validIds: Set<string>,
   validMoveIdsByPokemon: Map<string, Set<string>>,
-  validItemIds: Set<string>
+  validItemIds: Set<string>,
+  validAbilityIdsByPokemon: Map<string, Set<string>>
 ) {
   const params = new URLSearchParams(window.location.search);
   const sharedTeam = params.get(shareQueryKey);
@@ -186,6 +205,7 @@ function readSharedTeam(
   const slots = sharedTeam.split(",").slice(0, emptyTeam.length);
   const sharedMoveSlots = (params.get(shareMovesQueryKey) ?? "").split(";");
   const sharedItemSlots = (params.get(shareItemsQueryKey) ?? "").split(",");
+  const sharedAbilitySlots = (params.get(shareAbilitiesQueryKey) ?? "").split(",");
 
   return emptyTeam.map((_, index) => {
     const value = slots[index];
@@ -201,6 +221,11 @@ function readSharedTeam(
       itemId:
         sharedItemSlots[index] && validItemIds.has(sharedItemSlots[index])
           ? sharedItemSlots[index]
+          : null,
+      abilityId:
+        sharedAbilitySlots[index] &&
+        validAbilityIdsByPokemon.get(value)?.has(sharedAbilitySlots[index])
+          ? sharedAbilitySlots[index]
           : null
     };
   });
@@ -216,10 +241,14 @@ function clearSharedTeamFromAddress() {
   url.searchParams.delete(shareQueryKey);
   url.searchParams.delete(shareMovesQueryKey);
   url.searchParams.delete(shareItemsQueryKey);
+  url.searchParams.delete(shareAbilitiesQueryKey);
   window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 }
 
 export function TeamBuilder({
+  abilities,
+  abilitiesByPokemonId,
+  abilityCheckedAt,
   checkedAt,
   duplicateHeldItemsAllowed,
   itemCheckedAt,
@@ -236,6 +265,10 @@ export function TeamBuilder({
 
   const pokemonById = useMemo(() => new Map(pokemon.map((entry) => [entry.id, entry])), [pokemon]);
   const moveById = useMemo(() => new Map(moves.map((entry) => [entry.id, entry])), [moves]);
+  const abilityById = useMemo(
+    () => new Map(abilities.map((entry) => [entry.id, entry])),
+    [abilities]
+  );
   const validIds = useMemo(() => new Set(pokemon.map((entry) => entry.id)), [pokemon]);
   const validItemIds = useMemo(() => new Set(items.map((entry) => entry.id)), [items]);
   const sortedItems = useMemo(
@@ -254,6 +287,16 @@ export function TeamBuilder({
         ])
       ),
     [learnsets, moveById]
+  );
+  const validAbilityIdsByPokemon = useMemo(
+    () =>
+      new Map(
+        Object.entries(abilitiesByPokemonId).map(([pokemonId, abilityIds]) => [
+          pokemonId,
+          new Set(abilityIds.filter((abilityId) => abilityById.has(abilityId)))
+        ])
+      ),
+    [abilitiesByPokemonId, abilityById]
   );
   const selectedPokemon = useMemo(
     () =>
@@ -293,11 +336,22 @@ export function TeamBuilder({
   }, [selectedPokemon]);
 
   useEffect(() => {
-    const sharedTeam = readSharedTeam(validIds, validMoveIdsByPokemon, validItemIds);
+    const sharedTeam = readSharedTeam(
+      validIds,
+      validMoveIdsByPokemon,
+      validItemIds,
+      validAbilityIdsByPokemon
+    );
 
     setTeam(
       enforceHeldItemRule(
-        sharedTeam ?? readStoredTeam(validIds, validMoveIdsByPokemon, validItemIds),
+        sharedTeam ??
+          readStoredTeam(
+            validIds,
+            validMoveIdsByPokemon,
+            validItemIds,
+            validAbilityIdsByPokemon
+          ),
         duplicateHeldItemsAllowed
       )
     );
@@ -305,7 +359,13 @@ export function TeamBuilder({
       setShareStatus("공유 링크에서 팀을 불러왔습니다.");
     }
     setIsHydrated(true);
-  }, [duplicateHeldItemsAllowed, validIds, validItemIds, validMoveIdsByPokemon]);
+  }, [
+    duplicateHeldItemsAllowed,
+    validAbilityIdsByPokemon,
+    validIds,
+    validItemIds,
+    validMoveIdsByPokemon
+  ]);
 
   useEffect(() => {
     if (isHydrated) {
@@ -323,7 +383,9 @@ export function TeamBuilder({
       }
 
       return currentTeam.map((slot, index) =>
-        index === openIndex ? { pokemonId: id, moveIds: [], itemId: null } : slot
+        index === openIndex
+          ? { pokemonId: id, moveIds: [], itemId: null, abilityId: null }
+          : slot
       );
     });
   }
@@ -375,6 +437,26 @@ export function TeamBuilder({
     });
   }
 
+  function updateSlotAbility(slotIndex: number, abilityId: string) {
+    setShareStatus("");
+    clearSharedTeamFromAddress();
+    setTeam((currentTeam) =>
+      currentTeam.map((slot, index) => {
+        if (index !== slotIndex || !slot) {
+          return slot;
+        }
+        const normalizedAbilityId = abilityId === "" ? null : abilityId;
+        if (
+          normalizedAbilityId &&
+          !validAbilityIdsByPokemon.get(slot.pokemonId)?.has(normalizedAbilityId)
+        ) {
+          return slot;
+        }
+        return { ...slot, abilityId: normalizedAbilityId };
+      })
+    );
+  }
+
   function removeSlot(slotIndex: number) {
     setShareStatus("");
     clearSharedTeamFromAddress();
@@ -400,6 +482,10 @@ export function TeamBuilder({
     url.searchParams.set(
       shareItemsQueryKey,
       team.map((slot) => slot?.itemId ?? "").join(",")
+    );
+    url.searchParams.set(
+      shareAbilitiesQueryKey,
+      team.map((slot) => slot?.abilityId ?? "").join(",")
     );
     window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 
@@ -468,6 +554,17 @@ export function TeamBuilder({
                       )
                     )
                 : [];
+              const availableAbilities = entry
+                ? (abilitiesByPokemonId[entry.id] ?? [])
+                    .map((abilityId) => abilityById.get(abilityId))
+                    .filter((ability): ability is AbilityEntry => Boolean(ability))
+                    .sort((left, right) =>
+                      (left.nameKo ?? left.nameEn).localeCompare(
+                        right.nameKo ?? right.nameEn,
+                        "ko"
+                      )
+                    )
+                : [];
 
               return (
                 <div
@@ -507,6 +604,24 @@ export function TeamBuilder({
                             {role}
                           </Badge>
                         ))}
+                      </div>
+                      <div className="grid gap-2 border-t border-[var(--panel-border)] pt-3">
+                        <p className="text-xs font-bold text-[var(--muted)]">특성</p>
+                        <select
+                          aria-label={`${entry.nameKo} 특성`}
+                          className="h-10 w-full rounded-md border border-[var(--panel-border)] bg-white px-2 text-sm outline-none focus:border-[var(--support)]"
+                          onChange={(event) =>
+                            updateSlotAbility(index, event.target.value)
+                          }
+                          value={slot?.abilityId ?? ""}
+                        >
+                          <option value="">특성 선택</option>
+                          {availableAbilities.map((ability) => (
+                            <option key={ability.id} value={ability.id}>
+                              {ability.nameKo ?? ability.nameEn} · {ability.nameEn}
+                            </option>
+                          ))}
+                        </select>
                       </div>
                       <div className="grid gap-2 border-t border-[var(--panel-border)] pt-3">
                         <div className="flex items-center justify-between gap-2">
@@ -639,6 +754,9 @@ export function TeamBuilder({
               <Badge tone="warning">포켓몬별 기술 최대 4개</Badge>
               <span className="text-xs font-semibold text-[var(--muted)]">
                 도구 {items.length}개 · {itemCheckedAt} 확인 · 동일 도구 중복 불가
+              </span>
+              <span className="text-xs font-semibold text-[var(--muted)]">
+                특성 {abilities.length}개 · {abilityCheckedAt} 확인
               </span>
             </div>
           </InfoCard>

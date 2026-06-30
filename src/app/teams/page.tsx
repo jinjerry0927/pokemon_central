@@ -1,3 +1,4 @@
+import championsAbilities from "../../../data/generated/champions-abilities-m-b.json";
 import championsItems from "../../../data/generated/champions-items-m-b.json";
 import moveCandidates from "../../../data/generated/moves-m-b-candidates.json";
 import learnsets from "../../../data/generated/serebii-learnsets-m-b.json";
@@ -29,6 +30,14 @@ export default function TeamsPage() {
     nameEn: item.nameEn,
     category: item.category
   }));
+  const abilities = championsAbilities.abilities.map((ability) => ({
+    id: ability.id,
+    nameKo: ability.nameKo,
+    nameEn: ability.nameEn
+  }));
+  const abilitiesByPokemonId = Object.fromEntries(
+    championsAbilities.pokemonAbilities.map((entry) => [entry.pokemonId, entry.abilityIds])
+  );
 
   return (
     <AppShell>
@@ -38,6 +47,7 @@ export default function TeamsPage() {
             <div className="grid gap-2 text-sm font-semibold text-[var(--muted)]">
               <span>6개 슬롯 구성</span>
               <span>포켓몬별 기술 4개 선택</span>
+              <span>사용 가능 특성 선택</span>
               <span>소지 도구 선택</span>
               <span>타입 약점 시각화</span>
               <span>역할 태그 요약</span>
@@ -50,6 +60,9 @@ export default function TeamsPage() {
       />
 
       <TeamBuilder
+        abilities={abilities}
+        abilitiesByPokemonId={abilitiesByPokemonId}
+        abilityCheckedAt={championsAbilities.checkedAt}
         checkedAt={learnsets.checkedAt}
         duplicateHeldItemsAllowed={championsItems.rules.duplicateHeldItemsAllowed}
         itemCheckedAt={championsItems.checkedAt}

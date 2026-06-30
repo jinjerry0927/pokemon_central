@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import builds from "../../../../data/builds.json";
+import championsAbilities from "../../../../data/generated/champions-abilities-m-b.json";
 import moveCandidates from "../../../../data/generated/moves-m-b-candidates.json";
 import learnsets from "../../../../data/generated/serebii-learnsets-m-b.json";
 import moves from "../../../../data/moves.json";
@@ -76,6 +77,9 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
   }
 
   const relatedBuilds = builds.filter((build) => build.pokemonId === entry.id);
+  const abilityById = new Map(
+    championsAbilities.abilities.map((ability) => [ability.id, ability])
+  );
   const keyMoves = entry.keyMoveIds
     .map((moveId) => moves.find((move) => move.id === moveId))
     .filter((move): move is (typeof moves)[number] => Boolean(move));
@@ -132,7 +136,9 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
                   <p className="text-sm font-semibold text-[var(--muted)]">특성</p>
                   <div className="mt-2 flex flex-wrap gap-1">
                     {entry.abilities.map((ability) => (
-                      <Badge key={ability}>{formatId(ability)}</Badge>
+                      <Badge key={ability}>
+                        {abilityById.get(ability)?.nameKo ?? formatId(ability)}
+                      </Badge>
                     ))}
                   </div>
                 </div>
