@@ -7,9 +7,12 @@
   --background: #f7f8fb;
   --foreground: #182033;
   --muted: #5f6b7a;
+  --muted-soft: #7a8491;
   --panel: #ffffff;
   --panel-border: #dce2ea;
+  --panel-border-strong: #c4ccd8;
   --chip: #eef2f7;
+  --chip-strong: #e3e9f2;
   --accent: #d83a4b;
   --accent-strong: #b92738;
   --accent-soft: #fde8ec;
@@ -44,4 +47,9 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--support);
+  outline-offset: 2px;
 }

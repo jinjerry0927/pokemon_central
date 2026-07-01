@@ -53,15 +53,15 @@ const badgeToneClass: Record<BadgeTone, string> = {
 export function AppShell({ children }: { children: ReactNode }) {
   return (
     <main className="min-h-screen">
-      <header className="border-b border-[var(--panel-border)] bg-[var(--panel)]">
-        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-          <Link className="text-lg font-bold text-[var(--foreground)]" href="/">
+      <header className="sticky top-0 z-20 border-b border-[var(--panel-border)] bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+          <Link className="text-lg font-extrabold tracking-tight text-[var(--foreground)]" href="/">
             Pokemon Central
           </Link>
-          <nav className="-mx-4 flex gap-2 overflow-x-auto px-4 text-sm font-semibold text-[var(--muted)] sm:mx-0 sm:flex-wrap sm:px-0">
+          <nav className="-mx-4 flex gap-1 overflow-x-auto px-4 text-sm font-semibold text-[var(--muted)] sm:mx-0 sm:flex-wrap sm:px-0">
             {navigationItems.map((item) => (
               <Link
-                className="shrink-0 rounded-md px-3 py-2 hover:bg-[var(--chip)] hover:text-[var(--foreground)]"
+                className="flex min-h-11 shrink-0 items-center rounded-md px-3 hover:bg-[var(--chip)] hover:text-[var(--foreground)]"
                 href={item.href}
                 key={item.href}
               >
@@ -72,7 +72,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         </div>
       </header>
       {children}
-      <footer className="border-t border-[var(--panel-border)] bg-[var(--panel)]">
+      <footer className="border-t border-[var(--panel-border)] bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-4 py-5 text-sm leading-6 text-[var(--muted)] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <p>
             Pokemon Central은 팬메이드 공략 사이트이며 Pokemon Champions 또는 Pokemon 공식
@@ -104,16 +104,16 @@ export function PageHeader({
   aside?: ReactNode;
 }) {
   return (
-    <section className="border-b border-[var(--panel-border)] bg-[var(--panel)]">
-      <div className="mx-auto grid max-w-[1440px] gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-10 lg:py-10">
+    <section className="border-b border-[var(--panel-border)] bg-white">
+      <div className="mx-auto grid max-w-[1440px] gap-6 px-4 py-7 sm:px-6 lg:grid-cols-[minmax(0,1fr)_360px] lg:px-10 lg:py-9">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wide text-[var(--accent)]">
+          <p className="text-xs font-bold uppercase tracking-wide text-[var(--accent)]">
             {eyebrow}
           </p>
-          <h1 className="mt-3 max-w-4xl text-2xl font-bold leading-tight text-[var(--foreground)] sm:text-3xl lg:text-5xl">
+          <h1 className="mt-3 max-w-4xl text-2xl font-extrabold leading-tight tracking-tight text-[var(--foreground)] sm:text-3xl lg:text-4xl">
             {title}
           </h1>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--muted)] lg:text-lg">
+          <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--muted)]">
             {description}
           </p>
         </div>
@@ -153,17 +153,17 @@ export function InfoCard({
   action?: CardAction;
 }) {
   return (
-    <section className="rounded-lg border border-[var(--panel-border)] bg-[var(--panel)] p-4">
+    <section className="rounded-md border border-[var(--panel-border)] bg-white p-4 shadow-[0_1px_2px_rgba(24,32,51,0.04)]">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h2 className="text-base font-bold text-[var(--foreground)]">{title}</h2>
+          <h2 className="text-base font-extrabold tracking-tight text-[var(--foreground)]">{title}</h2>
           {description ? (
             <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{description}</p>
           ) : null}
         </div>
         {action ? (
           <Link
-            className="shrink-0 rounded-md border border-[var(--panel-border)] px-3 py-2 text-sm font-semibold text-[var(--foreground)] hover:bg-[var(--chip)]"
+            className="flex min-h-10 shrink-0 items-center rounded-md border border-[var(--panel-border)] px-3 text-sm font-bold text-[var(--foreground)] hover:border-[var(--panel-border-strong)] hover:bg-[var(--chip)]"
             href={action.href}
           >
             {action.label}
@@ -184,7 +184,7 @@ export function Badge({
 }) {
   return (
     <span
-      className={`inline-flex min-h-6 items-center rounded-md border px-2 py-1 text-xs font-bold ${badgeToneClass[tone]}`}
+      className={`inline-flex min-h-6 items-center rounded-md border px-2 py-1 text-xs font-bold leading-none ${badgeToneClass[tone]}`}
     >
       {children}
     </span>
@@ -206,7 +206,7 @@ export function SearchField({
     <label className="block">
       <span className="text-sm font-semibold text-[var(--foreground)]">{label}</span>
       <input
-        className="mt-2 h-11 w-full rounded-md border border-[var(--panel-border)] bg-white px-3 text-sm outline-none focus:border-[var(--support)] focus:ring-2 focus:ring-[var(--support-soft)]"
+        className="mt-2 h-11 w-full rounded-md border border-[var(--panel-border)] bg-white px-3 text-sm outline-none placeholder:text-[var(--muted-soft)] hover:border-[var(--panel-border-strong)] focus:border-[var(--support)] focus:ring-2 focus:ring-[var(--support-soft)]"
         onChange={(event) => onChange?.(event.target.value)}
         placeholder={placeholder}
         type="search"
@@ -231,10 +231,10 @@ export function FilterBar({
       <div className="mt-2 flex flex-wrap gap-2">
         {options.map((option) => (
           <button
-            className={`rounded-md border px-3 py-2 text-sm font-semibold ${
+            className={`min-h-10 rounded-md border px-3 text-sm font-bold transition-colors ${
               option.active
                 ? "border-[var(--support)] bg-[var(--support)] text-white"
-                : "border-[var(--panel-border)] bg-white text-[var(--muted)] hover:text-[var(--foreground)]"
+                : "border-[var(--panel-border)] bg-white text-[var(--muted)] hover:border-[var(--panel-border-strong)] hover:bg-[var(--chip)] hover:text-[var(--foreground)]"
             }`}
             key={option.label}
             onClick={() => onSelect?.(option.label)}
@@ -250,13 +250,13 @@ export function FilterBar({
 
 export function Tabs({ items }: { items: TabItem[] }) {
   return (
-    <div className="flex gap-1 overflow-x-auto rounded-lg border border-[var(--panel-border)] bg-[var(--chip)] p-1">
+    <div className="flex gap-1 overflow-x-auto rounded-md border border-[var(--panel-border)] bg-[var(--chip)] p-1">
       {items.map((item) => (
         <button
-          className={`min-h-9 min-w-max flex-1 rounded-md px-3 text-sm font-bold ${
+          className={`min-h-10 min-w-max flex-1 rounded px-3 text-sm font-bold transition-colors ${
             item.active
               ? "bg-white text-[var(--foreground)] shadow-sm"
-              : "text-[var(--muted)] hover:text-[var(--foreground)]"
+              : "text-[var(--muted)] hover:bg-white/60 hover:text-[var(--foreground)]"
           }`}
           key={item.label}
           type="button"
@@ -276,7 +276,7 @@ export function DataTable<Row extends object>({
   rows: Row[];
 }) {
   return (
-    <div className="overflow-x-auto rounded-lg border border-[var(--panel-border)] bg-[var(--panel)]">
+    <div className="overflow-x-auto rounded-md border border-[var(--panel-border)] bg-white shadow-[0_1px_2px_rgba(24,32,51,0.04)]">
       <table className="w-full min-w-[680px] border-collapse text-left text-sm">
         <thead className="bg-[var(--chip)] text-xs uppercase tracking-wide text-[var(--muted)]">
           <tr>
@@ -294,7 +294,10 @@ export function DataTable<Row extends object>({
         </thead>
         <tbody>
           {rows.map((row, rowIndex) => (
-            <tr className="border-b border-[var(--panel-border)] last:border-0" key={rowIndex}>
+            <tr
+              className="border-b border-[var(--panel-border)] last:border-0 hover:bg-[var(--chip)]/60"
+              key={rowIndex}
+            >
               {columns.map((column) => {
                 const value = row[column.key];
 
