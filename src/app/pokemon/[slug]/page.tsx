@@ -2,8 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import builds from "../../../../data/builds.json";
 import championsAbilities from "../../../../data/generated/champions-abilities-m-b.json";
+import championsItems from "../../../../data/generated/champions-items-m-b.json";
 import moveCandidates from "../../../../data/generated/moves-m-b-candidates.json";
 import learnsets from "../../../../data/generated/serebii-learnsets-m-b.json";
+import usageInsights from "../../../../data/generated/usage-insights-m-b.json";
 import moves from "../../../../data/moves.json";
 import pokemon from "../../../../data/pokemon.json";
 import {
@@ -32,6 +34,13 @@ const statLabels: Record<StatKey, string> = {
   specialAttack: "특공",
   specialDefense: "특방",
   speed: "스피드"
+};
+
+type UsageListItem = {
+  id: string;
+  label: string;
+  usagePercent: number;
+  meta?: string;
 };
 
 export const dynamicParams = false;
@@ -68,6 +77,37 @@ function formatId(value: string) {
     .join(" ");
 }
 
+function formatUsagePercent(value: number) {
+  return `${Number.isInteger(value) ? value : value.toFixed(1)}%`;
+}
+
+function UsageTopList({ items }: { items: UsageListItem[] }) {
+  if (items.length === 0) {
+    return <p className="text-sm text-[var(--muted)]">표시할 사용률 데이터가 없습니다.</p>;
+  }
+
+  return (
+    <div className="grid gap-2">
+      {items.map((item) => (
+        <div
+          className="grid grid-cols-[minmax(0,1fr)_56px] items-center gap-3 rounded-md border border-[var(--panel-border)] bg-white px-3 py-2"
+          key={item.id}
+        >
+          <div className="min-w-0">
+            <p className="truncate text-sm font-bold">{item.label}</p>
+            {item.meta ? (
+              <p className="mt-1 truncate text-xs text-[var(--muted)]">{item.meta}</p>
+            ) : null}
+          </div>
+          <span className="text-right text-sm font-bold text-[var(--support-strong)]">
+            {formatUsagePercent(item.usagePercent)}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default async function PokemonDetailPage({ params }: PokemonRoute) {
   const { slug } = await params;
   const entry = pokemon.find((item) => item.id === slug);
@@ -80,6 +120,7 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
   const abilityById = new Map(
     championsAbilities.abilities.map((ability) => [ability.id, ability])
   );
+  const itemById = new Map(championsItems.entries.map((item) => [item.id, item]));
   const keyMoves = entry.keyMoveIds
     .map((moveId) => moves.find((move) => move.id === moveId))
     .filter((move): move is (typeof moves)[number] => Boolean(move));
@@ -87,6 +128,52 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
   const moveCandidatesById = new Map(
     moveCandidates.entries.map((move) => [move.id, move])
   );
+  const usageEntry = usageInsights.entries.find((item) => item.pokemonId === entry.id);
+  const topUsageMoves =
+    usageEntry?.moves.slice(0, 5).map((move) => {
+      const moveDetail = moveCandidatesById.get(move.moveId);
+
+      return {
+        id: move.moveId,
+        label: moveDetail?.nameKo ?? formatId(move.moveId),
+        meta: moveDetail?.nameEn,
+        usagePercent: move.usagePercent
+      };
+    }) ?? [];
+  const topUsageAbilities =
+    usageEntry?.abilities.slice(0, 3).map((ability) => {
+      const abilityDetail = abilityById.get(ability.abilityId);
+
+      return {
+        id: ability.abilityId,
+        label: abilityDetail?.nameKo ?? formatId(ability.abilityId),
+        meta: abilityDetail?.nameEn,
+        usagePercent: ability.usagePercent
+      };
+    }) ?? [];
+  const topUsageItems =
+    usageEntry?.items.slice(0, 3).map((item) => {
+      const itemDetail = itemById.get(item.itemId);
+
+      return {
+        id: item.itemId,
+        label: itemDetail?.nameKo ?? formatId(item.itemId),
+        meta: itemDetail?.nameEn,
+        usagePercent: item.usagePercent
+      };
+    }) ?? [];
+  const topUsageNatures =
+    usageEntry?.natureModifiers.slice(0, 3).map((nature) => ({
+      id: nature.labelKo,
+      label: nature.labelKo,
+      usagePercent: nature.usagePercent
+    })) ?? [];
+  const topUsageStatSpreads =
+    usageEntry?.statPointSpreads.slice(0, 3).map((spread) => ({
+      id: spread.label,
+      label: spread.label,
+      usagePercent: spread.usagePercent
+    })) ?? [];
   const learnableMoves = (learnsetEntry?.serebiiMoveIds ?? [])
     .map((moveId) => moveCandidatesById.get(moveId))
     .filter((move): move is (typeof moveCandidates.entries)[number] => Boolean(move))
@@ -200,6 +287,58 @@ export default async function PokemonDetailPage({ params }: PokemonRoute) {
               ) : (
                 <p className="text-sm leading-6 text-[var(--muted)]">
                   주요 기술은 메타 검토 후 별도로 선정합니다.
+                </p>
+              )}
+            </InfoCard>
+
+            <InfoCard
+              description={`${usageInsights.regulationId} ${usageInsights.source.description} 이 수치는 많이 쓰이는 선택지를 보여주며 정답 빌드를 의미하지 않습니다.`}
+              title="사용률 인사이트"
+            >
+              {usageEntry ? (
+                <div className="grid gap-4">
+                  <div>
+                    <p className="mb-2 text-sm font-semibold text-[var(--muted)]">
+                      많이 쓰는 기술 Top
+                    </p>
+                    <UsageTopList items={topUsageMoves} />
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <div>
+                      <p className="mb-2 text-sm font-semibold text-[var(--muted)]">
+                        많이 쓰는 특성 Top
+                      </p>
+                      <UsageTopList items={topUsageAbilities} />
+                    </div>
+                    <div>
+                      <p className="mb-2 text-sm font-semibold text-[var(--muted)]">
+                        많이 쓰는 도구 Top
+                      </p>
+                      <UsageTopList items={topUsageItems} />
+                    </div>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <div>
+                      <p className="mb-2 text-sm font-semibold text-[var(--muted)]">
+                        많이 쓰는 능력보정 Top
+                      </p>
+                      <UsageTopList items={topUsageNatures} />
+                    </div>
+                    <div>
+                      <p className="mb-2 text-sm font-semibold text-[var(--muted)]">
+                        많이 쓰는 HABCDS 스탯 분배 Top
+                      </p>
+                      <UsageTopList items={topUsageStatSpreads} />
+                    </div>
+                  </div>
+                  <p className="text-xs leading-5 text-[var(--muted)]">
+                    데이터 확인일: {usageInsights.checkedAt}. 시즌과 집계 방식에 따라 수치가
+                    달라질 수 있습니다.
+                  </p>
+                </div>
+              ) : (
+                <p className="text-sm leading-6 text-[var(--muted)]">
+                  이 포켓몬의 사용률 인사이트는 아직 생성된 스냅샷에 없습니다.
                 </p>
               )}
             </InfoCard>
