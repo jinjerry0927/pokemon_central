@@ -1,7 +1,6 @@
 # Feedback Backlog
 
-공개 MVP 피드백을 다음 개발 작업으로 전환하는 우선순위 문서다. 원본 의견은
-[`mvp-feedback.md`](./mvp-feedback.md)에 먼저 기록하고, 반복 확인과 분류를 거친 항목만 이 문서로 옮긴다.
+공개 MVP 피드백과 다음 개발 작업 후보를 한곳에서 관리하는 우선순위 문서다. 실제 사용자 피드백은 먼저 아래 `Feedback Log`에 기록하고, 반복 확인과 분류를 거친 항목만 `Backlog`로 옮긴다.
 
 ## Operating Rules
 
@@ -26,6 +25,27 @@
 - `Done`: 수정 및 검증 완료
 - `Deferred`: 현재 MVP 범위 또는 비용 때문에 보류
 
+## Public Feedback
+
+- Public site: https://pokemon-central.pages.dev/
+- Launch date: 2026-06-20
+- Collection status: In progress
+
+### Feedback Log
+
+| Date | Channel | Area | Feedback | Priority | Status |
+| --- | --- | --- | --- | --- | --- |
+| 2026-06-20 | Test | UI | `[TEST]` 모바일에서 팀빌더 버튼이 작아 누르기 어렵다. | P2 | Backlog |
+
+`Test` 채널 항목은 운영 흐름 검증용이며 실제 사용자 피드백 수집 건수에 포함하지 않는다.
+
+### Priority Values
+
+- `P0`: 사이트 사용을 막는 오류
+- `P1`: 주요 기능의 잘못된 결과 또는 큰 불편
+- `P2`: 개선 가치가 있는 일반 피드백
+- `P3`: 향후 검토할 제안
+
 ## Backlog
 
 실제 사용자 피드백은 아직 수집되지 않았다. 아래 항목은 분류와 선정 흐름을 검증하기 위한 테스트 데이터다.
@@ -36,8 +56,7 @@
 | FB-DATA-001 | Data | 메가스톤 수집 및 포켓몬별 전용 도구 필터링 | 1 | P2 | Done | 2026-06-30 / Planning; `npm.cmd run data:validate`, `npm run lint`, `npm run build` |
 | FB-FEATURE-001 | Feature | 사용률 기반 기술/특성/도구/능력보정/HABCDS 인사이트를 팀빌더에 연결 | 1 | P1 | Done | 2026-06-30 / Planning; `npm.cmd run data:usage`, `npm.cmd run data:validate`, `npm run lint`, `npm run build` |
 
-Priority는 `mvp-feedback.md`의 `P0`~`P3` 기준을 사용한다. Source에는 피드백 로그의
-날짜와 채널을 적어 원문을 다시 찾을 수 있게 한다.
+Priority는 위 `P0`~`P3` 기준을 사용한다. Source에는 피드백 로그의 날짜와 채널을 적어 원문을 다시 찾을 수 있게 한다.
 
 ## Weekly Top 3
 

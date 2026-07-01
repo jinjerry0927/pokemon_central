@@ -440,8 +440,8 @@ npm run build
 진행 상태:
 
 - 공개 URL: https://pokemon-central.pages.dev/
-- README 공개 URL 및 피드백 로그 연결 완료
-- 피드백 기록 문서: `docs/planning/mvp-feedback.md`
+- README 공개 URL 및 Backlog 연결 완료
+- 피드백 기록 위치: `docs/planning/backlog.md`
 - Search Console 대시보드 등록 상태 확인 필요
 - 실제 사용자 피드백 수집 필요
 
@@ -528,7 +528,7 @@ npm run build
 
 진행 상태:
 
-- 비용 검토 기록 생성: `docs/planning/cost-review.md`
+- 비용 검토 기준을 `docs/planning/long-term-operation.md`에 통합
 - 서버, DB, 외부 API, 도메인, 저장소 크기 기준 검토 완료
 - Cloudflare Pages 최근 30일 빌드 횟수와 트래픽 대시보드 확인 필요
 
@@ -573,7 +573,7 @@ issue/backlog -> branch -> implement -> lint/build -> commit -> push -> Cloudfla
 완료 기록:
 
 - 장기 운영 런북: `docs/planning/long-term-operation.md`
-- 월간 운영 기록 템플릿: `docs/planning/operation-log.md`
+- 월간 운영 기록 템플릿: `docs/planning/long-term-operation.md`
 
 장기 목표:
 

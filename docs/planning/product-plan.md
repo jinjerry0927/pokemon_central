@@ -69,6 +69,17 @@ Mobile should collapse these panels into tabs or stacked sections, but MVP decis
 - Use simple Korean labels and avoid excessive competitive jargon.
 - Every curated note should separate usage frequency from recommendation and explain when a choice can fail.
 
+## Usage-Based Build Insights
+
+Pokemon Central의 팀빌더 방향은 고정 샘플 빌드 제공이 아니라, 포켓몬별 사용률 데이터를 정리해 사용자가 직접 무난한 조합을 만들 수 있게 돕는 것이다.
+
+- `샘플`은 공식 정답 세트가 아니라 사람들이 공유하는 참고 빌드로 취급한다.
+- 사이트의 차별점은 특정 작성자의 빌드를 복사하게 하는 것이 아니라, 기술, 특성, 도구, 능력 보정, HABCDS 포인트의 사용 경향을 데이터로 보여주는 것이다.
+- Champions Battle Data API는 수집 시점에 `data/generated/usage-insights-m-b.json`으로 저장하고, 런타임에서 외부 API를 직접 호출하지 않는다.
+- 팀빌더는 사용률이 높은 기술, 특성, 도구를 먼저 정렬하고 슬롯 안에 `사용률 힌트`를 보여준다.
+- “많이 쓰임”과 “추천”을 분리해서 표시한다. 사용률이 높아도 무조건 정답이라고 쓰지 않는다.
+- 팀 공유 코드 입력/복사는 Pokemon Champions 자체 기능과 겹치므로 후순위로 둔다.
+
 ## Backlog
 
 - Phase N guide candidate: Starter-choice guide for the early free team flow. Cover the initial choices shown in Pokemon Champions, explain why Pikachu is recommended for beginners, and compare alternate picks such as Charizard, Tyranitar, Armarouge, Palafin, Lucario, Gardevoir, Absol, Altaria, and Snorlax. If this later becomes interactive, move the "choose one starter -> receive the other five team members" flow to Phase J Team Builder.
@@ -76,7 +87,6 @@ Mobile should collapse these panels into tabs or stacked sections, but MVP decis
 - Account sync, cloud save, or cross-device team storage.
 - Community submissions, voting, comments, or build sharing.
 - Automated metagame statistics ingestion.
-- Usage-based team builder insights: see `usage-insights-roadmap.md`.
 - Native mobile app or mobile-first team building workflows.
 - PvP simulator, battle replay tools, or matchmaking features.
 

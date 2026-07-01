@@ -1,7 +1,6 @@
 # Long-Term Operation
 
-Pokemon Central을 무료 운영 범위 안에서 꾸준히 유지하기 위한 Phase Z 운영 런북이다. 월간 점검 결과는
-[`operation-log.md`](./operation-log.md)에 남기며, 확인할 데이터가 없으면 임의의 수치를 만들지 않고 `확인 불가`와 이유를 기록한다.
+Pokemon Central을 무료 운영 범위 안에서 꾸준히 유지하기 위한 운영 런북이다. 월간 점검 결과는 이 문서의 `Operation Log`에 최신 기록이 위로 오도록 추가한다. 확인할 데이터가 없으면 임의의 수치를 만들지 않고 `확인 불가`와 이유를 기록한다.
 
 ## Operating Cadence
 
@@ -26,7 +25,7 @@ Pokemon Central을 무료 운영 범위 안에서 꾸준히 유지하기 위한 
 
 ### 2. 오류와 피드백 정리
 
-- [ ] `mvp-feedback.md`의 신규 의견을 분류한다.
+- [ ] `backlog.md`의 신규 피드백 로그를 분류한다.
 - [ ] 반복되거나 영향이 확인된 항목만 `backlog.md`로 이동한다.
 - [ ] 데이터 오류는 `data-update-checklist.md`에 따라 출처와 영향받는 공략을 함께 확인한다.
 - [ ] 즉시 수정하지 않는 항목에는 보류 이유를 남긴다.
@@ -48,7 +47,7 @@ npm run build
 
 - [ ] JSON 파싱, 린트, 정적 빌드 결과를 기록한다.
 - [ ] 변경한 페이지와 연결된 링크를 로컬 또는 배포 URL에서 확인한다.
-- [ ] `operation-log.md`에 지표 요약, 결정, 변경 파일, 검증 결과, 다음 점검일을 남긴다.
+- [ ] 아래 `Operation Log`에 지표 요약, 결정, 변경 파일, 검증 결과, 다음 점검일을 남긴다.
 
 ## Release Routine
 
@@ -73,3 +72,59 @@ issue/backlog -> branch -> implement -> lint/build -> commit -> push -> Cloudfla
 - 배포 실패 또는 분석 스크립트의 예기치 않은 누락
 
 즉시 수정할 수 없으면 영향 범위, 임시 대응, 다음 확인 시점을 `backlog.md`에 기록한다.
+
+## Cost Review
+
+무료 운영 유지 기준:
+
+- 서버 없음
+- DB 없음
+- 유료 도메인 없음
+- 런타임 외부 API 없음. 외부 데이터는 수집 시점 JSON으로 저장한다.
+- Cloudflare Pages 무료 운영 범위 안에서 빌드 횟수와 트래픽을 유지한다.
+
+대시보드 확인 항목:
+
+- Cloudflare Pages 최근 30일 빌드 횟수
+- Cloudflare Pages 요청 수와 대역폭
+- Cloudflare Web Analytics 최근 30일 방문 수
+- 저장소 크기와 정적 자산 크기
+
+한도에 근접하면 자동 배포를 줄이거나 정적 자산 크기를 줄이는 대응을 `backlog.md`에 등록한다.
+
+## Operation Log
+
+첫 월간 운영 기록은 실제 Analytics와 Search Console 점검을 수행한 뒤 아래 템플릿 위에 추가한다.
+
+```markdown
+## YYYY-MM
+
+- Review date: YYYY-MM-DD
+- Review window: YYYY-MM-DD ~ YYYY-MM-DD
+- Next review: YYYY-MM-DD
+
+### Usage
+
+- Popular pages: 확인값 또는 확인 불가 사유
+- Search queries: 확인값 또는 확인 불가 사유
+- Decision: 유지할 페이지와 개선 후보
+
+### Maintenance
+
+- Data errors: 수정 내용 또는 변경 없음
+- New guides: 작성한 공략 또는 추가하지 않은 근거
+- Builds/teams: 최신화 내용 또는 변경 없음
+- Backlog: 연결한 Backlog ID 또는 없음
+
+### Verification
+
+- JSON parse: Pass / Fail / Not run
+- `npm run lint`: Pass / Fail / Not run
+- `npm run build`: Pass / Fail / Not run
+- Live URL: 확인한 경로 또는 확인하지 못한 이유
+
+### Release
+
+- Commit/deploy: 커밋과 배포 정보 또는 배포 없음
+- Notes: 다음 점검에서 확인할 항목
+```
