@@ -17,17 +17,20 @@ const primaryActions = [
   {
     href: "/pokedex",
     label: "도감에서 포켓몬 찾기",
-    description: "타입, 역할, 상세 링크"
+    description: "타입, 역할, 상세 링크",
+    className: "border-[var(--brand-soft)] bg-[var(--brand-soft)] text-[var(--brand-strong)]"
   },
   {
     href: "/teams",
     label: "팀빌더 열기",
-    description: "약점, 역할, 사용률 힌트"
+    description: "약점, 역할, 사용률 힌트",
+    className: "border-[var(--accent-soft)] bg-[var(--accent-soft)] text-[var(--accent-strong)]"
   },
   {
     href: "/calculator",
     label: "계산기로 확인",
-    description: "공격자, 방어자, 기술"
+    description: "공격자, 방어자, 기술",
+    className: "border-[var(--electric-soft)] bg-[var(--electric-soft)] text-[var(--foreground)]"
   }
 ];
 
@@ -35,22 +38,26 @@ const workflowSteps = [
   {
     href: "/pokedex",
     label: "도감",
-    detail: "후보 포켓몬의 타입, 역할, 주요 기술을 먼저 좁힙니다."
+    detail: "후보 포켓몬의 타입, 역할, 주요 기술을 먼저 좁힙니다.",
+    accent: "bg-[var(--brand)]"
   },
   {
     href: "/teams",
     label: "팀빌더",
-    detail: "6마리 조합의 약점과 역할 균형을 로컬 저장 기준으로 점검합니다."
+    detail: "6마리 조합의 약점과 역할 균형을 로컬 저장 기준으로 점검합니다.",
+    accent: "bg-[var(--accent)]"
   },
   {
     href: "/calculator",
     label: "계산기",
-    detail: "선택한 포켓몬과 기술의 데미지 범위를 확인합니다."
+    detail: "선택한 포켓몬과 기술의 데미지 범위를 확인합니다.",
+    accent: "bg-[var(--electric)]"
   },
   {
     href: "/speed-tiers",
     label: "스피드",
-    detail: "자주 마주치는 스피드 기준과 추월 관계를 비교합니다."
+    detail: "자주 마주치는 스피드 기준과 추월 관계를 비교합니다.",
+    accent: "bg-[var(--success-strong)]"
   }
 ];
 
@@ -88,14 +95,14 @@ export default function Home() {
             </p>
           </InfoCard>
         }
-        description="도감, 팀빌더, 계산기, 사용률 인사이트를 한 흐름으로 연결한 한국어 랭크 준비용 데이터 워크벤치입니다."
+        description="도감, 팀빌더, 계산기, 사용률 인사이트를 한 흐름으로 연결한 한국어 랭크 준비용 데이터 워크벤치입니다. 익숙한 웹앱처럼 바로 누르고 비교할 수 있게 정리했습니다."
         eyebrow="Korean Battle Desk"
         title="포켓몬 선택부터 계산까지 빠르게 이어지는 준비 허브"
       />
 
       <section className="mx-auto grid max-w-[1440px] gap-5 px-4 py-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_360px] lg:px-10 lg:py-8">
         <div className="grid gap-5">
-          <div className="rounded-md border border-[var(--panel-border)] bg-white p-4 shadow-[0_1px_2px_rgba(24,32,51,0.04)] sm:p-5">
+          <div className="rounded-md border border-[var(--panel-border)] bg-white p-4 shadow-[var(--shadow-soft)] sm:p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h2 className="text-lg font-extrabold tracking-tight text-[var(--foreground)]">
@@ -105,19 +112,25 @@ export default function Home() {
                   처음 진입한 사용자가 바로 탐색, 조합, 검증 중 하나를 고를 수 있게 정리했습니다.
                 </p>
               </div>
-              <Badge tone="support">Static data</Badge>
+              <div className="flex flex-wrap gap-2">
+                <Badge tone="support">Static data</Badge>
+                <Badge tone="accent">Battle desk</Badge>
+              </div>
             </div>
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               {primaryActions.map((action) => (
                 <Link
-                  className="group rounded-md border border-[var(--panel-border)] bg-[var(--chip)] p-4 hover:border-[var(--support)] hover:bg-white"
+                  className={`group rounded-md border p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] ${action.className}`}
                   href={action.href}
                   key={action.href}
                 >
-                  <p className="text-sm font-extrabold text-[var(--foreground)] group-hover:text-[var(--support-strong)]">
+                  <p className="text-sm font-extrabold">
                     {action.label}
                   </p>
                   <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{action.description}</p>
+                  <span className="mt-4 inline-flex min-h-9 items-center rounded-md bg-white/80 px-3 text-xs font-extrabold text-[var(--foreground)]">
+                    바로가기
+                  </span>
                 </Link>
               ))}
             </div>
@@ -126,11 +139,12 @@ export default function Home() {
           <div className="grid gap-3">
             {workflowSteps.map((step, index) => (
               <Link
-                className="grid gap-3 rounded-md border border-[var(--panel-border)] bg-white p-4 hover:border-[var(--panel-border-strong)] hover:bg-[var(--chip)] sm:grid-cols-[64px_120px_minmax(0,1fr)] sm:items-center"
+                className="grid gap-3 rounded-md border border-[var(--panel-border)] bg-white p-4 shadow-[var(--shadow-card)] transition hover:border-[var(--panel-border-strong)] hover:bg-[var(--chip)] sm:grid-cols-[76px_120px_minmax(0,1fr)] sm:items-center"
                 href={step.href}
                 key={step.href}
               >
-                <span className="text-xs font-bold uppercase text-[var(--muted)]">
+                <span className="flex items-center gap-2 text-xs font-bold uppercase text-[var(--muted)]">
+                  <span className={`size-2 rounded-full ${step.accent}`} />
                   Step {index + 1}
                 </span>
                 <span className="text-base font-extrabold text-[var(--foreground)]">
@@ -153,6 +167,9 @@ export default function Home() {
               <Badge tone="success">특성</Badge>
               <Badge tone="success">도구</Badge>
               <Badge tone="neutral">HABCDS</Badge>
+            </div>
+            <div className="mt-4 rounded-md border border-[var(--electric-soft)] bg-[var(--electric-soft)] p-3 text-xs font-semibold leading-5 text-[var(--foreground)]">
+              많이 쓰인 선택지를 먼저 보여주되, 최종 판단은 타입 상성, 역할, 계산 결과와 함께 확인합니다.
             </div>
           </InfoCard>
 
